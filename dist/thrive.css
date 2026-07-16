@@ -247,6 +247,9 @@
   .addr a:hover{color:#fff}
   .cta-band .meta a{color:inherit;text-decoration:none}
   .cta-band .meta a:hover{color:#fff}
+  /* email links: understated, inherit surrounding colour, underline on hover */
+  .maillink{color:inherit;text-decoration:none}
+  .maillink:hover{text-decoration:underline}
 
   /* Process steps: reusable "from spec to running" band (Home, Sport, Commercial) */
   .process{padding:104px 0;background:#fff;color:var(--ink)}
