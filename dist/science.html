@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" as="image" href="images/zeugma-hero.webp" fetchpriority="high">
+<script>/* exclude own visits from Clarity */if(document.cookie.indexOf('exclude_clarity=true')>-1){window.clarity=function(){};}</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MWS3R9HX');</script>
+<!-- End Google Tag Manager -->
+<title>The Science of Hyperbaric Oxygen - Thrive Hyperbaric</title>
+<meta name="description" content="How hyperbaric oxygen works - the oxygen swing the body adapts to - and the research these HPO.TECH chambers are built on. Used in hospitals for decades.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="thrive.css">
+<style>
+  /* ===== Science page ===== */
+  .credit{background:var(--navy);padding:18px 24px;border-top:1px solid #1c2942;text-align:center}
+  .credit p{font-family:var(--data);text-transform:uppercase;letter-spacing:.16em;font-weight:600;font-size:12.5px;color:#7c8caa;margin:0}
+  .credit b{color:#cbd6e6;font-weight:600}
+
+  /* mechanism scroll stage */
+  .mech{position:relative;background:var(--navy);height:340vh}
+  .mech-sticky{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(8px,1.4vh,20px);overflow:hidden;padding:clamp(78px,9vh,96px) 24px clamp(18px,2.5vh,32px)}
+  .mech-head{text-align:center;max-width:34ch;margin:0 auto 4px}
+  .mech-head .ey{font-family:var(--data);text-transform:uppercase;letter-spacing:.22em;font-weight:600;font-size:12px;color:var(--cyan);margin-bottom:14px}
+  .mech-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(22px,3vw,36px);line-height:1.05;letter-spacing:-.015em;color:var(--smoke);margin:0}
+  .mech-head h2 em{font-style:italic;color:var(--cyan)}
+  .mech-stage{width:min(1000px,95vw);max-height:42vh;margin:0 auto}
+  .mech-svg{width:100%;height:auto;max-height:42vh;display:block}
+  .axis{stroke:#26344f;stroke-width:1}
+  .axlbl{font-family:var(--data);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;fill:#5d6f8c;font-weight:600}
+  .curve-base{fill:none;stroke:#23324d;stroke-width:3}
+  .curve-trace{fill:none;stroke:var(--cyan);stroke-width:4;stroke-linecap:round;filter:drop-shadow(0 0 7px rgba(34,211,238,.55))}
+  .guide{stroke:rgba(34,211,238,.4);stroke-width:1;stroke-dasharray:3 5}
+  .marker{fill:#fff;stroke:var(--cyan);stroke-width:3;filter:drop-shadow(0 0 9px rgba(34,211,238,.85))}
+  .membrane{fill:rgba(34,211,238,.045);stroke:#3a4d6e;stroke-width:2}
+  .celllbl{font-family:var(--data);font-size:12px;letter-spacing:.14em;text-transform:uppercase;fill:#5d6f8c;font-weight:600}
+  .o2{fill:var(--cyan);opacity:0;transition:opacity .25s linear}
+  .mito{fill:#1c2942;stroke:#4a5e80;stroke-width:1.5;transition:fill .6s,stroke .6s,filter .6s}
+  .pulse{fill:none;stroke:var(--gold);stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center}
+  #cell.s-response .mito{fill:#3a2f1c;stroke:#DAC089;filter:drop-shadow(0 0 7px rgba(218,192,137,.7))}
+  #cell.s-response .pulse{animation:pulsering 2.3s ease-out infinite}
+  @keyframes pulsering{0%{opacity:.55;transform:scale(.45)}100%{opacity:0;transform:scale(1.7)}}
+  .mech-caps{position:relative;min-height:clamp(48px,7vh,64px);margin-top:0;width:min(720px,92vw)}
+  .cap{position:absolute;inset:0;text-align:center;opacity:0;transition:opacity .45s ease;font-size:16.5px;line-height:1.5;color:#9fb0c7}
+  .cap .n{font-family:var(--data);color:var(--cyan);font-weight:700;letter-spacing:.06em;margin-right:9px}
+  .cap.on{opacity:1}
+
+  /* three beats */
+  .beats{background:#0b1120;padding:clamp(56px,7vw,100px) 24px}
+  .beats .inner{max-width:1040px;margin:0 auto}
+  .beats .bhead{text-align:center;max-width:54ch;margin:0 auto 44px}
+  .beats .bhead .ey{font-family:var(--data);text-transform:uppercase;letter-spacing:.2em;font-weight:600;font-size:12px;color:var(--cyan);margin-bottom:14px}
+  .beats .bhead h2{font-family:var(--serif);font-weight:500;font-size:clamp(24px,3.4vw,38px);line-height:1.06;letter-spacing:-.015em;color:var(--smoke);margin:0}
+  .bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:760px){.bgrid{grid-template-columns:1fr}}
+  .beat{background:#0f1830;border:1px solid #1e2a44;border-radius:16px;padding:26px 26px 28px;opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1);transition-delay:var(--d,0s)}
+  .beat.in{opacity:1;transform:none}
+  .beat .bn{font-family:var(--data);font-weight:700;font-size:12.5px;letter-spacing:.2em;color:var(--cyan)}
+  .beat .bsvg{display:block;height:96px;margin:16px 0 18px}
+  .beat h3{font-family:var(--serif);font-weight:500;font-size:21px;color:var(--smoke);margin:0 0 9px}
+  .beat p{font-size:14.5px;line-height:1.6;color:#9fb0c7;margin:0}
+
+  /* nobel band */
+  .nobel-band{background:var(--navy);padding:clamp(44px,5vw,68px) 24px;border-top:1px solid #1c2942;text-align:center}
+  .nobel-band .inner{max-width:680px;margin:0 auto}
+  .nobel-band .k{font-family:var(--data);text-transform:uppercase;letter-spacing:.22em;font-weight:600;font-size:12px;color:#D9BE8C}
+  .nobel-band h2{font-family:var(--serif);font-weight:500;font-size:clamp(23px,3vw,33px);color:var(--smoke);margin:12px 0 0;letter-spacing:-.01em}
+  .nobel-band p{color:#9fb0c7;font-size:16.5px;line-height:1.62;margin:14px auto 0;max-width:52ch}
+
+  /* delivery spec prefix */
+  .sci .herofig .big .bigpre{font-size:.4em;font-weight:600;letter-spacing:.1em;color:#7E8DA6;vertical-align:.34em;text-transform:uppercase}
+
+  /* studies */
+  .studies{padding:clamp(56px,7vw,104px) 24px;background:var(--sand)}
+  .studies .inner{max-width:1040px;margin:0 auto}
+  .studies .head{max-width:60ch;margin-bottom:36px}
+  .studies .head p{color:var(--ink-soft);margin-top:14px;font-size:16.5px;line-height:1.62}
+  .scards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media(max-width:760px){.scards{grid-template-columns:1fr}}
+  .scard{background:#fff;border:1px solid var(--line-light);border-radius:16px;padding:30px 30px 28px;display:flex;flex-direction:column}
+  .scard .lab{font-family:var(--data);text-transform:uppercase;letter-spacing:.16em;font-weight:600;font-size:11.5px;color:var(--gold-ink);margin-bottom:14px}
+  .scard.cyan .lab{color:var(--cyan-deep)}
+  .scard h3{font-family:var(--serif);font-weight:500;font-size:23px;color:var(--navy);margin:0 0 12px;letter-spacing:-.01em}
+  .scard p{font-size:14.5px;line-height:1.62;color:var(--ink);margin:0 0 18px}
+  .scard .cite{margin-top:auto;font-family:var(--data);font-weight:600;font-size:11.5px;letter-spacing:.05em;color:var(--ink-soft);text-transform:uppercase}
+  .studies .foot{margin-top:24px;font-size:14px;line-height:1.62;color:var(--ink-soft);max-width:74ch}
+
+
+  /* nobel pathway */
+  .pathway{background:var(--navy);padding:clamp(50px,6vw,86px) 24px clamp(58px,7vw,96px);border-top:1px solid #1c2942;text-align:center}
+  .pathway .inner{max-width:920px;margin:0 auto}
+  .pathway .k{font-family:var(--data);text-transform:uppercase;letter-spacing:.22em;font-weight:600;font-size:12px;color:#D9BE8C}
+  .pathway h2{font-family:var(--serif);font-weight:500;font-size:clamp(23px,3vw,33px);color:var(--smoke);margin:12px 0 0;letter-spacing:-.01em}
+  .pathway .lead{color:#9fb0c7;font-size:16.5px;line-height:1.62;margin:14px auto 0;max-width:56ch}
+  .pw-stage{margin:40px auto 0;width:min(820px,100%)}
+  .pw-svg{width:100%;height:auto;display:block;overflow:visible}
+  .pw-line{fill:none;stroke:#2c5566;stroke-width:2;stroke-dasharray:540;stroke-dashoffset:540;transition:stroke-dashoffset 1.1s ease}
+  .pathway.in .pw-line{stroke-dashoffset:0}
+  .pathway.in .pw-line.l2{transition-delay:.1s}
+  .pathway.in .pw-line.l3{transition-delay:.2s}
+  .pw-trigger rect{fill:rgba(34,211,238,.07);stroke:var(--cyan);stroke-width:2}
+  .pw-tag{font-family:var(--data);font-size:11px;letter-spacing:.16em;font-weight:700;fill:#D9BE8C}
+  .pw-tt{font-family:var(--serif);font-size:19px;fill:var(--smoke)}
+  .pw-ts{font-family:var(--sans);font-size:13px;fill:#9fb0c7}
+  .pw-node{opacity:0;transform:translateX(-10px);transition:opacity .7s ease,transform .7s ease}
+  .pathway.in .pw-node{opacity:1;transform:none}
+  .pathway.in .pw-node.n1{transition-delay:.55s}
+  .pathway.in .pw-node.n2{transition-delay:.7s}
+  .pathway.in .pw-node.n3{transition-delay:.85s}
+  .pw-node rect{fill:#0f1830;stroke:#3a4d6e;stroke-width:1.5}
+  .pw-node .dot{fill:#DAC089;filter:drop-shadow(0 0 5px rgba(218,192,137,.7))}
+  .pw-nt{font-family:var(--sans);font-size:15px;font-weight:500;fill:#e7edf6;dominant-baseline:middle}
+  .pw-cap{font-family:var(--data);text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:600;fill:#5d6f8c}
+  @media(max-width:680px){.pw-svg{min-width:560px}.pw-stage{overflow-x:auto}}
+
+  @media(prefers-reduced-motion:reduce){
+    .mech{height:auto}
+    .mech-sticky{position:static;height:auto;padding:72px 24px}
+    .curve-trace{stroke-dashoffset:0!important}
+    .cap{position:static;opacity:1;margin-bottom:8px}
+    .mech-caps{height:auto}
+    .beat{opacity:1;transform:none}
+    #cell.s-response .pulse{animation:none}
+    .pw-line{stroke-dashoffset:0}
+    .pw-node{opacity:1;transform:none}
+    .o2{opacity:1}
+  }
+</style>
+<script>/* market-aware: flag US visitors by timezone - no geo-IP, no cookies, no consent needed */
+try{var _z=Intl.DateTimeFormat().resolvedOptions().timeZone||'';var _US=['America/New_York','America/Detroit','America/Chicago','America/Denver','America/Phoenix','America/Los_Angeles','America/Anchorage','America/Adak','America/Boise','America/Juneau','America/Sitka','America/Nome','America/Menominee','Pacific/Honolulu'];if(_US.indexOf(_z)>-1||/^America\/(Indiana|Kentucky|North_Dakota)\//.test(_z)){document.documentElement.classList.add('us');window.__thriveUS=true;}}catch(e){}</script>
+<link rel="canonical" href="https://www.thrivehyperbaric.com/science">
+<meta name="theme-color" content="#0F172A">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Thrive Hyperbaric">
+<meta property="og:title" content="The Science of Hyperbaric Oxygen - Thrive Hyperbaric">
+<meta property="og:description" content="How hyperbaric oxygen works - the oxygen swing the body adapts to - and the research these HPO.TECH chambers are built on. Used in hospitals for decades.">
+<meta property="og:url" content="https://www.thrivehyperbaric.com/science">
+<meta property="og:image" content="https://www.thrivehyperbaric.com/images/og-default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Science of Hyperbaric Oxygen - Thrive Hyperbaric">
+<meta name="twitter:description" content="How hyperbaric oxygen works - the oxygen swing the body adapts to - and the research these HPO.TECH chambers are built on. Used in hospitals for decades.">
+<meta name="twitter:image" content="https://www.thrivehyperbaric.com/images/og-default.jpg">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWS3R9HX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager -->
+
+<nav class="nav" id="nav">
+  <div class="nav-inner maxw">
+    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Thrive Hyperbaric" class="logo-img"></a></div>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="links">
+      <a href="models.html">Models</a><a href="home-use.html">Home Use</a><a href="commercial.html">Commercial</a>
+      <a href="sport.html">Sport</a><a href="science.html" class="active">Science</a><a href="buying-guide.html">Buying Guide</a>
+      <a href="contact.html" class="quote">Get a quote</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero hero-split">
+  <div class="panel">
+    <div class="block">
+      <div class="eyebrow">The Science</div>
+      <h1>The science of <em>hyperbaric oxygen.</em></h1>
+      <p class="sub">It comes down to oxygen - and what your body does with it. Under real pressure, far more reaches your cells than breathing ever can, and several of the body's own systems respond. Used in hospitals for decades; if you already know why you want it, what matters is the part below - the dose the research uses, and the chamber built to deliver it.</p>
+      <div class="cta">
+        <a href="#how" class="btn gold">See how it works</a>
+        <a href="#studies" class="txtlink">The research</a>
+      </div>
+    </div>
+  </div>
+  <div class="img" style="background-image:url(images/zeugma-hero.webp);background-position:center"></div>
+</section>
+
+<div class="credit"><p>Used in hospitals worldwide for decades &middot; <b>a fascinating, emerging field of study in healthy people</b></p></div>
+
+<section class="mech" id="how">
+  <div class="mech-sticky">
+    <div class="mech-head">
+      <div class="ey">How it works</div>
+      <h2>Two things at once: the lift now, and the <em>adaptation that lasts.</em></h2>
+    </div>
+    <div class="mech-stage">
+      <svg viewBox="0 0 1000 470" class="mech-svg" role="img" aria-label="Oxygen rises during a session and saturates the body; the rise and the fall that follows both act as the signal the body adapts to.">
+        <line class="axis" x1="80" y1="384" x2="660" y2="384"/>
+        <line class="axis" x1="80" y1="70" x2="80" y2="384"/>
+        <text class="axlbl" x="78" y="58">Blood oxygen</text>
+        <text class="axlbl" x="250" y="406" text-anchor="middle">in the chamber</text>
+        <text class="axlbl" x="560" y="406" text-anchor="middle">after</text>
+        <path id="curveBase" class="curve-base" d="M80,344 C190,344 235,110 350,110 L430,110 C545,110 565,344 660,344"/>
+        <path id="curveTrace" class="curve-trace" d="M80,344 C190,344 235,110 350,110 L430,110 C545,110 565,344 660,344"/>
+        <line id="guide" class="guide" x1="80" y1="70" x2="80" y2="384"/>
+        <circle id="marker" class="marker" r="7.5" cx="80" cy="344"/>
+        <text class="celllbl" x="828" y="58" text-anchor="middle">inside a cell</text>
+        <g id="cell" class="s-flood" transform="translate(700,80)">
+          <ellipse class="membrane" cx="128" cy="170" rx="122" ry="126"/>
+          <ellipse class="mito" cx="92" cy="138" rx="26" ry="12.5" transform="rotate(-18 92 138)"/>
+          <ellipse class="mito" cx="172" cy="188" rx="24" ry="12" transform="rotate(20 172 188)"/>
+          <ellipse class="mito" cx="118" cy="222" rx="22" ry="11" transform="rotate(-7 118 222)"/>
+          <g id="o2dots">
+            <circle class="o2" cx="74" cy="96" r="5"/><circle class="o2" cx="158" cy="100" r="5"/>
+            <circle class="o2" cx="112" cy="128" r="5"/><circle class="o2" cx="198" cy="148" r="5"/>
+            <circle class="o2" cx="64" cy="180" r="5"/><circle class="o2" cx="150" cy="240" r="5"/>
+            <circle class="o2" cx="96" cy="258" r="5"/><circle class="o2" cx="204" cy="216" r="5"/>
+            <circle class="o2" cx="132" cy="168" r="5"/>
+          </g>
+          <circle class="pulse" cx="128" cy="170" r="58"/>
+          <circle class="pulse" cx="128" cy="170" r="58" style="animation-delay:1.15s"/>
+        </g>
+      </svg>
+    </div>
+    <div class="mech-caps">
+      <div class="cap" data-s="0"><span class="n">01</span>The lift - oxygen floods your blood and tissue, far past what you take in at the surface. The body has more to work with straight away.</div>
+      <div class="cap" data-s="1"><span class="n">02</span>The swing - the rise of oxygen and the fall that follows are thought to be part of the signal the body adapts to, not the oxygen alone. The exact pathways are still being mapped.</div>
+      <div class="cap" data-s="2"><span class="n">03</span>The response - the body's own repair and adaptation systems switch on, and build over a course.</div>
+    </div>
+  </div>
+</section>
+
+<section class="beats">
+  <div class="inner">
+    <div class="bhead">
+      <div class="ey">Across a course</div>
+      <h2>Why it's run as a course, not a one-off.</h2>
+    </div>
+    <div class="bgrid">
+      <div class="beat">
+        <div class="bn">01 &middot; FROM SESSION ONE</div>
+        <svg class="bsvg" viewBox="0 0 120 96" fill="none">
+          <ellipse cx="60" cy="50" rx="40" ry="38" fill="rgba(34,211,238,.05)" stroke="#3a4d6e" stroke-width="2"/>
+          <circle cx="46" cy="38" r="4.5" fill="#22D3EE"/><circle cx="74" cy="40" r="4.5" fill="#22D3EE"/>
+          <circle cx="58" cy="54" r="4.5" fill="#22D3EE"/><circle cx="44" cy="62" r="4.5" fill="#22D3EE"/>
+          <circle cx="76" cy="62" r="4.5" fill="#22D3EE"/><circle cx="62" cy="34" r="4.5" fill="#22D3EE"/>
+          <circle cx="50" cy="50" r="4.5" fill="#22D3EE"/>
+        </svg>
+        <h3>Something to work with now</h3>
+        <p>From the very first session, your blood and tissue carry far more oxygen than usual - the lift you came for, there straight away.</p>
+      </div>
+      <div class="beat">
+        <div class="bn">02 &middot; EACH SESSION</div>
+        <svg class="bsvg" viewBox="0 0 120 96" fill="none">
+          <ellipse cx="60" cy="50" rx="40" ry="38" fill="rgba(218,192,137,.04)" stroke="#3a4d6e" stroke-width="2"/>
+          <circle cx="48" cy="40" r="4" fill="#22D3EE" opacity=".28"/><circle cx="74" cy="60" r="4" fill="#22D3EE" opacity=".28"/>
+          <ellipse cx="60" cy="50" rx="15" ry="8" fill="#3a2f1c" stroke="#DAC089" stroke-width="1.6" transform="rotate(-16 60 50)" style="filter:drop-shadow(0 0 5px rgba(218,192,137,.7))"/>
+        </svg>
+        <h3>More than the lift alone</h3>
+        <p>The body responds to the rise and fall, not the oxygen alone - so beyond the lift itself, each session is thought to leave a little adaptation behind. It is that adaptation a course is built around.</p>
+      </div>
+      <div class="beat">
+        <div class="bn">03 &middot; OVER A COURSE</div>
+        <svg class="bsvg" viewBox="0 0 120 96" fill="none">
+          <ellipse cx="60" cy="50" rx="40" ry="38" fill="rgba(218,192,137,.06)" stroke="#5a4a2e" stroke-width="2"/>
+          <ellipse cx="46" cy="40" rx="12" ry="6" fill="#3a2f1c" stroke="#DAC089" stroke-width="1.5" transform="rotate(-18 46 40)" style="filter:drop-shadow(0 0 4px rgba(218,192,137,.7))"/>
+          <ellipse cx="74" cy="48" rx="12" ry="6" fill="#3a2f1c" stroke="#DAC089" stroke-width="1.5" transform="rotate(16 74 48)" style="filter:drop-shadow(0 0 4px rgba(218,192,137,.7))"/>
+          <ellipse cx="56" cy="64" rx="12" ry="6" fill="#3a2f1c" stroke="#DAC089" stroke-width="1.5" transform="rotate(-6 56 64)" style="filter:drop-shadow(0 0 4px rgba(218,192,137,.7))"/>
+        </svg>
+        <h3>Built over a course</h3>
+        <p>The thinking is that these adaptations stack - so, like training, it is run as a course rather than a one-off. The durable effects seen in the research were built over 40 to 60 sessions, not a single visit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pathway" id="pathway">
+  <div class="inner">
+    <div class="k">The biology recognised by a Nobel Prize</div>
+    <h2>Not one pathway, but several.</h2>
+    <p class="lead">The body senses and adapts to oxygen - the biology recognised by the 2019 Nobel Prize in Medicine. A session is thought to set several of the body's own adaptation responses going - the mitochondria among them - through more than one pathway rather than a single chain, with the rise and fall of oxygen thought to be part of the trigger. This is genuinely still being worked out: what follows is the shape the research points to, not a settled map.</p>
+    <div class="pw-stage">
+      <svg class="pw-svg" viewBox="0 0 880 348" role="img" aria-label="The oxygen swing sets off several of the body's own responses - antioxidant defences, the mitochondria, and repair and renewal - through more than one pathway that is still being worked out.">
+        <path class="pw-line l1" d="M250,174 C420,174 440,76 596,76"/>
+        <path class="pw-line l2" d="M250,174 L596,174"/>
+        <path class="pw-line l3" d="M250,174 C420,174 440,272 596,272"/>
+        <g class="pw-trigger">
+          <rect x="44" y="132" width="206" height="84" rx="16"/>
+          <text class="pw-tag" x="147" y="118" text-anchor="middle">THE FLOOD AND THE FALL</text>
+          <text class="pw-tt" x="147" y="168" text-anchor="middle">The oxygen swing</text>
+          <text class="pw-ts" x="147" y="190" text-anchor="middle">sensed by your cells</text>
+        </g>
+        <g class="pw-node n1">
+          <rect x="596" y="44" width="258" height="64" rx="13"/>
+          <circle class="dot" cx="624" cy="76" r="6"/>
+          <text class="pw-nt" x="648" y="81">Antioxidant defences</text>
+        </g>
+        <g class="pw-node n2">
+          <rect x="596" y="142" width="258" height="64" rx="13"/>
+          <circle class="dot" cx="624" cy="174" r="6"/>
+          <text class="pw-nt" x="648" y="179">Mitochondria</text>
+        </g>
+        <g class="pw-node n3">
+          <rect x="596" y="240" width="258" height="64" rx="13"/>
+          <circle class="dot" cx="624" cy="272" r="6"/>
+          <text class="pw-nt" x="648" y="277">Repair and renewal</text>
+        </g>
+        <text class="pw-cap" x="440" y="338" text-anchor="middle">several responses - the routes are still open</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="sci">
+  <div class="maxw">
+    <div class="grid">
+      <div>
+        <div class="eyebrow">Why this chamber</div>
+        <h2>Real pressure. Real oxygen. Both.</h2>
+        <p>Whatever benefit you are looking for, it depends on one thing: enough oxygen actually reaching you - and that takes both real pressure and concentrated oxygen delivered at it. A soft inflatable has neither. Many hard-shell chambers have one without the other - milder pressure, or thinner oxygen. These reach the full 2.0 to 2.4 ATA the research uses, and deliver the oxygen to match - so you are not left wondering whether you got the real dose the benefits depend on.</p>
+        <a href="#studies" class="ln">See the research</a>
+      </div>
+      <div class="sheet">
+        <div class="sh"><span class="t">Oxygen delivery</span><span class="node"><i></i><i></i><i></i></span></div>
+        <div class="herofig">
+          <span class="k">Dissolved O&#8322; in plasma</span>
+          <span class="big"><span class="bigpre">up to </span>5<em>&nbsp;mL</em></span>
+          <span class="unit">per 100 mL plasma &middot; at 2.4 ATA</span>
+        </div>
+        <div class="r"><span class="k">Delivered pressure</span><span class="v gold">up to 2.4 ATA</span></div>
+        <div class="r"><span class="k">Oxygen delivery</span><span class="v">BIBS mask <span class="dotc">&middot;</span> 100% O&#8322;</span></div>
+        <div class="r"><span class="k">Flow rate</span><span class="v">20 L/min</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="studies" id="studies">
+  <div class="inner">
+    <div class="head">
+      <div class="sec-eyebrow">What the research measured</div>
+      <h2 class="sec-h2">The clearest signal is in the cell's power plants.</h2>
+      <p>The firmest thing the research shows hyperbaric oxygen doing in healthy people lands on one place: the cell's own power plants - the mitochondria. A blinded, placebo-controlled trial at the 2.0 ATA these chambers deliver measured it in athletes, and a second, independent group has since found hyperbaric oxygen changing mitochondrial function too.</p>
+    </div>
+    <div class="scards">
+      <div class="scard cyan">
+        <div class="lab">Stamina &middot; Performance</div>
+        <h3>Tested in healthy athletes</h3>
+        <p>In a blinded, placebo-controlled trial, trained masters athletes completed 40 sessions at 2.0 ATA. The hyperbaric group showed gains in VO&#8322; max and the anaerobic threshold against placebo, with increased mitochondrial respiration and mass measured from muscle biopsy. In plain terms: the same effort sat further below the limit - and it was banked from sitting in the chamber, not extra training.</p>
+        <div class="cite">Hadanny et al., 2022 &middot; Sports Medicine - Open</div>
+      </div>
+      <div class="scard">
+        <div class="lab">The power plants &middot; Why it matters</div>
+        <h3>Why that matters</h3>
+        <p>Mitochondria are the cell's power plants, central to how nearly every cell works - which is why a measured gain in them draws interest well beyond sport. In that trial the gain showed up where you would expect it first - in stamina. Where it reaches beyond that, in an otherwise healthy person, is being actively studied.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="nobel-band">
+  <div class="inner">
+    <div class="k">A live field</div>
+    <h2>One measured effect. A wider field, moving fast.</h2>
+    <p>The mitochondrial gain is the clearest signal so far - and it is one of several of the body's own systems that respond to the oxygen. Where the rest of that response leads is being actively studied, in labs and clinics around the world. This is a field near the start of what it will become - which is exactly why it is worth watching now.</p>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="maxw" style="padding:0 46px">
+    <h2>Talk it through with someone who runs one.</h2>
+    <p>Get in touch to discuss hyperbaric oxygen and which chamber would suit you best - with a clinic operator who uses these every day.</p>
+    <a href="contact.html" class="btn gold">Get in touch</a>
+    <div class="meta"><a href="tel:+447799772383">+44 779 977 2383</a> &nbsp;&middot;&nbsp; hello@thrivehyperbaric.com</div>
+    <div class="cta-proof"><span>Installed &amp; serviced worldwide</span> <span class="hot">US install &amp; servicing - Detroit, Michigan</span> <span>We reply in your time zone</span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="maxw">
+    <div class="fgrid">
+      <div>
+        <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Thrive Hyperbaric" class="logo-img" style="height:30px;margin-bottom:18px"></a></div>
+        <p class="spec">The official HPO.TECH worldwide specialist.</p>
+        <p class="addr">Supplying, installing and supporting chambers worldwide.<br>UK &middot; Europe &middot; US &middot; Middle East &middot; Asia<br>US install &amp; servicing teams - Detroit, Michigan</p>
+        <p class="addr" style="margin-top:14px"><span style="color:#aeb9cc;font-family:var(--data);text-transform:uppercase;letter-spacing:.1em;font-size:11px;font-weight:600">Visit the clinic</span><br>The Foundry, Beehive Yard, Bath, UK<br><a href="tel:+447799772383">+44 779 977 2383</a><br>hello@thrivehyperbaric.com</p>
+      </div>
+      <div><h4>Explore</h4><a href="models.html">Models</a><a href="home-use.html">Home Use</a><a href="commercial.html">Commercial</a><a href="sport.html">Sport</a><a href="science.html">Science</a><a href="buying-guide.html">Buying Guide</a></div>
+      <div><h4>More</h4><a href="about.html">About</a><a href="certifications.html">Certifications</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+      <div><h4>Legal</h4><a href="privacy-policy.html">Privacy Policy</a><a href="cookie-policy.html">Cookie Policy</a><a href="terms-of-use.html">Website Terms of Use</a></div>
+    </div>
+    <div class="fbar"><span class="copy" style="display:block;max-width:920px;margin:0 auto 12px;line-height:1.55;opacity:.75">Hyperbaric oxygen therapy is an established hospital treatment for specific approved conditions. Its use by healthy people for performance, recovery or ageing is not an approved medical indication and the evidence is still developing. Nothing on this page is a medical claim, a promise of results, or a substitute for advice from a qualified clinician.</span><span class="copy" style="display:block;margin-bottom:8px;opacity:.7;font-size:11.5px;line-height:1.5">Thrive Bath Ltd, registered in England &amp; Wales &middot; Company no. 15018698 &middot; Registered office: Unit F3, The Foundry, Beehive Yard, Walcot Street, Bath, BA1 5BT</span><span class="copy">&copy; 2026 Thrive Bath Ltd t/a Thrive Hyperbaric</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var mech=document.querySelector('.mech');
+  var base=document.getElementById('curveBase'),trace=document.getElementById('curveTrace');
+  var marker=document.getElementById('marker'),guide=document.getElementById('guide'),cell=document.getElementById('cell');
+  var caps=[].slice.call(document.querySelectorAll('.mech-caps .cap'));
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(base&&trace){
+    var len=base.getTotalLength();
+    trace.style.strokeDasharray=len; trace.style.strokeDashoffset=reduce?0:len;
+    var setStage=function(s){
+      cell.classList.toggle('s-flood',s===0);
+      cell.classList.toggle('s-fall',s===1);
+      cell.classList.toggle('s-response',s===2);
+      caps.forEach(function(c,i){c.classList.toggle('on',i===s);});
+    };
+    var o2=[].slice.call(document.querySelectorAll('#o2dots .o2'));
+    var clamp=function(v){return v<0?0:(v>1?1:v);};
+    var drive=function(p){
+      trace.style.strokeDashoffset=len*(1-p);
+      var pt=base.getPointAtLength(len*Math.max(0.0001,Math.min(p,1)));
+      marker.setAttribute('cx',pt.x); marker.setAttribute('cy',pt.y);
+      guide.setAttribute('x1',pt.x); guide.setAttribute('x2',pt.x);
+      // oxygen level tracks the curve height: rises 0->1 across the climb (p .04-.46),
+      // holds on the plateau, then recedes on the fall (p .56-.86 -> ~.12)
+      var lvl;
+      if(p<0.46){ lvl=clamp((p-0.04)/0.42); }
+      else if(p<0.56){ lvl=1; }
+      else { lvl=clamp(1-(p-0.56)/0.30*0.88); }
+      // stagger dots so they fill progressively, not all at once
+      var n=o2.length;
+      o2.forEach(function(d,i){
+        var thresh=i/n*0.9;            // each dot has its own fill point during the climb
+        var dl=clamp((lvl- thresh)/0.18);
+        d.style.opacity=(lvl>=1?1:dl);
+      });
+      var s=0; if(p>=0.56&&p<0.8)s=1; else if(p>=0.8)s=2;
+      setStage(s);
+    };
+    if(reduce){drive(1);} else {
+      var ticking=false;
+      var onScroll=function(){
+        if(ticking)return; ticking=true;
+        requestAnimationFrame(function(){
+          var total=mech.offsetHeight-window.innerHeight;
+          var p=Math.max(0,Math.min(1,(-mech.getBoundingClientRect().top)/total));
+          drive(p); ticking=false;
+        });
+      };
+      window.addEventListener('scroll',onScroll,{passive:true});
+      window.addEventListener('resize',onScroll,{passive:true});
+      onScroll();
+    }
+  }
+  var beats=[].slice.call(document.querySelectorAll('.beat'));
+  beats.forEach(function(b,i){b.style.setProperty('--d',(i*0.12).toFixed(2)+'s');});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.2});
+    beats.forEach(function(b){io.observe(b);});
+    var pw=document.querySelector('.pathway'); if(pw){var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io2.unobserve(e.target);}});},{threshold:.25}); io2.observe(pw);}
+    setTimeout(function(){beats.forEach(function(b){b.classList.add('in');});},2200);
+  } else { beats.forEach(function(b){b.classList.add('in');}); var pw0=document.querySelector('.pathway'); if(pw0) pw0.classList.add('in'); }
+})();
+</script>
+<script src="thrive.js"></script>
+</body>
+</html>

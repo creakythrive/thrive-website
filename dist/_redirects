@@ -1,0 +1,15 @@
+# Foundry tool moved to its own subdomain (301). Keep old bookmarks working.
+/foundry/hpo_doc_generator.html   https://foundry.thrivehyperbaric.com/          301
+/foundry/*                        https://foundry.thrivehyperbaric.com/:splat     301
+/foundry                          https://foundry.thrivehyperbaric.com/          301
+/hpo_doc_generator.html           https://foundry.thrivehyperbaric.com/          301
+
+# Old WordPress URLs -> new pages (301). Cloudflare Pages reads this file.
+/home-hyperbaric-chamber/*            /home-use          301
+/elite-sports-hyperbaric-chamber/*    /sport             301
+/fitness-wellness-hyperbaric-chamber/* /commercial       301
+/hyperbaric-chamber-cost/*            /buying-guide      301
+/privacy/*                            /privacy-policy    301
+/cookies/*                            /cookie-policy     301
+/terms/*                              /terms-of-use      301
+# Serve clean URLs: /models.html -> /models etc. is automatic on Pages.
