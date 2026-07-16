@@ -278,3 +278,29 @@
   .cta-band .cta-proof span.hot::before{background:var(--gold)}
   /* US visitors (timezone-detected): lead with the US logistics line */
   html.us .cta-band .cta-proof span.hot{order:-1}
+
+  /* ===== Mobile polish (2026-07) ===== */
+  @media(max-width:700px){
+    /* tighter vertical rhythm */
+    .router,.sci,.irl,.why,.bj,.process{padding-top:66px;padding-bottom:66px}
+    .cta-band{padding-top:78px;padding-bottom:78px}
+    .header-band{padding-top:112px;padding-bottom:52px}
+    /* tighter side gutters (46px -> 22px) */
+    .nav-inner,.router .pad,.irl .pad,.process .head,.process .foot,
+    .sci .grid,.why .grid,.bj .grid,.process .steps,.strip .row,.fgrid,.header-band .inner{padding-left:22px;padding-right:22px}
+    .fbar{margin-left:22px;margin-right:22px}
+    .cta-band .maxw{padding-left:22px!important;padding-right:22px!important}
+    .links a:not(.quote){padding-left:22px;padding-right:22px}
+    .links a.quote{margin-left:22px;margin-right:22px}
+    /* hero: declutter + tighter gutters */
+    .wrap{padding:78px 22px 0}
+    .hero .sub{margin:20px 0 28px}
+    .strip .cell:not(.lead){display:none}
+    .strip .cell.lead{border-top:none;padding:16px 0}
+    /* router cards: shorter on mobile */
+    .panel{height:420px}
+    /* CTA proof: neat left-aligned bulleted list */
+    .cta-band .cta-proof{flex-direction:column;align-items:flex-start;text-align:left;max-width:300px;margin:22px auto 0;gap:11px}
+    .cta-band .cta-proof span{margin:0;align-items:flex-start}
+    .cta-band .cta-proof span::before{margin-top:6px}
+  }

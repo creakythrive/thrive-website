@@ -117,6 +117,17 @@
   .pw-cap{font-family:var(--data);text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:600;fill:#5d6f8c}
   @media(max-width:680px){.pw-svg{min-width:560px}.pw-stage{overflow-x:auto}}
 
+  /* mobile: shorter scroll stage (less empty gap), content to the top, bigger diagram labels */
+  @media(max-width:700px){
+    .mech{height:230vh}
+    .mech-sticky{justify-content:flex-start;padding-top:90px;gap:14px}
+    .mech-stage{max-height:40vh;width:100%}
+    .mech-svg{max-height:40vh}
+    .axlbl,.celllbl{font-size:29px}
+    .mech-head h2{font-size:clamp(21px,5.4vw,28px)}
+    .beats,.studies,.nobel-band,.pathway{padding-top:60px;padding-bottom:60px}
+  }
+
   @media(prefers-reduced-motion:reduce){
     .mech{height:auto}
     .mech-sticky{position:static;height:auto;padding:72px 24px}
