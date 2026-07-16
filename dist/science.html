@@ -117,13 +117,20 @@
   .pw-cap{font-family:var(--data);text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:600;fill:#5d6f8c}
   @media(max-width:680px){.pw-svg{min-width:560px}.pw-stage{overflow-x:auto}}
 
-  /* mobile: shorter scroll stage (less empty gap), content to the top, bigger diagram labels */
+  /* mobile: render the mechanism statically (no tall sticky frame = no empty gap); show the full curve + all three captions at once, bigger labels */
   @media(max-width:700px){
-    .mech{height:230vh}
-    .mech-sticky{justify-content:flex-start;padding-top:90px;gap:14px}
-    .mech-stage{max-height:40vh;width:100%}
-    .mech-svg{max-height:40vh}
+    .mech{height:auto}
+    .mech-sticky{position:static;height:auto;justify-content:flex-start;padding:18px 22px 14px;gap:16px}
+    .mech-stage{max-height:none;width:100%}
+    .mech-svg{max-height:none}
+    .curve-trace{stroke-dashoffset:0!important}
+    .o2{opacity:1}
+    .mech-caps{position:static;min-height:0;height:auto;width:100%;margin-top:2px}
+    .cap{position:static;opacity:1;margin:0;text-align:left}
+    .cap+.cap{margin-top:14px}
+    #cell.s-response .pulse{animation:none}
     .axlbl,.celllbl{font-size:29px}
+    .mech-head{margin-bottom:6px}
     .mech-head h2{font-size:clamp(21px,5.4vw,28px)}
     .beats,.studies,.nobel-band,.pathway{padding-top:60px;padding-bottom:60px}
   }
@@ -405,7 +412,8 @@ try{var _z=Intl.DateTimeFormat().resolvedOptions().timeZone||'';var _US=['Americ
   var base=document.getElementById('curveBase'),trace=document.getElementById('curveTrace');
   var marker=document.getElementById('marker'),guide=document.getElementById('guide'),cell=document.getElementById('cell');
   var caps=[].slice.call(document.querySelectorAll('.mech-caps .cap'));
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* on phones the mechanism is laid out statically (see CSS) - skip the scroll-driven animation */
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.matchMedia('(max-width:700px)').matches;
   if(base&&trace){
     var len=base.getTotalLength();
     trace.style.strokeDasharray=len; trace.style.strokeDashoffset=reduce?0:len;
