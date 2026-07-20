@@ -277,10 +277,9 @@
   .cta-band .cta-proof{margin:28px auto 0;max-width:740px;display:flex;flex-wrap:wrap;justify-content:center;padding-top:24px;border-top:1px solid rgba(255,255,255,.12)}
   .cta-band .cta-proof span{display:inline-flex;align-items:center;font-size:14.5px;font-weight:500;color:#D7E0EC;letter-spacing:.005em;margin:6px 15px}
   .cta-band .cta-proof span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cyan);flex:0 0 auto;margin-right:9px}
-  .cta-band .cta-proof span.hot{color:#EAD9BE;font-weight:600}
-  .cta-band .cta-proof span.hot::before{background:var(--gold)}
-  /* US visitors (timezone-detected): lead with the US logistics line */
-  html.us .cta-band .cta-proof span.hot{order:-1}
+  /* US logistics line: highlighted in gold and led first, but only for US visitors (timezone-detected). Non-US visitors see it styled like the other bullets. */
+  html.us .cta-band .cta-proof span.hot{color:#EAD9BE;font-weight:600;order:-1}
+  html.us .cta-band .cta-proof span.hot::before{background:var(--gold)}
 
   /* ===== Mobile polish (2026-07) ===== */
   @media(max-width:700px){
