@@ -34,7 +34,7 @@
   .legal .lcontact p{color:var(--navy)}
 </style>
 <script>/* market-aware: flag US visitors by timezone - no geo-IP, no cookies, no consent needed */
-try{var _z=Intl.DateTimeFormat().resolvedOptions().timeZone||'';var _US=['America/New_York','America/Detroit','America/Chicago','America/Denver','America/Phoenix','America/Los_Angeles','America/Anchorage','America/Adak','America/Boise','America/Juneau','America/Sitka','America/Nome','America/Menominee','Pacific/Honolulu'];if(_US.indexOf(_z)>-1||/^America\/(Indiana|Kentucky|North_Dakota)\//.test(_z)){document.documentElement.classList.add('us');window.__thriveUS=true;}}catch(e){}</script>
+try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','us');else if(/[?&]uk(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','uk');else if(/[?&]auto(=|&|$)/.test(_q))sessionStorage.removeItem('thrivePreview');var _pv=sessionStorage.getItem('thrivePreview'),_us;if(_pv==='us')_us=true;else if(_pv==='uk')_us=false;else{var _z=Intl.DateTimeFormat().resolvedOptions().timeZone||'',_USZ=['America/New_York','America/Detroit','America/Chicago','America/Denver','America/Phoenix','America/Los_Angeles','America/Anchorage','America/Adak','America/Boise','America/Juneau','America/Sitka','America/Nome','America/Menominee','Pacific/Honolulu'];_us=_USZ.indexOf(_z)>-1||/^America\/(Indiana|Kentucky|North_Dakota)\//.test(_z);}if(_us){document.documentElement.classList.add('us');window.__thriveUS=true;}}catch(e){}</script>
 <link rel="canonical" href="https://www.thrivehyperbaric.com/privacy-policy">
 <meta name="theme-color" content="#0F172A">
 <link rel="icon" href="/favicon-dots.ico" sizes="any">
