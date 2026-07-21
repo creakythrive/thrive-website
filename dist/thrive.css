@@ -284,6 +284,9 @@
 .cta-proof span.hoteu{display:none}
 html.eu .cta-band .cta-proof span.hoteu{display:inline-flex;order:-1}
 html.eu .cta-band .cta-proof span.ww{display:none}
+.cta-proof span.euce{display:none}
+html.eu .cta-band .cta-proof span.euce{display:inline-flex}
+html.eu .cta-band .cta-proof span.wr{display:none}
   /* US-only content: hidden by default, shown to timezone-detected US visitors */
   .us-only{display:none}
   html.us .us-only{display:contents}
