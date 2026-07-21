@@ -18,8 +18,8 @@
 <link rel="stylesheet" href="thrive.css">
 <style>/* homepage only: chamber-framed, lighter hero on phones */@media(max-width:700px){.hero .bg{background-image:url(images/home-hero-m.webp)!important;background-position:20% 70%;background-size:auto 108%}.hero .wrap{align-items:flex-end;padding:78px 22px 26px}.hero .scrim{background:linear-gradient(0deg,rgba(6,8,14,.95) 0%,rgba(6,8,14,.86) 24%,rgba(6,8,14,.52) 46%,rgba(6,8,14,.2) 66%,rgba(6,8,14,.34) 100%)}}</style>
 
-<script>/* market-aware: flag US visitors by timezone - no geo-IP, no cookies, no consent needed */
-try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','us');else if(/[?&]me(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','me');else if(/[?&]uk(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','uk');else if(/[?&]auto(=|&|$)/.test(_q))sessionStorage.removeItem('thrivePreview');var _pv=sessionStorage.getItem('thrivePreview'),_m='';if(_pv==='us')_m='us';else if(_pv==='me')_m='gcc';else if(_pv==='uk')_m='';else{var _z=Intl.DateTimeFormat().resolvedOptions().timeZone||'',_USZ=['America/New_York','America/Detroit','America/Chicago','America/Denver','America/Phoenix','America/Los_Angeles','America/Anchorage','America/Adak','America/Boise','America/Juneau','America/Sitka','America/Nome','America/Menominee','Pacific/Honolulu'],_GCC=['Asia/Dubai','Asia/Riyadh','Asia/Qatar','Asia/Kuwait','Asia/Bahrain','Asia/Muscat'];if(_USZ.indexOf(_z)>-1||/^America\/(Indiana|Kentucky|North_Dakota)\//.test(_z))_m='us';else if(_GCC.indexOf(_z)>-1)_m='gcc';}if(_m==='us'){document.documentElement.classList.add('us');window.__thriveUS=true;}else if(_m==='gcc'){document.documentElement.classList.add('gcc');window.__thriveGCC=true;}}catch(e){}</script>
+<script>/* market-aware: flag US/GCC/EU visitors by timezone - no geo-IP, no cookies, no consent needed */
+try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','us');else if(/[?&]me(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','me');else if(/[?&]eu(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','eu');else if(/[?&]uk(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','uk');else if(/[?&]auto(=|&|$)/.test(_q))sessionStorage.removeItem('thrivePreview');var _pv=sessionStorage.getItem('thrivePreview'),_m='';if(_pv==='us')_m='us';else if(_pv==='me')_m='gcc';else if(_pv==='eu')_m='eu';else if(_pv==='uk')_m='';else{var _z=Intl.DateTimeFormat().resolvedOptions().timeZone||'',_USZ=['America/New_York','America/Detroit','America/Chicago','America/Denver','America/Phoenix','America/Los_Angeles','America/Anchorage','America/Adak','America/Boise','America/Juneau','America/Sitka','America/Nome','America/Menominee','Pacific/Honolulu'],_GCC=['Asia/Dubai','Asia/Riyadh','Asia/Qatar','Asia/Kuwait','Asia/Bahrain','Asia/Muscat'],_UKZ=['Europe/London','Europe/Isle_of_Man','Europe/Guernsey','Europe/Jersey'];if(_USZ.indexOf(_z)>-1||/^America\/(Indiana|Kentucky|North_Dakota)\//.test(_z))_m='us';else if(_GCC.indexOf(_z)>-1)_m='gcc';else if(/^Europe\//.test(_z)&&_UKZ.indexOf(_z)<0)_m='eu';}if(_m==='us'){document.documentElement.classList.add('us');window.__thriveUS=true;}else if(_m==='gcc'){document.documentElement.classList.add('gcc');window.__thriveGCC=true;}else if(_m==='eu'){document.documentElement.classList.add('eu');window.__thriveEU=true;}}catch(e){}</script>
 <link rel="canonical" href="https://www.thrivehyperbaric.com/">
 <meta name="theme-color" content="#0F172A">
 <link rel="icon" href="/favicon-dots.ico" sizes="any">
@@ -164,10 +164,8 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
       <div class="tile" style="background-image:url(images/gallery-everest.webp);background-position:50% 25%"><span class="cap">Everest expedition</span></div>
     </div>
     <div class="igbar pad">
-      <div class="h">@thrivehyperbaric</div>
-      <!-- Instagram CTA disabled until feed is ready - re-enable when content is up:
-      <a href="https://instagram.com/thrivehyperbaric" target="_blank" rel="noopener" class="btn ghost-dark">Follow the work on Instagram</a>
-      -->
+      <div class="h"><a href="https://www.instagram.com/thrivehyperbaric/" target="_blank" rel="noopener">@thrivehyperbaric</a></div>
+      <a href="https://www.instagram.com/thrivehyperbaric/" target="_blank" rel="noopener" class="btn ghost-dark">Follow the work on Instagram</a>
     </div>
   </div>
 </section>
@@ -191,13 +189,22 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
 </section>
 
 <!-- ===== CTA ===== -->
+<!-- GCC approvals trust band (Gulf visitors only) -->
+<div class="gcctrust" role="region" aria-label="Regulatory approvals for the Gulf">
+  <div class="inner">
+    <p class="lead">Cleared for medical use in Saudi Arabia &amp; the UAE</p>
+    <p class="body">Every HPO.TECH system holds full marketing authorisation from the <b>Saudi Food &amp; Drug Authority (SFDA)</b> and is registered with the <b>UAE Ministry of Health and Prevention (MOHAP)</b>.</p>
+    <a class="ln" href="certifications.html">See our certifications</a>
+  </div>
+</div>
+
 <section class="cta-band">
   <div class="maxw" style="padding:0 46px">
     <h2 id="ctaType">Start with a conversation.</h2>
     <p>A direct discussion about your space, your goals and the right chamber for your setup.</p>
     <a href="contact.html" class="btn gold">Talk to David</a>
     <div class="meta"><a href="tel:+447799772383">+44 779 977 2383</a> &nbsp;&middot;&nbsp; <a class="maillink" href="mailto:hello@thrivehyperbaric.com">hello@thrivehyperbaric.com</a></div>
-    <div class="cta-proof"><span>Installed &amp; serviced worldwide</span> <span class="hot">US install &amp; servicing - Detroit, Michigan</span> <span>We reply in your time zone</span></div>
+    <div class="cta-proof"><span class="ww">Installed &amp; serviced worldwide</span> <span class="hot">US install &amp; servicing - Detroit, Michigan</span> <span class="hoteu">Installed &amp; serviced across Europe</span> <span class="euce">CE-marked medical device</span> <span class="wr">We reply in your time zone</span></div>
   </div>
 </section>
 
@@ -211,9 +218,7 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
         <p class="addr">Supplying, installing and supporting chambers worldwide.<br>UK &middot; Europe &middot; US &middot; Middle East &middot; Asia<span class="us-only"><br>US install &amp; servicing teams - Detroit, Michigan</span></p>
         <p class="addr" style="margin-top:14px"><span style="color:#aeb9cc;font-family:var(--data);text-transform:uppercase;letter-spacing:.1em;font-size:11px;font-weight:600">Contact</span><br><a href="tel:+447799772383">+44 779 977 2383</a><br><a class="maillink" href="mailto:hello@thrivehyperbaric.com">hello@thrivehyperbaric.com</a></p>
         <p class="addr" style="margin-top:14px"><span style="color:#aeb9cc;font-family:var(--data);text-transform:uppercase;letter-spacing:.1em;font-size:11px;font-weight:600">Visit the clinic</span><br><a class="maillink" href="https://maps.app.goo.gl/1AncxfpsFBJcQJEE9" target="_blank" rel="noopener">The Foundry, Beehive Yard, Bath, UK</a></p>
-        <!-- Instagram disabled until feed is ready - re-enable when content is up:
-        <a href="https://instagram.com/thrivehyperbaric" target="_blank" rel="noopener" class="social" aria-label="Follow Thrive Hyperbaric on Instagram"><span>@thrivehyperbaric</span></a>
-        -->
+        <a href="https://www.instagram.com/thrivehyperbaric/" target="_blank" rel="noopener" class="social" aria-label="Follow Thrive Hyperbaric on Instagram"><span>@thrivehyperbaric</span></a>
       </div>
       <div>
         <h4>Explore</h4>

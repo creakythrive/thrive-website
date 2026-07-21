@@ -103,8 +103,8 @@
   .mcard img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#eee}
   .mcard .n{font-family:var(--serif);font-size:19px;color:var(--navy);padding:16px 18px 18px;text-align:left}
 </style>
-<script>/* market-aware: flag US visitors by timezone - no geo-IP, no cookies, no consent needed */
-try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','us');else if(/[?&]me(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','me');else if(/[?&]uk(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','uk');else if(/[?&]auto(=|&|$)/.test(_q))sessionStorage.removeItem('thrivePreview');var _pv=sessionStorage.getItem('thrivePreview'),_m='';if(_pv==='us')_m='us';else if(_pv==='me')_m='gcc';else if(_pv==='uk')_m='';else{var _z=Intl.DateTimeFormat().resolvedOptions().timeZone||'',_USZ=['America/New_York','America/Detroit','America/Chicago','America/Denver','America/Phoenix','America/Los_Angeles','America/Anchorage','America/Adak','America/Boise','America/Juneau','America/Sitka','America/Nome','America/Menominee','Pacific/Honolulu'],_GCC=['Asia/Dubai','Asia/Riyadh','Asia/Qatar','Asia/Kuwait','Asia/Bahrain','Asia/Muscat'];if(_USZ.indexOf(_z)>-1||/^America\/(Indiana|Kentucky|North_Dakota)\//.test(_z))_m='us';else if(_GCC.indexOf(_z)>-1)_m='gcc';}if(_m==='us'){document.documentElement.classList.add('us');window.__thriveUS=true;}else if(_m==='gcc'){document.documentElement.classList.add('gcc');window.__thriveGCC=true;}}catch(e){}</script>
+<script>/* market-aware: flag US/GCC/EU visitors by timezone - no geo-IP, no cookies, no consent needed */
+try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','us');else if(/[?&]me(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','me');else if(/[?&]eu(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','eu');else if(/[?&]uk(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','uk');else if(/[?&]auto(=|&|$)/.test(_q))sessionStorage.removeItem('thrivePreview');var _pv=sessionStorage.getItem('thrivePreview'),_m='';if(_pv==='us')_m='us';else if(_pv==='me')_m='gcc';else if(_pv==='eu')_m='eu';else if(_pv==='uk')_m='';else{var _z=Intl.DateTimeFormat().resolvedOptions().timeZone||'',_USZ=['America/New_York','America/Detroit','America/Chicago','America/Denver','America/Phoenix','America/Los_Angeles','America/Anchorage','America/Adak','America/Boise','America/Juneau','America/Sitka','America/Nome','America/Menominee','Pacific/Honolulu'],_GCC=['Asia/Dubai','Asia/Riyadh','Asia/Qatar','Asia/Kuwait','Asia/Bahrain','Asia/Muscat'],_UKZ=['Europe/London','Europe/Isle_of_Man','Europe/Guernsey','Europe/Jersey'];if(_USZ.indexOf(_z)>-1||/^America\/(Indiana|Kentucky|North_Dakota)\//.test(_z))_m='us';else if(_GCC.indexOf(_z)>-1)_m='gcc';else if(/^Europe\//.test(_z)&&_UKZ.indexOf(_z)<0)_m='eu';}if(_m==='us'){document.documentElement.classList.add('us');window.__thriveUS=true;}else if(_m==='gcc'){document.documentElement.classList.add('gcc');window.__thriveGCC=true;}else if(_m==='eu'){document.documentElement.classList.add('eu');window.__thriveEU=true;}}catch(e){}</script>
 <link rel="canonical" href="https://www.thrivehyperbaric.com/sport">
 <meta name="theme-color" content="#0F172A">
 <link rel="icon" href="/favicon-dots.ico" sizes="any">
@@ -252,13 +252,22 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
   </div>
 </section>
 
+<!-- GCC approvals trust band (Gulf visitors only) -->
+<div class="gcctrust" role="region" aria-label="Regulatory approvals for the Gulf">
+  <div class="inner">
+    <p class="lead">Cleared for medical use in Saudi Arabia &amp; the UAE</p>
+    <p class="body">Every HPO.TECH system holds full marketing authorisation from the <b>Saudi Food &amp; Drug Authority (SFDA)</b> and is registered with the <b>UAE Ministry of Health and Prevention (MOHAP)</b>.</p>
+    <a class="ln" href="certifications.html">See our certifications</a>
+  </div>
+</div>
+
 <section class="cta-band" id="contact">
   <div class="maxw" style="padding:0 46px">
     <h2>Talk it through with someone who runs one.</h2>
     <p>Get in touch to discuss hyperbaric oxygen and which chamber would suit your setup - with a clinic operator who works in the game.</p>
     <a href="contact.html" class="btn gold">Get in touch</a>
     <div class="meta"><a href="tel:+447799772383">+44 779 977 2383</a> &nbsp;&middot;&nbsp; <a class="maillink" href="mailto:hello@thrivehyperbaric.com">hello@thrivehyperbaric.com</a></div>
-    <div class="cta-proof"><span>Installed &amp; serviced worldwide</span> <span class="hot">US install &amp; servicing - Detroit, Michigan</span> <span>We reply in your time zone</span></div>
+    <div class="cta-proof"><span class="ww">Installed &amp; serviced worldwide</span> <span class="hot">US install &amp; servicing - Detroit, Michigan</span> <span class="hoteu">Installed &amp; serviced across Europe</span> <span class="euce">CE-marked medical device</span> <span class="wr">We reply in your time zone</span></div>
   </div>
 </section>
 
