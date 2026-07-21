@@ -280,6 +280,9 @@
   /* US logistics line: highlighted in gold and led first, but only for US visitors (timezone-detected). Non-US visitors see it styled like the other bullets. */
   html.us .cta-band .cta-proof span.hot{color:#EAD9BE;font-weight:600;order:-1}
   html.us .cta-band .cta-proof span.hot::before{background:var(--gold)}
+  /* US-only content: hidden by default, shown to timezone-detected US visitors */
+  .us-only{display:none}
+  html.us .us-only{display:contents}
 
   /* ===== Mobile polish (2026-07) ===== */
   @media(max-width:700px){
