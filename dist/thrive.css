@@ -281,9 +281,16 @@
   .cta-band .cta-proof span.hot{display:none}
   html.us .cta-band .cta-proof span.hot{display:inline-flex;color:#EAD9BE;font-weight:600;order:-1}
   html.us .cta-band .cta-proof span.hot::before{background:var(--gold)}
+.cta-proof span.hoteu{display:none}
+html.eu .cta-band .cta-proof span.hoteu{display:inline-flex;order:-1}
+html.eu .cta-band .cta-proof span.ww{display:none}
   /* US-only content: hidden by default, shown to timezone-detected US visitors */
   .us-only{display:none}
   html.us .us-only{display:contents}
+.eu-only{display:none}
+html.eu .eu-only{display:contents}
+.gcc-only{display:none}
+html.gcc .gcc-only{display:contents}
 
   /* ===== Mobile polish (2026-07) ===== */
   @media(max-width:700px){
@@ -310,3 +317,16 @@
     .cta-band .cta-proof span{margin:0;align-items:flex-start}
     .cta-band .cta-proof span::before{margin-top:6px}
   }
+
+
+/* GCC (Gulf) regulatory-approvals trust band - shown only to html.gcc visitors */
+.gcctrust{display:none}
+html.gcc .gcctrust{display:block;background:var(--navy);border-top:1px solid #1c2942;border-bottom:1px solid #1c2942;padding:26px 24px}
+.gcctrust .inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:14px 30px;flex-wrap:wrap}
+.gcctrust .lead{font-family:var(--serif);font-weight:600;font-size:19px;color:#fff;margin:0;flex:0 0 auto}
+.gcctrust .body{flex:1;min-width:280px;max-width:72ch;color:#9fb0c7;font-size:14.5px;line-height:1.55;margin:0}
+.gcctrust .body b{color:#dbe2ec;font-weight:600}
+.gcctrust .ln{white-space:nowrap;font-family:var(--data);text-transform:uppercase;letter-spacing:.12em;font-weight:600;font-size:13px;color:var(--cyan);text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.gcctrust .ln::after{content:"\2192";transition:transform .2s}
+.gcctrust .ln:hover::after{transform:translateX(4px)}
+@media(max-width:700px){.gcctrust .inner{flex-direction:column;align-items:flex-start;gap:12px}}
