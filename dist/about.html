@@ -65,9 +65,20 @@
   .mission .sec-eyebrow{color:var(--cyan-deep);justify-content:center}
   .mission .sec-h2{color:var(--navy);margin:0 auto}
   .mission p{font-size:18px;line-height:1.66;color:var(--ink-soft);margin-top:18px}
+
+  /* the manufacturer (HPO.TECH) */
+  .maker{padding:clamp(56px,7vw,104px) 24px;background:var(--sand)}
+  .maker .inner{max-width:1140px;margin:0 auto}
+  .maker .grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
+  @media(max-width:900px){.maker .grid{grid-template-columns:1fr;gap:32px}}
+  .maker .photo{min-height:460px;border-radius:16px;background-size:cover;background-position:center;background-color:#e7e0d4;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+  .maker .sec-eyebrow{color:var(--gold-ink)}
+  .maker .sec-h2{color:var(--navy)}
+  .maker p{font-size:16.5px;line-height:1.64;color:var(--ink-soft);max-width:52ch;margin-top:16px}
+  .maker .arrowlink{margin-top:22px;display:inline-block}
 </style>
 <script>/* market-aware: flag US visitors by timezone - no geo-IP, no cookies, no consent needed */
-try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','us');else if(/[?&]uk(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','uk');else if(/[?&]auto(=|&|$)/.test(_q))sessionStorage.removeItem('thrivePreview');var _pv=sessionStorage.getItem('thrivePreview'),_us;if(_pv==='us')_us=true;else if(_pv==='uk')_us=false;else{var _z=Intl.DateTimeFormat().resolvedOptions().timeZone||'',_USZ=['America/New_York','America/Detroit','America/Chicago','America/Denver','America/Phoenix','America/Los_Angeles','America/Anchorage','America/Adak','America/Boise','America/Juneau','America/Sitka','America/Nome','America/Menominee','Pacific/Honolulu'];_us=_USZ.indexOf(_z)>-1||/^America\/(Indiana|Kentucky|North_Dakota)\//.test(_z);}if(_us){document.documentElement.classList.add('us');window.__thriveUS=true;}}catch(e){}</script>
+try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','us');else if(/[?&]me(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','me');else if(/[?&]uk(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','uk');else if(/[?&]auto(=|&|$)/.test(_q))sessionStorage.removeItem('thrivePreview');var _pv=sessionStorage.getItem('thrivePreview'),_m='';if(_pv==='us')_m='us';else if(_pv==='me')_m='gcc';else if(_pv==='uk')_m='';else{var _z=Intl.DateTimeFormat().resolvedOptions().timeZone||'',_USZ=['America/New_York','America/Detroit','America/Chicago','America/Denver','America/Phoenix','America/Los_Angeles','America/Anchorage','America/Adak','America/Boise','America/Juneau','America/Sitka','America/Nome','America/Menominee','Pacific/Honolulu'],_GCC=['Asia/Dubai','Asia/Riyadh','Asia/Qatar','Asia/Kuwait','Asia/Bahrain','Asia/Muscat'];if(_USZ.indexOf(_z)>-1||/^America\/(Indiana|Kentucky|North_Dakota)\//.test(_z))_m='us';else if(_GCC.indexOf(_z)>-1)_m='gcc';}if(_m==='us'){document.documentElement.classList.add('us');window.__thriveUS=true;}else if(_m==='gcc'){document.documentElement.classList.add('gcc');window.__thriveGCC=true;}}catch(e){}</script>
 <link rel="canonical" href="https://www.thrivehyperbaric.com/about">
 <meta name="theme-color" content="#0F172A">
 <link rel="icon" href="/favicon-dots.ico" sizes="any">
@@ -130,6 +141,24 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
         <div class="pull">David went through the full range of hyperbaric chambers. Only HPO.TECH met the standard.</div>
       </div>
       <div class="photo" style="background-image:url(images/david.webp)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== THE MANUFACTURER (HPO.TECH) ===== -->
+<section class="maker">
+  <div class="inner">
+    <div class="grid">
+      <div class="photo" style="background-image:url(images/about-hpotech.webp)"></div>
+      <div>
+        <div class="sec-eyebrow">The manufacturer</div>
+        <h2 class="sec-h2">Built by HPO.TECH, in Istanbul.</h2>
+        <p>The chambers are engineered and built by HPO.TECH at their own facility in Istanbul - every unit made in-house, under their own quality control and protected by their own patents.</p>
+        <p>They're built to the standards that matter: CE marking and ISO 13485 medical-device quality, PED pressure-equipment certification, ASME PVHO for vessels that hold people under pressure, and independent inspection by T&uuml;rk Loydu before each unit leaves the factory.</p>
+        <p>HPO.TECH also supply hospitals, and hold medical-device approval for their chambers across a range of countries - among them the EU, the UAE, Saudi Arabia and Malaysia.</p>
+        <p>We work hand in hand with HPO.TECH on every project - specification, customisation, installation and training - so you get the manufacturer's engineering and the manufacturer's price, with a specialist team managing the detail around it. That combination is the strongest way to own one.</p>
+        <a class="arrowlink" href="certifications.html">See the certifications</a>
+      </div>
     </div>
   </div>
 </section>
