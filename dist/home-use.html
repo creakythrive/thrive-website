@@ -86,6 +86,27 @@
     .gal .tile{grid-area:auto;aspect-ratio:4/3}
     .gal .mich,.gal .dubai{grid-column:1/-1;aspect-ratio:16/10}
   }
+  /* ===== region club credibility strip (inside .trusted) ===== */
+  .trusted .inner{max-width:1160px}
+  .trusted .clubs{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:20px auto 2px;max-width:1120px}
+  .trusted .club{display:flex;align-items:center;gap:13px;padding:9px 16px 9px 9px;margin:0;background:#fff;border:1px solid var(--line-light);border-radius:13px;cursor:zoom-in;font:inherit;color:inherit;text-align:left;-webkit-appearance:none;appearance:none;transition:box-shadow .2s ease,transform .2s ease,border-color .2s ease}
+  .trusted .club:hover{box-shadow:0 10px 26px rgba(15,23,42,.13);transform:translateY(-2px);border-color:#d9ceb6}
+  .trusted .club:focus-visible{outline:2px solid var(--gold-ink);outline-offset:2px}
+  .trusted .club .thumb{width:66px;height:50px;flex:none;border-radius:8px;background-size:cover;background-position:center;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08);position:relative}
+  .trusted .club .thumb::after{content:"";position:absolute;right:5px;bottom:5px;width:15px;height:15px;border-radius:4px;background:rgba(15,23,42,.62) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M15 3h6v6M9 21H3v-6M21 3l-8 8M3 21l8-8'/%3E%3C/svg%3E") center/11px no-repeat;opacity:0;transition:opacity .2s ease}
+  .trusted .club:hover .thumb::after{opacity:1}
+  .trusted .club .meta{display:flex;flex-direction:column;gap:3px;min-width:0}
+  .trusted .club .reg{font-family:var(--data);text-transform:uppercase;letter-spacing:.13em;font-size:10.5px;font-weight:600;color:var(--gold-ink);white-space:nowrap}
+  .trusted .club .name{font-family:var(--serif);font-weight:500;font-size:16px;line-height:1.05;color:var(--navy)}
+  /* market-aware: the visitor's home club leads and is highlighted */
+  .trusted .club.is-home{order:-1;border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),0 8px 22px rgba(191,161,129,.28);background:linear-gradient(#fff,#fdfaf4)}
+  .trusted .club.is-home .thumb{box-shadow:inset 0 0 0 1px rgba(191,161,129,.5)}
+  .trusted .subnote{margin:16px auto 0;max-width:62ch;font-size:13.5px;line-height:1.55;color:var(--ink-soft)}
+  .trusted .subnote b{color:var(--navy);font-weight:600}
+  @media(max-width:600px){
+    .trusted .clubs{flex-direction:column;align-items:stretch;gap:9px}
+    .trusted .club{width:100%}
+  }
 </style>
 <script>/* market-aware: flag US/GCC/EU visitors by timezone - no geo-IP, no cookies, no consent needed */
 try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','us');else if(/[?&]me(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','me');else if(/[?&]eu(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','eu');else if(/[?&]uk(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','uk');else if(/[?&]auto(=|&|$)/.test(_q))sessionStorage.removeItem('thrivePreview');var _pv=sessionStorage.getItem('thrivePreview'),_m='';if(_pv==='us')_m='us';else if(_pv==='me')_m='gcc';else if(_pv==='eu')_m='eu';else if(_pv==='uk')_m='';else{var _z=Intl.DateTimeFormat().resolvedOptions().timeZone||'',_USZ=['America/New_York','America/Detroit','America/Chicago','America/Denver','America/Phoenix','America/Los_Angeles','America/Anchorage','America/Adak','America/Boise','America/Juneau','America/Sitka','America/Nome','America/Menominee','Pacific/Honolulu'],_GCC=['Asia/Dubai','Asia/Riyadh','Asia/Qatar','Asia/Kuwait','Asia/Bahrain','Asia/Muscat'],_UKZ=['Europe/London','Europe/Isle_of_Man','Europe/Guernsey','Europe/Jersey'];if(_USZ.indexOf(_z)>-1||/^America\/(Indiana|Kentucky|North_Dakota)\//.test(_z))_m='us';else if(_GCC.indexOf(_z)>-1)_m='gcc';else if(/^Europe\//.test(_z)&&_UKZ.indexOf(_z)<0)_m='eu';}if(_m==='us'){document.documentElement.classList.add('us');window.__thriveUS=true;}else if(_m==='gcc'){document.documentElement.classList.add('gcc');window.__thriveGCC=true;}else if(_m==='eu'){document.documentElement.classList.add('eu');window.__thriveEU=true;}}catch(e){}</script>
@@ -142,8 +163,22 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
 <!-- ===== TRUSTED / SOCIAL PROOF ===== -->
 <section class="trusted">
   <div class="inner">
-    <p class="lead">Proven in elite sport - and the one Bryan Johnson chose for his own setup.</p>
-    <div class="marks">NFL &middot; NHL &middot; Elite football &middot; Rugby &middot; <b>Bryan Johnson</b></div>
+    <p class="lead">Proven at the top of elite sport.</p>
+    <div class="clubs">
+      <button type="button" class="club" data-region="us" data-full="images/club-panthers.webp" data-alt="Florida Panthers HPO.TECH chamber">
+        <span class="thumb" style="background-image:url(images/club-panthers.webp)"></span>
+        <span class="meta"><span class="reg">United States &middot; NHL</span><span class="name">Florida Panthers</span></span>
+      </button>
+      <button type="button" class="club" data-region="uk" data-full="images/club-brentford.webp" data-alt="HPO.TECH chamber installed by Thrive at Brentford FC">
+        <span class="thumb" style="background-image:url(images/club-brentford.webp)"></span>
+        <span class="meta"><span class="reg">United Kingdom &middot; Premier League</span><span class="name">Brentford FC</span></span>
+      </button>
+      <button type="button" class="club" data-region="gcc" data-full="images/club-al-hilal.webp" data-alt="Al Hilal HPO.TECH chamber">
+        <span class="thumb" style="background-image:url(images/club-al-hilal.webp)"></span>
+        <span class="meta"><span class="reg">Middle East &middot; Saudi Pro League</span><span class="name">Al Hilal</span></span>
+      </button>
+    </div>
+    <p class="subnote">The same HPO.TECH hard-shell chambers Thrive specifies for the home - also trusted across the <b>NFL</b>, alongside <b>Bath Rugby</b>, and chosen by <b>Bryan Johnson</b> for his own setup.</p>
     <p class="crossroute">Buying for a clinic or a team? <a href="commercial.html">Commercial</a> <span aria-hidden="true">&middot;</span> <a href="sport.html">Sport</a></p>
   </div>
 </section>
@@ -339,7 +374,7 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
 (function(){
   var lb=document.getElementById('lb'); if(!lb) return;
   var img=lb.querySelector('img');
-  function open(src){ img.src=src; lb.classList.add('open'); }
+  function open(src,alt){ img.src=src; img.alt=alt||'Install, enlarged'; lb.classList.add('open'); }
   function close(){ lb.classList.remove('open'); img.src=''; }
   document.querySelectorAll('.gal .tile').forEach(function(t){
     var m=(t.style.backgroundImage||'').match(/url\((['"]?)(.*?)\1\)/); if(!m) return;
@@ -348,6 +383,16 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
     t.addEventListener('click',function(){open(src);});
     t.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); open(src);} });
   });
+  // region club chips -> lightbox (buttons handle Enter/Space natively)
+  document.querySelectorAll('.trusted .club[data-full]').forEach(function(b){
+    b.addEventListener('click',function(){ open(b.getAttribute('data-full'), b.getAttribute('data-alt')); });
+  });
+  // market-aware: lead + highlight the visitor's home club (EU falls to UK/Brentford)
+  try{
+    var home=window.__thriveUS?'us':window.__thriveGCC?'gcc':'uk';
+    var strip=document.querySelector('.trusted .clubs');
+    if(strip){ var hc=strip.querySelector('.club[data-region="'+home+'"]'); if(hc){ hc.classList.add('is-home'); strip.insertBefore(hc,strip.firstChild); } }
+  }catch(e){}
   lb.addEventListener('click',close);
   document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
 })();
