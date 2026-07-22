@@ -169,7 +169,7 @@
   .txtlink::after,.arrowlink::after,.sci .ln::after{transition:transform .2s ease;display:inline-block}
   .txtlink:hover::after,.arrowlink:hover::after,.sci .ln:hover::after{transform:translateX(4px)}
   .txtlink:hover,.arrowlink:hover,.sci .ln:hover{opacity:1}
-  .scilinks{display:flex;gap:28px;flex-wrap:wrap;align-items:center}
+  .scilinks{display:flex;gap:14px 44px;flex-wrap:wrap;align-items:center}
 
   /* odometer roll + typing caret */
   .odo{display:inline-block;height:1em;line-height:1;overflow:hidden;vertical-align:bottom}
