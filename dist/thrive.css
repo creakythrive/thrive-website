@@ -297,6 +297,16 @@ html.eu .cta-band .cta-proof span.wr{display:none}
 html.eu .eu-only{display:contents}
 .gcc-only{display:none}
 html.gcc .gcc-only{display:contents}
+  /* UK market: split out from the international default. UK drops the worldwide/reply lines and shows CE + independent-certification proof instead. */
+  html.uk .cta-band .cta-proof span.ww{display:none}
+  html.uk .cta-band .cta-proof span.wr{display:none}
+  .cta-band .cta-proof span.ukce{display:none}
+  .cta-band .cta-proof span.ukcert{display:none}
+  html.uk .cta-band .cta-proof span.ukce{display:inline-flex}
+  html.uk .cta-band .cta-proof span.ukcert{display:inline-flex}
+  .uk-only{display:none}
+  html.uk .uk-only{display:contents}
+  html.uk .uk-hide{display:none}
 
   /* ===== Mobile polish (2026-07) ===== */
   @media(max-width:700px){
