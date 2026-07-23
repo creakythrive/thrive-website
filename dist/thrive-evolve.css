@@ -899,3 +899,23 @@ svg rect{rx:0 !important;ry:0 !important}
    portrait section does not cut his head off */
 .spec-photo{background-position:center 16%}
 @media(max-width:900px){.spec-photo{background-position:center 12%}}
+
+
+/* --- specialist / no-extra-cost note ----------------------------
+   Sits under the closing call to action on each page.
+   ---------------------------------------------------------------- */
+.spec-note{
+  margin:18px 0 0;
+  padding-top:14px;
+  border-top:1px dotted rgba(15,23,42,.42);
+  font-size:14.5px;line-height:1.55;
+  max-width:62ch;
+  color:var(--ink-soft);
+}
+.spec-note strong,.spec-note b{font-weight:700;color:var(--navy)}
+/* on navy bands */
+.cta-band .spec-note,.sci .spec-note,.dark .spec-note,
+.why .spec-note,.certb .spec-note,.header-band .spec-note{
+  color:#C3D0E0;border-top-color:rgba(255,255,255,.42);
+}
+@media(max-width:760px){.spec-note{font-size:14px}}
