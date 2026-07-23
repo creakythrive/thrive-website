@@ -125,6 +125,8 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
 <meta name="twitter:title" content="Hyperbaric Chambers for Home Use - Thrive Hyperbaric">
 <meta name="twitter:description" content="A medical-grade HPO.TECH hard-shell hyperbaric chamber in your home, specified, installed and supported by Thrive - the same chamber our clinic runs.">
 <meta name="twitter:image" content="https://www.thrivehyperbaric.com/images/og-default.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="thrive-evolve.css">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -149,8 +151,8 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
   <div class="panel">
     <div class="block">
       <div class="eyebrow">Home use</div>
-      <h1>The hyperbaric chamber,<br><em>at home.</em></h1>
-      <p class="sub">The same certified hard-shell chambers our clinic runs daily - in your home, on your schedule.</p>
+      <h1>A hyperbaric chamber in your own house</h1>
+      <p class="sub">The same certified hard-shell chambers we run in the clinic every day, installed at home and available whenever you want it.</p>
       <div class="cta">
         <a href="contact.html" class="btn gold">Get a quote</a>
         <a href="models.html" class="txtlink">View the models</a>
@@ -161,26 +163,38 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
 </section>
 
 <!-- ===== TRUSTED / SOCIAL PROOF ===== -->
-<section class="trusted">
-  <div class="inner">
-    <p class="lead">Proven at the top of elite sport.</p>
-    <div class="clubs">
-      <button type="button" class="club" data-region="us" data-full="images/club-panthers.webp" data-alt="Florida Panthers HPO.TECH chamber">
-        <span class="thumb" style="background-image:url(images/club-panthers.webp)"></span>
-        <span class="meta"><span class="reg">United States &middot; NHL</span><span class="name">Florida Panthers</span></span>
-      </button>
-      <button type="button" class="club" data-region="uk" data-full="images/club-brentford.webp" data-alt="HPO.TECH chamber installed by Thrive at Brentford FC">
-        <span class="thumb" style="background-image:url(images/club-brentford.webp)"></span>
-        <span class="meta"><span class="reg">United Kingdom &middot; Premier League</span><span class="name">Brentford FC</span></span>
-      </button>
-      <button type="button" class="club" data-region="gcc" data-full="images/club-al-hilal.webp" data-alt="Al Hilal HPO.TECH chamber">
-        <span class="thumb" style="background-image:url(images/club-al-hilal.webp)"></span>
-        <span class="meta"><span class="reg">Middle East &middot; Saudi Pro League</span><span class="name">Al Hilal</span></span>
-      </button>
+<section class="trusted trusted-full">
+  <div class="tfull">
+    <div class="tfull-copy">
+      <p class="tfull-head">The professional grade, now available at home.</p>
+      <p class="tfull-reg" id="tfullReg"></p>
+      <p class="tfull-name" id="tfullName"></p>
     </div>
+    <div class="tfull-img" id="tfull"></div>
+  </div>
+  <div class="inner">
     <p class="subnote">The same HPO.TECH hard-shell chambers Thrive specifies for the home - also trusted across the <b>NFL</b>, alongside <b>Bath Rugby</b>, and chosen by <b>Bryan Johnson</b> for his own setup.</p>
     <p class="crossroute">Buying for a clinic or a team? <a href="commercial.html">Commercial</a> <span aria-hidden="true">&middot;</span> <a href="sport.html">Sport</a></p>
   </div>
+  <div class="clubs" hidden>
+    <span class="club" data-region="us" data-full="images/club-panthers.webp" data-reg="United States &middot; NHL" data-name="Florida Panthers"></span>
+    <span class="club" data-region="uk" data-full="images/club-brentford.webp" data-reg="United Kingdom &middot; Premier League" data-name="Brentford FC"></span>
+    <span class="club" data-region="gcc" data-full="images/club-al-hilal.webp" data-reg="Middle East &middot; Saudi Pro League" data-name="Al Hilal"></span>
+  </div>
+  <script>
+  (function(){
+    var home = window.__thriveUS ? 'us' : (window.__thriveGCC ? 'gcc' : 'uk');
+    var pick = document.querySelector('.trusted .club[data-region="'+home+'"]')
+            || document.querySelector('.trusted .club[data-region="uk"]');
+    if(!pick) return;
+    var band = document.getElementById('tfull');
+    band.style.backgroundImage = 'url(' + pick.getAttribute('data-full') + ')';
+    band.setAttribute('role','img');
+    band.setAttribute('aria-label', pick.getAttribute('data-name') + ' - HPO.TECH chamber installation');
+    document.getElementById('tfullReg').innerHTML  = pick.getAttribute('data-reg');
+    document.getElementById('tfullName').innerHTML = pick.getAttribute('data-name');
+  })();
+  </script>
 </section>
 
 <!-- ===== DESIRE / OWNERSHIP ===== -->
@@ -190,9 +204,9 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
       <div class="photo" style="background-image:url(images/home-use-ownership.webp)"></div>
       <div>
         <div class="sec-eyebrow">Ownership</div>
-        <h2 class="sec-h2">How it feels to own one.</h2>
-        <p>No appointments, no travel, no working around a clinic's schedule. The chamber sits in your home and runs on yours - before work, after training, or last thing at night. It becomes part of the day rather than something you have to make time for.</p>
-        <p>It is specified to sit properly in the space, as a considered piece of equipment.</p>
+        <h2 class="sec-h2">What owning one is actually like, day to day</h2>
+        <p>No appointments, no travel, no working around a clinic's schedule. The chamber sits in your home and runs on yours - before work, after training, or last thing at night. Within a fortnight most owners stop treating it as an event and it just becomes part of the day.</p>
+        <p>It is specified to sit properly in the room, rather than looking like equipment that has been parked there.</p>
       </div>
     </div>
   </div>
@@ -203,7 +217,7 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
   <div class="grid">
     <div>
       <div class="sec-eyebrow">Make it yours</div>
-      <h2 class="sec-h2">Built to belong in your home.</h2>
+      <h2 class="sec-h2">It should look like it belongs in the room</h2>
       <p>The interior leather, the exterior finish, the detailing - specified to your home and to you. Your colours, a monogram, or no branding at all.</p>
       <div class="finishes">
         <div class="fitem"><span class="fk">Interior</span><span class="fv">Leather, colour, trim</span></div>
@@ -221,7 +235,7 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
   <div class="inner">
     <div class="head">
       <div class="sec-eyebrow">Installed worldwide</div>
-      <h2 class="sec-h2">In homes like these.</h2>
+      <h2 class="sec-h2">Homes we have put these into</h2>
       <p>HPO.TECH chambers are installed in private homes across North and South America, Europe, Middle East, Asia and Australasia. A few of them, below.<span class="us-only"> Most HPO.TECH chambers are installed in the US, where we work with install and servicing teams run from Detroit, Michigan.</span></p>
     </div>
     <div class="gal">
@@ -239,7 +253,7 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
     <div class="grid">
       <div>
         <div class="eyebrow">The real thing</div>
-        <h2>A real chamber, not a soft-shell.</h2>
+        <h2>How this differs from a soft-shell bag at 1.3 ATA</h2>
         <p>Most chambers sold for the home are soft-shell bags that sit just above normal pressure. This is a rigid chamber that holds 2.0 to 2.4 ATA with a built-in oxygen supply, made and certified to the standards that apply to pressure equipment built for people. It is the same specification we run in the clinic.</p>
         <div class="scilinks">
           <a href="science.html" class="ln">See the science</a>
@@ -251,10 +265,10 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
         <div class="herofig">
           <span class="k">Delivered pressure</span>
           <span class="big">2.0&ndash;2.4<em>&nbsp;ATA</em></span>
-          <span class="unit">the real working range, not a soft-shell</span>
+          <span class="unit">the real working range, well above a soft-shell</span>
         </div>
         <div class="r"><span class="k">Chamber</span><span class="v gold">Rigid, certified</span></div>
-        <div class="r"><span class="k">Oxygen supply</span><span class="v">BIBS <span class="dotc">&middot;</span> 100% &rarr; 94%</span></div>
+        <div class="r"><span class="k">Oxygen supply</span><span class="v">BIBS <span class="dotc">&middot;</span> Up to 100%</span></div>
         <div class="r"><span class="k">Certification includes</span><span class="v">CE <span class="dotc">&middot;</span> PED <span class="dotc">&middot;</span> ASME<span class="us-only">&nbsp;<span class="dotc">&middot;</span> NFPA</span></span></div>
       </div>
     </div>
@@ -262,10 +276,28 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
 </section>
 
 <!-- ===== FROM SPEC TO RUNNING ===== -->
+<!-- ===== BRYAN JOHNSON ===== -->
+<section class="feature bj-section">
+  <div class="maxw">
+    <div class="grid">
+      <div>
+        <h2 class="sec-h2">Bryan Johnson runs the HPO.TECH Zeugma chamber</h2>
+        <p>Blueprint is probably the most documented self-experiment anyone has run on themselves, and hyperbaric oxygen is part of it. Johnson completed a full 60-session course and has put it near the top of the list of things he considers worth the time, which for someone who measures everything is a reasonably useful signal.</p>
+        <p class="bj-spec"><b>Zeugma</b> &middot; one seat &middot; up to 2.4 ATA &middot; the single-seat chamber in the HPO.TECH range</p>
+        <a href="models.html#zeugma" class="arrowlink">See the Zeugma</a>
+      </div>
+      <div>
+        <div class="photo frame-tr" style="background-image:url(images/bryan-johnson-zeugma.jpg)"></div>
+        <p class="bj-cap">Bryan Johnson&rsquo;s own Zeugma, in his home gym.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="process">
   <div class="head">
     <div class="sec-eyebrow">How it happens</div>
-    <h2 class="sec-h2">From spec to running.</h2>
+    <h2 class="sec-h2">From your floor plan to a working chamber</h2>
   </div>
   <div class="steps">
     <div class="step">
@@ -281,7 +313,7 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
     <div class="step">
       <div class="n">03</div>
       <h3>Running</h3>
-      <p>Commissioned, handed over, and backed by protocol guidance so it earns its place from the first session.</p>
+      <p>Commissioned, handed over, and backed by protocol guidance so it is useful from the first session.</p>
     </div>
   </div>
   <div class="foot">Handled across the UK, Europe, the US and beyond - with US install and servicing teams run from Detroit, Michigan.</div>
@@ -292,8 +324,8 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
   <div class="field" aria-hidden="true"><svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs><g id="mito"><path d="M12,29 C10,16 24,9 41,11 C55,12 64,5 83,8 C103,11 115,20 111,31 C107,45 88,49 68,46 C53,44 45,51 29,48 C15,45 13,41 12,29 Z" fill="rgba(14,116,144,.14)" stroke="rgba(14,116,144,.6)" stroke-width="2.4"/><path d="M24,30 C29,18 33,43 41,30 C49,17 53,43 61,30 C69,17 73,43 81,30 C88,19 92,40 98,30" fill="none" stroke="rgba(14,116,144,.55)" stroke-width="1.9" stroke-linecap="round"/></g></defs></svg><span><svg viewBox="0 0 120 56"><use href="#mito"/></svg></span><span><svg viewBox="0 0 120 56"><use href="#mito"/></svg></span><span><svg viewBox="0 0 120 56"><use href="#mito"/></svg></span><span><svg viewBox="0 0 120 56"><use href="#mito"/></svg></span><span><svg viewBox="0 0 120 56"><use href="#mito"/></svg></span><span><svg viewBox="0 0 120 56"><use href="#mito"/></svg></span></div>
   <div class="inner">
     <div class="sec-eyebrow">What the research measured</div>
-    <h2 class="sec-h2">The stamina your life demands.</h2>
-    <p>In a blinded, placebo-controlled trial, a course at the dose our chambers deliver raised aerobic capacity - with enhanced mitochondria (the cell's own power plants) doing the work.</p>
+    <h2 class="sec-h2">What the 2022 trial actually measured</h2>
+    <p>In a blinded, placebo-controlled trial, trained masters athletes completed 40 sessions at the pressure these chambers reach. Aerobic capacity rose against placebo, and the mitochondria - the cell's own power plants - increased and worked harder. That is the endpoint that moved.</p>
     <div class="cite">Hadanny et al., 2022 &middot; Sports Medicine - Open</div>
     <a href="science.html" class="arrowlink">See the science</a>
   </div>
@@ -305,8 +337,8 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
     <div class="grid">
       <div>
         <div class="sec-eyebrow">Why Thrive</div>
-        <h2 class="sec-h2">A clinic owner. Not just a supplier.</h2>
-        <p>Thrive Hyperbaric founder, David Gumbleton, runs an active hyperbaric clinic in Bath, using the same chambers you would own. Whether you are buying for your own home or specifying for a client, his team handles everything from specification to handover - and you pay HPO.TECH directly, at the same price as going direct.</p>
+        <h2 class="sec-h2">David runs a hyperbaric clinic in Bath and uses these daily</h2>
+        <p>He runs the hyperbaric clinic at The Foundry in Bath and uses the same chambers you would own. Whether you are buying for your own house or specifying for a client, his team handles it from specification through to handover, and you pay HPO.TECH directly at manufacturer prices.</p>
         <div class="btns">
           <a href="contact.html" class="btn gold">Talk to David</a>
           <a href="about.html" class="btn ghost-light">About Thrive</a>
@@ -329,8 +361,8 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
 
 <section class="cta-band">
   <div class="maxw" style="padding:0 46px">
-    <h2>Start with a conversation.</h2>
-    <p>A direct discussion about your space, your goals and the right chamber for your home.</p>
+    <h2>Start by telling us about the room</h2>
+    <p>Most conversations start with a photo of the room and a rough idea of who will use it. David takes it from there: measurements, model, plant room, timeline.</p>
     <a href="contact.html" class="btn gold">Get a quote</a>
     <div class="meta"><a href="tel:+447799772383">+44 779 977 2383</a> &nbsp;&middot;&nbsp; <a class="maillink" href="mailto:hello@thrivehyperbaric.com">hello@thrivehyperbaric.com</a></div>
     <div class="cta-proof"><span class="ww">Installed &amp; serviced worldwide</span> <span class="hot">US install &amp; servicing - Detroit, Michigan</span> <span class="hoteu">Installed &amp; serviced across Europe</span> <span class="euce">CE-marked medical device</span> <span class="ukce">CE marked</span> <span class="ukcert">Independently inspected</span> <span class="wr">We reply in your time zone</span></div>
