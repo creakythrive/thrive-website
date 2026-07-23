@@ -177,9 +177,9 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
     <p class="crossroute">Buying for a clinic or a team? <a href="commercial.html">Commercial</a> <span aria-hidden="true">&middot;</span> <a href="sport.html">Sport</a></p>
   </div>
   <div class="clubs" hidden>
-    <span class="club" data-region="us" data-full="images/club-panthers.webp" data-reg="United States &middot; NHL" data-name="Florida Panthers"></span>
-    <span class="club" data-region="uk" data-full="images/club-brentford.webp" data-reg="United Kingdom &middot; Premier League" data-name="Brentford FC"></span>
-    <span class="club" data-region="gcc" data-full="images/club-al-hilal.webp" data-reg="Middle East &middot; Saudi Pro League" data-name="Al Hilal"></span>
+    <span class="club" data-region="us" data-full="images/club-panthers.webp" data-pos="10% center" data-reg="United States &middot; NHL" data-name="Florida Panthers"></span>
+    <span class="club" data-region="uk" data-full="images/club-brentford.webp" data-pos="center center" data-reg="United Kingdom &middot; Premier League" data-name="Brentford FC"></span>
+    <span class="club" data-region="gcc" data-full="images/club-al-hilal.webp" data-pos="center center" data-reg="Middle East &middot; Saudi Pro League" data-name="Al Hilal"></span>
   </div>
   <script>
   (function(){
@@ -189,6 +189,7 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
     if(!pick) return;
     var band = document.getElementById('tfull');
     band.style.backgroundImage = 'url(' + pick.getAttribute('data-full') + ')';
+    band.style.backgroundPosition = pick.getAttribute('data-pos') || 'center center';
     band.setAttribute('role','img');
     band.setAttribute('aria-label', pick.getAttribute('data-name') + ' - HPO.TECH chamber installation');
     document.getElementById('tfullReg').innerHTML  = pick.getAttribute('data-reg');
