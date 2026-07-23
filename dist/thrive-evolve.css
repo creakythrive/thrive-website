@@ -919,3 +919,8 @@ svg rect{rx:0 !important;ry:0 !important}
   color:#C3D0E0;border-top-color:rgba(255,255,255,.42);
 }
 @media(max-width:760px){.spec-note{font-size:14px}}
+
+/* Sport: the two club rows are now one block of six */
+.herd .herd-row{grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:900px){.herd .herd-row{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.herd .herd-row{grid-template-columns:1fr}}
