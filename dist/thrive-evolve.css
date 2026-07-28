@@ -1123,3 +1123,28 @@ svg rect{rx:0 !important;ry:0 !important}
 .irl > .maxw > .bento{margin-top:0}
 .irl{padding-top:104px}
 .irl .pad.bento{margin-top:0}
+
+
+/* ============================================================
+   MODEL VIDEOS  ·  models page
+   preload="none" with a poster, so nothing downloads until the
+   visitor presses play. The three clips total 9.9MB and this page
+   is an Ads landing page, so they must never load on page view.
+   ============================================================ */
+.mvideo{margin:22px 0 4px}
+.mvideo video{
+  display:block;width:100%;height:auto;background:#0B1220;
+  border:0;outline:0;
+}
+/* the two portrait clips are 4:5 - hold them to a sensible width
+   so they do not tower over the spec table beside them */
+.mvideo.portrait video{max-width:360px}
+.mvideo.landscape video{max-width:100%}
+
+.mvcap{
+  margin:10px 0 0;font-size:14px;font-weight:700;
+  color:var(--ink-soft);
+}
+@media(max-width:760px){
+  .mvideo.portrait video{max-width:100%}
+}
