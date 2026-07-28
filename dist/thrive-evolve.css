@@ -1185,3 +1185,18 @@ svg rect{rx:0 !important;ry:0 !important}
   .model .mtext{order:1}
   .model .mvid{order:2;aspect-ratio:16/10}
 }
+
+/* ============================================================
+   FOOTER  ·  manufacturer credential moved under the HPO.TECH
+   mark in the Legal column, so it reads as a caption to the
+   logo rather than floating under the Thrive logo.
+   ============================================================ */
+footer .spec.hpo-spec{
+  margin:8px 0 0;
+  max-width:24ch;
+  font-size:12.5px;
+  line-height:1.45;
+}
+@media(max-width:560px){
+  footer .spec.hpo-spec{max-width:36ch}
+}
