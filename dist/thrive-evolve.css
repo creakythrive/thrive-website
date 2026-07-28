@@ -1125,17 +1125,6 @@ svg rect{rx:0 !important;ry:0 !important}
 .irl .pad.bento{margin-top:0}
 
 
-/* ============================================================
-   MODEL VIDEOS  ·  models page
-   preload="none" with a poster, so nothing downloads until the
-   visitor presses play. The three clips total 9.9MB and this page
-   is an Ads landing page, so they must never load on page view.
-   ============================================================ */
-.mvideo{margin:22px 0 4px}
-.mvideo video{
-  display:block;width:100%;height:auto;background:#0B1220;
-  border:0;outline:0;
-}
 /* the two portrait clips are 4:5 - hold them to a sensible width
    so they do not tower over the spec table beside them */
 .mvideo.portrait video{max-width:360px}
@@ -1147,4 +1136,39 @@ svg rect{rx:0 !important;ry:0 !important}
 }
 @media(max-width:760px){
   .mvideo.portrait video{max-width:100%}
+}
+
+
+/* ============================================================
+   MODEL VIDEOS  ·  models page
+   Sits below the finish row as its own element, not inside it.
+   preload="none" + poster, so none of the 9.9MB loads on view.
+   ============================================================ */
+.model .mvideo{
+  margin:30px 0 6px;
+  padding-top:24px;
+  border-top:1px dotted rgba(15,23,42,.42);
+  display:grid;
+  grid-template-columns:auto minmax(0,28ch);
+  justify-content:start;
+  gap:26px;
+  align-items:end;
+}
+.model .mvideo video{
+  display:block;height:auto;background:#0B1220;
+  grid-row:1;grid-column:1;
+}
+.model .mvideo.landscape video{width:min(620px,100%)}
+.model .mvideo.portrait  video{width:min(320px,100%)}
+
+.model .mvideo figcaption{
+  grid-row:1;grid-column:2;
+  font-size:15px;font-weight:700;color:var(--ink-soft);
+  padding-bottom:4px;max-width:30ch;
+}
+
+@media(max-width:760px){
+  .model .mvideo{grid-template-columns:1fr;gap:12px}
+  .model .mvideo video{grid-column:1;width:100%}
+  .model .mvideo figcaption{grid-row:2;grid-column:1;padding-bottom:0;max-width:none}
 }
