@@ -1051,3 +1051,62 @@ svg rect{rx:0 !important;ry:0 !important}
   .bgpromo-img::before,.bgpromo-img::after{height:6px}
   .bgpromo-img::after{width:6px;height:auto}
 }
+
+
+/* ============================================================
+   BUYING GUIDE PROMO  ·  homepage and Home Use
+   Sand ground, image left, copy right - so it alternates against
+   the navy David section above it on Home Use.
+   ============================================================ */
+.bgpromo{
+  background:linear-gradient(180deg,#F8F4ED 0%,#F1E9DB 100%);
+  padding:84px 0;
+}
+.bgpromo .pad{padding:0 46px}
+.bgpromo-grid{
+  display:grid;grid-template-columns:0.92fr 1.08fr;gap:56px;align-items:center;
+}
+.bgpromo-img{
+  min-height:430px;
+  background-size:cover;background-position:center;
+  background-color:#E9E2D6;
+  position:relative;
+}
+/* navy two-sided frame, opening bottom-left */
+.bgpromo-img::before{
+  content:"";position:absolute;bottom:0;left:0;right:0;height:10px;z-index:6;
+  background:linear-gradient(90deg,var(--navy) 0%,var(--navy) 34%,rgba(15,23,42,0) 100%);
+}
+.bgpromo-img::after{
+  content:"";position:absolute;top:0;bottom:0;left:0;width:10px;z-index:6;
+  background:linear-gradient(0deg,var(--navy) 0%,var(--navy) 34%,rgba(15,23,42,0) 100%);
+}
+
+.bgpromo h2{color:var(--navy);max-width:17ch;margin-bottom:14px}
+.bgpromo-lede{
+  color:var(--ink);font-size:17px;line-height:1.6;max-width:52ch;margin-bottom:22px;
+}
+.bgpromo-list{
+  list-style:none;margin:0 0 26px;padding:0;
+  border-top:1px dotted rgba(15,23,42,.42);
+}
+.bgpromo-list li{
+  position:relative;padding:12px 0 12px 28px;
+  border-bottom:1px dotted rgba(15,23,42,.42);
+  color:var(--ink-soft);font-size:15.5px;line-height:1.5;
+}
+.bgpromo-list li::before{
+  content:"";position:absolute;left:2px;top:19px;
+  width:9px;height:9px;background:var(--gold);
+}
+.bgpromo-cta{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+
+@media(max-width:900px){
+  .bgpromo{padding:56px 0}
+  .bgpromo .pad{padding:0 22px}
+  .bgpromo-grid{grid-template-columns:1fr;gap:26px}
+  .bgpromo-img{min-height:260px}
+  .bgpromo-img::before{height:6px}
+  .bgpromo-img::after{width:6px}
+  .bgpromo h2{max-width:none}
+}
