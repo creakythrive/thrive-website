@@ -953,16 +953,23 @@ svg rect{rx:0 !important;ry:0 !important}
   html.eu .installs .gal .lond{grid-area:lond}
 }
 
-/* Mobile keeps auto-placement, so reorder by source instead */
+/* Mobile keeps auto-placement, so reorder by source instead. The local
+   tile also spans the row so it reads as the feature, which is what the
+   original layout gave Michigan and Dubai. */
 @media(max-width:760px){
-  .installs .gal .tile{grid-area:auto}
-  .installs .gal .lond{order:-1}
-  html.us  .installs .gal .lond{order:0}
-  html.us  .installs .gal .mich{order:-1}
-  html.gcc .installs .gal .lond{order:0}
-  html.gcc .installs .gal .dubai{order:-1}
-  html.eu  .installs .gal .lond{order:0}
-  html.eu  .installs .gal .upps{order:-1}
+  .installs .gal .tile{grid-area:auto;grid-column:auto;aspect-ratio:4/3}
+
+  /* default and UK */
+  .installs .gal .lond{order:-1;grid-column:1/-1;aspect-ratio:16/10}
+
+  html.us  .installs .gal .lond{order:0;grid-column:auto;aspect-ratio:4/3}
+  html.us  .installs .gal .mich{order:-1;grid-column:1/-1;aspect-ratio:16/10}
+
+  html.gcc .installs .gal .lond{order:0;grid-column:auto;aspect-ratio:4/3}
+  html.gcc .installs .gal .dubai{order:-1;grid-column:1/-1;aspect-ratio:16/10}
+
+  html.eu  .installs .gal .lond{order:0;grid-column:auto;aspect-ratio:4/3}
+  html.eu  .installs .gal .upps{order:-1;grid-column:1/-1;aspect-ratio:16/10}
 }
 
 
