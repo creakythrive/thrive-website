@@ -1110,3 +1110,9 @@ svg rect{rx:0 !important;ry:0 !important}
   .bgpromo-img::after{width:6px}
   .bgpromo h2{max-width:none}
 }
+
+/* .irl lost its heading block, which carried a bottom margin - even the
+   padding up so the grid is not sitting low in the section */
+.irl > .maxw > .bento{margin-top:0}
+.irl{padding-top:104px}
+.irl .pad.bento{margin-top:0}
