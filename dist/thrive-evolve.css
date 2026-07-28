@@ -924,3 +924,43 @@ svg rect{rx:0 !important;ry:0 !important}
 .herd .herd-row{grid-template-columns:repeat(3,1fr);gap:14px}
 @media(max-width:900px){.herd .herd-row{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.herd .herd-row{grid-template-columns:1fr}}
+
+
+/* ============================================================
+   HOME USE  ·  installs gallery leads with the visitor's region
+   The page already sets html.us / .gcc / .eu / .uk from the
+   browser timezone. The feature tile (top-left 2x2) swaps grid
+   area with the matching city so the first photo is local.
+   Base case, including UK and anything undetected, is London.
+   ============================================================ */
+@media(min-width:761px){
+  /* default and UK - London leads */
+  .installs .gal .lond{grid-area:mich}
+  .installs .gal .mich{grid-area:lond}
+
+  /* US - Michigan leads */
+  html.us .installs .gal .mich{grid-area:mich}
+  html.us .installs .gal .lond{grid-area:lond}
+
+  /* Gulf - Dubai leads */
+  html.gcc .installs .gal .dubai{grid-area:mich}
+  html.gcc .installs .gal .mich{grid-area:dubai}
+  html.gcc .installs .gal .lond{grid-area:lond}
+
+  /* Europe - Uppsala leads */
+  html.eu .installs .gal .upps{grid-area:mich}
+  html.eu .installs .gal .mich{grid-area:upps}
+  html.eu .installs .gal .lond{grid-area:lond}
+}
+
+/* Mobile keeps auto-placement, so reorder by source instead */
+@media(max-width:760px){
+  .installs .gal .tile{grid-area:auto}
+  .installs .gal .lond{order:-1}
+  html.us  .installs .gal .lond{order:0}
+  html.us  .installs .gal .mich{order:-1}
+  html.gcc .installs .gal .lond{order:0}
+  html.gcc .installs .gal .dubai{order:-1}
+  html.eu  .installs .gal .lond{order:0}
+  html.eu  .installs .gal .upps{order:-1}
+}
