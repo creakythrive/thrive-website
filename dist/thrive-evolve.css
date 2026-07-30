@@ -1127,51 +1127,14 @@ svg rect{rx:0 !important;ry:0 !important}
 
 /* the two portrait clips are 4:5 - hold them to a sensible width
    so they do not tower over the spec table beside them */
-.mvideo.portrait video{max-width:360px}
-.mvideo.landscape video{max-width:100%}
 
 .mvcap{
   margin:10px 0 0;font-size:14px;font-weight:700;
   color:var(--ink-soft);
 }
 @media(max-width:760px){
-  .mvideo.portrait video{max-width:100%}
-}
+  }
 
-
-/* ============================================================
-   MODEL VIDEOS  ·  models page
-   Sits below the finish row as its own element, not inside it.
-   preload="none" + poster, so none of the 9.9MB loads on view.
-   ============================================================ */
-.model .mvideo{
-  margin:30px 0 6px;
-  padding-top:24px;
-  border-top:1px dotted rgba(15,23,42,.42);
-  display:grid;
-  grid-template-columns:auto minmax(0,28ch);
-  justify-content:start;
-  gap:26px;
-  align-items:end;
-}
-.model .mvideo video{
-  display:block;height:auto;background:#0B1220;
-  grid-row:1;grid-column:1;
-}
-.model .mvideo.landscape video{width:min(620px,100%)}
-.model .mvideo.portrait  video{width:min(320px,100%)}
-
-.model .mvideo figcaption{
-  grid-row:1;grid-column:2;
-  font-size:15px;font-weight:700;color:var(--ink-soft);
-  padding-bottom:4px;max-width:30ch;
-}
-
-@media(max-width:760px){
-  .model .mvideo{grid-template-columns:1fr;gap:12px}
-  .model .mvideo video{grid-column:1;width:100%}
-  .model .mvideo figcaption{grid-row:2;grid-column:1;padding-bottom:0;max-width:none}
-}
 
 
 /* ============================================================
@@ -1313,4 +1276,53 @@ svg rect{rx:0 !important;ry:0 !important}
 .dimnote{
   margin:18px 0 0;font-size:14.5px;line-height:1.6;
   max-width:78ch;color:var(--ink-soft);
+}
+
+
+/* ============================================================
+   MODEL VIDEO ROW  ·  models page
+   The .mrow / .mvid / .vplay markup shipped without any CSS, so the
+   poster image rendered at its intrinsic width (up to 900px) and
+   broke the layout on anything narrower than desktop.
+   Posters are mixed portrait and landscape, so a fixed aspect ratio
+   with object-fit normalises all three.
+   ============================================================ */
+.model .mrow{
+  display:grid;
+  grid-template-columns:392px minmax(0,1fr);
+  gap:44px;
+  align-items:start;
+}
+
+.model .mvid{
+  -webkit-appearance:none;appearance:none;
+  display:block;position:relative;
+  width:100%;margin:0;padding:0;border:0;
+  background:#0B1220;cursor:pointer;
+  overflow:hidden;
+  aspect-ratio:4/3;
+}
+.model .mvid img{
+  display:block;width:100%;height:100%;
+  object-fit:cover;object-position:center;
+}
+
+/* play control */
+.model .vplay{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  pointer-events:none;
+}
+.model .vplay svg{width:62px;height:62px;display:block}
+.model .vplay circle{fill:rgba(11,18,32,.55);stroke:#fff;stroke-width:3}
+.model .vplay path{fill:#fff}
+.model .mvid:hover .vplay circle{fill:rgba(11,18,32,.78)}
+.model .mvid:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+@media(max-width:1000px){
+  .model .mrow{grid-template-columns:300px minmax(0,1fr);gap:28px}
+  .model .vplay svg{width:52px;height:52px}
+}
+@media(max-width:760px){
+  .model .mrow{grid-template-columns:1fr;gap:20px}
+  .model .mvid{aspect-ratio:16/10}
 }
