@@ -1292,6 +1292,9 @@ svg rect{rx:0 !important;ry:0 !important}
   grid-template-columns:392px minmax(0,1fr);
   gap:44px;
   align-items:start;
+  /* the gallery above sits flush to the row - the text column gets 22px
+     from .mmeta, the poster had nothing */
+  margin-top:26px;
 }
 
 .model .mvid{
@@ -1319,10 +1322,10 @@ svg rect{rx:0 !important;ry:0 !important}
 .model .mvid:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 
 @media(max-width:1000px){
-  .model .mrow{grid-template-columns:300px minmax(0,1fr);gap:28px}
+  .model .mrow{grid-template-columns:300px minmax(0,1fr);gap:28px;margin-top:22px}
   .model .vplay svg{width:52px;height:52px}
 }
 @media(max-width:760px){
-  .model .mrow{grid-template-columns:1fr;gap:20px}
+  .model .mrow{grid-template-columns:1fr;gap:20px;margin-top:20px}
   .model .mvid{aspect-ratio:16/10}
 }
