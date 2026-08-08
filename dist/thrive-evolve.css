@@ -1209,25 +1209,25 @@ svg rect{rx:0 !important;ry:0 !important}
 /* process */
 .sprocess{background:#fff;padding:82px 0}
 .sprocess h2{max-width:22ch;margin-bottom:30px}
-.steps{
+.sprocess .steps{
   list-style:none;counter-reset:s;margin:0;padding:0;
   display:grid;grid-template-columns:repeat(3,1fr);gap:0;
   border-top:1px dotted rgba(15,23,42,.42);
 }
-.steps li{
+.sprocess .steps li{
   counter-increment:s;position:relative;
   padding:26px 30px 26px 0;
   border-bottom:1px dotted rgba(15,23,42,.42);
 }
-.steps li:nth-child(3n+2),.steps li:nth-child(3n){
+.sprocess .steps li:nth-child(3n+2), .sprocess .steps li:nth-child(3n){
   padding-left:30px;border-left:1px dotted rgba(15,23,42,.42);
 }
-.steps li::before{
+.sprocess .steps li::before{
   content:counter(s);
   display:block;font-weight:900;font-size:13px;color:var(--gold-ink);margin-bottom:6px;
 }
-.steps h3{font-size:18px;margin-bottom:7px}
-.steps p{font-size:15px;line-height:1.55;color:var(--ink-soft);margin:0}
+.sprocess .steps h3{font-size:18px;margin-bottom:7px}
+.sprocess .steps p{font-size:15px;line-height:1.55;color:var(--ink-soft);margin:0}
 
 /* proof */
 .sproof{background:linear-gradient(180deg,#FFFFFF 0%,#FBF8F3 100%);padding:80px 0}
@@ -1262,11 +1262,11 @@ svg rect{rx:0 !important;ry:0 !important}
   .dimrow span:nth-child(6)::before{content:"Installed ";font-weight:700;color:var(--ink-soft)}
   .dimrow span:nth-child(4),.dimrow span:nth-child(5),.dimrow span:nth-child(6){font-size:14px}
   .spec2{grid-template-columns:1fr;gap:26px}
-  .around-grid,.steps{grid-template-columns:1fr}
-  .around-grid > *,.steps li{padding:22px 0 0}
+  .around-grid,.sprocess .steps{grid-template-columns:1fr}
+  .around-grid > *,.sprocess .steps li{padding:22px 0 0}
   .around-grid > * + *{padding-left:0;border-left:0;border-top:1px dotted rgba(15,23,42,.45);margin-top:22px}
-  .steps li:nth-child(3n+2),.steps li:nth-child(3n){padding-left:0;border-left:0}
-  .steps li{padding-bottom:22px}
+  .sprocess .steps li:nth-child(3n+2), .sprocess .steps li:nth-child(3n){padding-left:0;border-left:0}
+  .sprocess .steps li{padding-bottom:22px}
   .through-grid{grid-template-columns:1fr;gap:28px}
   .through-img{width:100%;height:280px}
   .sgal{grid-template-columns:1fr 1fr}
