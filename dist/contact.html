@@ -469,9 +469,9 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
       .then(function(r){return r.json();})
       .then(function(j){
         if(j.success){ window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'fluent_form_success',user_data:ud}); f.innerHTML='<div class="form-done"><h3>Thank you - your enquiry is in.</h3><p>David and the team will reply within one day, in your hours.</p></div>'; f.scrollIntoView({behavior:'smooth',block:'center'}); }
-        else { btn.textContent=old; btn.disabled=false; alert('Sorry, something went wrong. Please email <a class="maillink" href="mailto:hello@thrivehyperbaric.com">hello@thrivehyperbaric.com</a>.'); }
+        else { btn.textContent=old; btn.disabled=false; alert('Sorry, something went wrong. Please email hello@thrivehyperbaric.com.'); }
       })
-      .catch(function(){ btn.textContent=old; btn.disabled=false; alert('Sorry, something went wrong. Please email <a class="maillink" href="mailto:hello@thrivehyperbaric.com">hello@thrivehyperbaric.com</a>.'); });
+      .catch(function(){ btn.textContent=old; btn.disabled=false; alert('Sorry, something went wrong. Please email hello@thrivehyperbaric.com.'); });
   });
 })();
 </script>
