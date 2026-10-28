@@ -62,15 +62,20 @@
   .ath .note{font-size:13px;color:#7c8ba4;margin-top:18px;max-width:62ch;line-height:1.5}
 
   .how{background:var(--sand);padding:clamp(56px,7vw,100px) 24px}
-  .how .inner{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .how .inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
   @media(max-width:760px){.how .inner{grid-template-columns:1fr;gap:28px}}
   .how .ey{font-family:var(--data);text-transform:uppercase;letter-spacing:.2em;font-weight:600;font-size:12px;color:var(--gold-ink)}
   .how h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.4vw,38px);line-height:1.04;letter-spacing:-.015em;color:var(--navy);margin:12px 0 0;max-width:18ch}
   .how p{color:var(--ink);font-size:16.5px;line-height:1.66;margin:16px 0 0;max-width:58ch}
-  .how p.cite{font-size:12.5px;color:var(--ink-soft);margin-top:10px}
+  .how .pts{list-style:none;margin:22px 0 0;padding:0}
+  .how .pts li{position:relative;padding:0 0 0 22px;margin:0 0 14px;font-size:15.5px;line-height:1.6;color:var(--ink);max-width:58ch}
+  .how .pts li::before{content:"";position:absolute;left:0;top:11px;width:8px;height:8px;background:var(--gold)}
+  .how .pts b{color:var(--navy);font-weight:600}
+  .how .pts a{color:var(--gold-ink);text-decoration:none;border-bottom:1px solid rgba(138,107,66,.35);white-space:nowrap}
+  .how p.note{font-size:13px;color:var(--ink-soft);line-height:1.55;margin-top:18px}
   .how .btn{margin-top:24px}
   .how .fig{overflow:hidden;border:1px solid var(--line-light);background:#0b1120}
-  .how .fig img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+  .how .fig img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;display:block}
   .acad{background:#fff;padding:clamp(56px,7vw,100px) 24px}
   .acad .inner{max-width:1100px;margin:0 auto}
   .acad .ey{font-family:var(--data);text-transform:uppercase;letter-spacing:.2em;font-weight:600;font-size:12px;color:var(--gold-ink)}
@@ -228,12 +233,18 @@
     <div>
       <div class="ey">How it helps</div>
       <h2>What a session does, in plain terms</h2>
-      <p>Breathing oxygen at twice normal pressure dissolves far more of it into the blood than you can get at the surface, so it reaches tissue that is normally hard to supply. Done as a course of sessions, that is the dose the published research on performance and recovery is built on.</p>
-      <p>The most relevant trial for anyone who trains is a blinded, placebo-controlled study in trained athletes: after 40 sessions at 2.0 ATA they gained VO&#8322; max and raised their anaerobic threshold against placebo, with more mitochondria measured from muscle biopsy. In plain terms, the same effort sits further below the limit, without adding training load.</p>
-      <p class="cite">Hadanny et al., 2022, Sports Medicine - Open.</p>
+      <p>Breathing oxygen at twice normal pressure dissolves far more of it into the blood than you can get at the surface, so it reaches tissue that is normally hard to supply. Done as a course of sessions, that is the dose the published research is built on. Jiu jitsu is a sport where something always hurts, so here is what that research has looked at.</p>
+      <ul class="pts">
+        <li><b>Recovery between sessions.</b> The 2026 meta-analysis of recovery trials, and what it found, is on our science page. <a href="science.html">Luo et al., 2026</a></li>
+        <li><b>Stamina.</b> In a blinded, placebo-controlled trial, trained athletes gained VO&#8322; max and raised their anaerobic threshold after 40 sessions at 2.0 ATA, with more mitochondria measured from muscle biopsy. <a href="https://doi.org/10.1186/s40798-021-00403-w" target="_blank" rel="noopener">Hadanny et al., 2022</a></li>
+        <li><b>Lingering effects of knocks to the head.</b> Two randomised crossover trials in adults with symptoms persisting months to years after a mild head injury found improved cognitive function and quality of life after 40 sessions. <a href="https://doi.org/10.1371/journal.pone.0079995" target="_blank" rel="noopener">Boussi-Gross et al., 2013</a> &middot; <a href="https://doi.org/10.4103/2045-9912.279978" target="_blank" rel="noopener">Harch et al., 2020</a></li>
+        <li><b>Years after the injury.</b> In 154 people treated between three months and 33 years after a head injury, memory and attention scores improved, with changes on brain perfusion scans. <a href="https://doi.org/10.1136/bmjopen-2018-023387" target="_blank" rel="noopener">Hadanny et al., 2018</a></li>
+        <li><b>Sham-controlled.</b> A double-blind trial in children with post-concussion symptoms six months to ten years after injury found improved cognition and executive function against sham sessions. <a href="https://doi.org/10.1038/s41598-022-19395-y" target="_blank" rel="noopener">Hadanny et al., 2022</a></li>
+      </ul>
+      <p class="note">Thrive supplies sessions for wellness and recovery use. These are the studies, not claims about what a session will do for you. If you're carrying an injury, talk to your doctor or physio first.</p>
       <a href="science.html" class="btn gold">Read the science</a>
     </div>
-    <div class="fig"><img src="images/sport-interior-2.webp" alt="Inside a hyperbaric chamber - reclining seats and screens"></div>
+    <div class="fig"><img src="images/jiu-jitsu-portrait.webp" alt="A jiu jitsu athlete after training"></div>
   </div>
 </section>
 
