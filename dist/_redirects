@@ -13,3 +13,14 @@
 /cookies/*                            /cookie-policy     301
 /terms/*                              /terms-of-use      301
 # Serve clean URLs: /models.html -> /models etc. is automatic on Pages.
+
+# JIU JITSU LOU campaign page - catch the obvious misspellings people type from a podcast
+/jiujitsu          /jiu-jitsu   301
+/jiujitsu/*        /jiu-jitsu   301
+/jiu-jitsu/*       /jiu-jitsu   301
+/jujitsu           /jiu-jitsu   301
+/ju-jitsu          /jiu-jitsu   301
+/jiu-jitsu-lou     /jiu-jitsu   301
+/jiujitsulou       /jiu-jitsu   301
+/lou               /jiu-jitsu   301
+/bjj               /jiu-jitsu   301
