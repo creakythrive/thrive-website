@@ -61,6 +61,16 @@
   .ath .cta{margin-top:36px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
   .ath .note{font-size:13px;color:#7c8ba4;margin-top:18px;max-width:62ch;line-height:1.5}
 
+  .how{background:var(--sand);padding:clamp(56px,7vw,100px) 24px}
+  .how .inner{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  @media(max-width:760px){.how .inner{grid-template-columns:1fr;gap:28px}}
+  .how .ey{font-family:var(--data);text-transform:uppercase;letter-spacing:.2em;font-weight:600;font-size:12px;color:var(--gold-ink)}
+  .how h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.4vw,38px);line-height:1.04;letter-spacing:-.015em;color:var(--navy);margin:12px 0 0;max-width:18ch}
+  .how p{color:var(--ink);font-size:16.5px;line-height:1.66;margin:16px 0 0;max-width:58ch}
+  .how p.cite{font-size:12.5px;color:var(--ink-soft);margin-top:10px}
+  .how .btn{margin-top:24px}
+  .how .fig{overflow:hidden;border:1px solid var(--line-light);background:#0b1120}
+  .how .fig img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
   .acad{background:#fff;padding:clamp(56px,7vw,100px) 24px}
   .acad .inner{max-width:1100px;margin:0 auto}
   .acad .ey{font-family:var(--data);text-transform:uppercase;letter-spacing:.2em;font-weight:600;font-size:12px;color:var(--gold-ink)}
@@ -213,6 +223,20 @@
   </div>
 </section>
 
+<section class="how" id="how">
+  <div class="inner">
+    <div>
+      <div class="ey">How it helps</div>
+      <h2>What a session does, in plain terms</h2>
+      <p>Breathing oxygen at twice normal pressure dissolves far more of it into the blood than you can get at the surface, so it reaches tissue that is normally hard to supply. Done as a course of sessions, that is the dose the published research on performance and recovery is built on.</p>
+      <p>The most relevant trial for anyone who trains is a blinded, placebo-controlled study in trained athletes: after 40 sessions at 2.0 ATA they gained VO&#8322; max and raised their anaerobic threshold against placebo, with more mitochondria measured from muscle biopsy. In plain terms, the same effort sits further below the limit, without adding training load.</p>
+      <p class="cite">Hadanny et al., 2022, Sports Medicine - Open.</p>
+      <a href="science.html" class="btn gold">Read the science</a>
+    </div>
+    <div class="fig"><img src="images/sport-interior-2.webp" alt="Inside a hyperbaric chamber - reclining seats and screens"></div>
+  </div>
+</section>
+
 <section class="acad" id="academy">
   <div class="inner">
     <div class="ey">For academy owners and coaches</div>
@@ -248,7 +272,6 @@
         <div class="pphoto" role="img" aria-label="David Gumbleton"></div>
         <div><div class="pname">David Gumbleton</div><div class="prole">Founder, Thrive Hyperbaric</div></div>
       </div>
-      <div class="meta"><a href="tel:+447799772383">+44 779 977 2383</a> &nbsp;&middot;&nbsp; <a class="maillink" href="mailto:hello@thrivehyperbaric.com">hello@thrivehyperbaric.com</a></div>
     </div>
     <div class="fcard">
       <form action="https://api.web3forms.com/submit" method="POST" id="enquiry-form">
