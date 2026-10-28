@@ -74,8 +74,9 @@
   .mcard .s{font-size:13.5px;color:var(--ink-soft);padding:0 18px 18px;line-height:1.5}
   .acad .pics{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
   @media(max-width:680px){.acad .pics{grid-template-columns:1fr}}
-  .acad .pics .f{overflow:hidden;aspect-ratio:16/10;border:1px solid var(--line-light);background:#0b1120}
-  .acad .pics img{width:100%;height:100%;object-fit:cover;display:block}
+  .acad .pics .f{margin:0;overflow:hidden;border:1px solid var(--line-light);background:#fff}
+  .acad .pics img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:#0b1120}
+  .acad .pics figcaption{font-size:12.5px;color:var(--ink-soft);padding:10px 12px;line-height:1.5}
   .home-strip{margin-top:40px;padding:30px 0 0;border-top:1px solid var(--line-light);display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
   @media(max-width:680px){.home-strip{grid-template-columns:1fr}}
   .home-strip h3{font-family:var(--serif);font-weight:500;font-size:clamp(22px,2.6vw,28px);line-height:1.08;letter-spacing:-.015em;color:var(--navy);margin:10px 0 0}
@@ -223,8 +224,8 @@
       <div class="mcard"><img src="images/mediterranean-hero.webp" alt="Mediterranean chamber"><div class="n">Mediterranean</div><div class="s">4 people &middot; group sessions for a squad or a busy academy</div></div>
     </div>
     <div class="pics">
-      <div class="f"><img src="images/sport-interior-1.webp" alt="Inside a Thrive-installed chamber - windows, reclining seats and screens"></div>
-      <div class="f"><img src="images/club-brentford.webp" alt="Hyperbaric chamber installed by Thrive at Brentford FC"></div>
+      <figure class="f"><img src="images/sport-interior-1.webp" alt="Inside a Thrive-installed chamber - windows, reclining seats and screens"><figcaption>Inside: windows, reclining seats and screens.</figcaption></figure>
+      <figure class="f"><img src="images/club-brentford.webp" alt="Hyperbaric chamber installed by Thrive at Brentford FC"><figcaption>Brentford FC's chamber, installed by Thrive. Premier League.</figcaption></figure>
     </div>
     <div class="home-strip">
       <div>
