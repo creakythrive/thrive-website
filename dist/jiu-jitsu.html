@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex, noai, noimageai">
 <link rel="preload" as="image" href="images/sport-hero.webp" fetchpriority="high">
 <script>/* exclude own visits from Clarity */if(document.cookie.indexOf('exclude_clarity=true')>-1){window.clarity=function(){};}</script>
 <!-- Google Tag Manager -->
@@ -68,6 +68,17 @@
   @media(max-width:680px){.acad .pics{grid-template-columns:1fr}}
   .acad .pics .f{overflow:hidden;aspect-ratio:16/10;border:1px solid var(--line-light);background:#0b1120}
   .acad .pics img{width:100%;height:100%;object-fit:cover;display:block}
+  .home-strip{margin-top:40px;padding:30px 0 0;border-top:1px solid var(--line-light);display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+  @media(max-width:680px){.home-strip{grid-template-columns:1fr}}
+  .home-strip h3{font-family:var(--serif);font-weight:500;font-size:clamp(22px,2.6vw,28px);line-height:1.08;letter-spacing:-.015em;color:var(--navy);margin:10px 0 0}
+  .home-strip p{color:var(--ink-soft);font-size:15.5px;line-height:1.6;margin:10px 0 0;max-width:62ch}
+  .home-strip .btn{white-space:nowrap}
+  .pills{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .pills input{position:absolute;opacity:0;width:0;height:0}
+  .pills label{display:flex;align-items:center;justify-content:center;text-align:center;padding:12px 8px;border:1px solid var(--line-light);font-size:14px;font-weight:500;color:var(--ink);cursor:pointer}
+  .pills label:hover{border-color:var(--gold)}
+  .pills input:checked + label{background:var(--navy);border-color:var(--navy);color:#fff}
+  .pills input:focus-visible + label{box-shadow:0 0 0 3px rgba(191,161,129,.3)}
 
   .ask{background:var(--sand);padding:clamp(56px,7vw,100px) 24px}
   .ask .inner{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
@@ -161,8 +172,7 @@
       </blockquote>
     </div>
     <div class="brand">
-      <!-- JJL logo to replace the wordmark once Lou sends it: <img src="images/jiujitsulou-logo.png" alt="JIU JITSU LOU"> -->
-      <div class="wordmark">JIU JITSU LOU</div>
+      <img src="images/jiujitsulou-logo.png" alt="JIU JITSU LOU Podcast" width="300" height="300" style="max-width:190px">
       <div class="x">&times;</div>
       <img src="images/logo.png" alt="Thrive Hyperbaric" style="max-width:160px;filter:invert(1)">
       <a class="ln" href="https://www.jiujitsulou.com" target="_blank" rel="noopener">The JIU JITSU LOU podcast</a>
@@ -204,6 +214,14 @@
       <div class="f"><img src="images/sport-interior-1.webp" alt="Inside a Thrive-installed chamber - windows, reclining seats and screens"></div>
       <div class="f"><img src="images/club-brentford.webp" alt="Hyperbaric chamber installed by Thrive at Brentford FC"></div>
     </div>
+    <div class="home-strip">
+      <div>
+        <div class="ey">For your own place</div>
+        <h3>Some people put one at home</h3>
+        <p>If you train seriously and want the sessions on your own schedule, the same single and two-seat chambers go into private homes. Most sit in a garage, gym room or basement. The home-use page covers what the room needs, what it costs to run and how it's looked after.</p>
+      </div>
+      <a href="home-use.html" class="btn gold">Chambers at home</a>
+    </div>
   </div>
 </section>
 
@@ -211,8 +229,8 @@
   <div class="inner">
     <div>
       <div class="ey">Talk to David</div>
-      <h2>Ask what it would take at your academy</h2>
-      <p>David runs the Bath clinic and sits in these chambers most days. He will tell you what a chamber needs from the room and the power supply, roughly what it costs to run, how many people you can put through in a session, and whether it makes sense for your academy at all. We handle specification, installation and support, from the first conversation through to handover.</p>
+      <h2>Ask what it would take</h2>
+      <p>David runs the Bath clinic and sits in these chambers most days. He will tell you what a chamber needs from the room and the power supply, roughly what it costs to run, how many people you can put through in a session, and whether it makes sense for your academy, or your house, at all. We handle specification, installation and support, from the first conversation through to handover.</p>
       <div class="person">
         <div class="pphoto" role="img" aria-label="David Gumbleton"></div>
         <div><div class="pname">David Gumbleton</div><div class="prole">Founder, Thrive Hyperbaric</div></div>
@@ -226,9 +244,15 @@
         <input type="hidden" name="from_name" value="Thrive Hyperbaric website">
         <input type="hidden" name="source" value="JIU JITSU LOU">
         <input type="hidden" name="page" value="thrivehyperbaric.com/jiu-jitsu">
-        <input type="hidden" name="installation" value="Sports">
         <input type="hidden" name="redirect" value="https://www.thrivehyperbaric.com/thank-you">
         <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none !important">
+        <div class="field">
+          <span class="flabel">Where would it go? <span class="req">*</span></span>
+          <div class="pills">
+            <input type="radio" id="t-acad" name="installation" value="Sports" required><label for="t-acad">Academy or facility</label>
+            <input type="radio" id="t-home" name="installation" value="Home"><label for="t-home">At home</label>
+          </div>
+        </div>
         <div class="frow">
           <div class="field"><label class="flabel" for="fname">First name <span class="req">*</span></label><input id="fname" name="first_name" type="text" autocomplete="given-name" required></div>
           <div class="field"><label class="flabel" for="lname">Last name <span class="req">*</span></label><input id="lname" name="last_name" type="text" autocomplete="family-name" required></div>
@@ -237,7 +261,7 @@
           <div class="field"><label class="flabel" for="email">Email <span class="req">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
           <div class="field"><label class="flabel" for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
         </div>
-        <div class="field"><label class="flabel" for="academy">Academy or facility, and where it is</label><input id="academy" name="academy" type="text" placeholder="e.g. Gracie Barra Bristol"></div>
+        <div class="field"><label class="flabel" for="academy">Academy, facility or town</label><input id="academy" name="academy" type="text" placeholder="e.g. Gracie Barra Bristol, or just where you are"></div>
         <div class="field"><label class="flabel" for="message">What would you like to know?</label><textarea id="message" name="message" placeholder="Space, number of athletes, timing - anything you're weighing up."></textarea></div>
         <button type="submit" class="btn gold submit">Send to David</button>
         <p class="privacy">We reply within one working day. Your details go to Thrive only. <a href="privacy-policy.html">Privacy policy</a></p>
