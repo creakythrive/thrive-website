@@ -1,0 +1,5 @@
+# Cloudflare Pages headers. Keep the partner campaign page out of search, AI and archive crawlers.
+/jiu-jitsu
+  X-Robots-Tag: noindex, nofollow, noarchive, noimageindex, noai, noimageai
+/jiu-jitsu.html
+  X-Robots-Tag: noindex, nofollow, noarchive, noimageindex, noai, noimageai
