@@ -25,7 +25,7 @@
   .jj-hero .cta .btn{text-align:center}
 
   .story{background:var(--sand);padding:clamp(56px,7vw,100px) 24px}
-  .story .inner{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .story .inner{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
   @media(max-width:760px){.story .inner{grid-template-columns:1fr;gap:28px}}
   .story .kick{font-family:var(--data);text-transform:uppercase;letter-spacing:.2em;font-weight:600;font-size:12px;color:var(--gold-ink)}
   .story h2{font-family:var(--serif);font-weight:500;font-size:clamp(28px,3.6vw,42px);line-height:1.03;letter-spacing:-.02em;color:var(--navy);margin:12px 0 0;max-width:18ch}
@@ -33,17 +33,25 @@
   .story blockquote p{margin:0 0 14px}
   .story blockquote p:last-child{margin:0}
   .story cite{display:block;margin-top:16px;font-style:normal;font-family:var(--data);text-transform:uppercase;letter-spacing:.12em;font-weight:600;font-size:12px;color:var(--ink-soft)}
-  .story .brand{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:36px 24px;border:1px solid var(--line-light);background:#fff}
-  .story .brand img{max-width:220px;height:auto;display:block}
-  .story .brand .x{font-family:var(--data);font-weight:600;letter-spacing:.2em;font-size:12px;color:var(--gold-ink);text-transform:uppercase}
-  .story .brand .wordmark{font-family:var(--data);font-weight:800;letter-spacing:.08em;font-size:clamp(20px,2.4vw,26px);color:var(--navy);text-transform:uppercase;text-align:center}
-  .story .brand .ln{margin-top:6px;font-size:13.5px;color:var(--ink-soft);text-decoration:none;border-bottom:1px solid rgba(138,107,66,.35)}
+  .story .lockup{display:flex;align-items:center;gap:16px;margin:0 0 26px}
+  .story .lockup img{width:84px;height:84px;display:block}
+  .story .lockup img.th{width:auto;height:30px;filter:invert(1)}
+  .story .lockup span{font-family:var(--data);font-weight:600;font-size:14px;color:var(--gold-ink)}
+  .story .photo{margin:0;overflow:hidden;border:1px solid var(--line-light);background:#0b1120}
+  .story .photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;display:block}
+  .story .photo figcaption{font-size:12.5px;color:var(--ink-soft);padding:10px 12px;background:#fff;line-height:1.5}
+  .story .photo figcaption a{color:var(--gold-ink);text-decoration:none;border-bottom:1px solid rgba(138,107,66,.35)}
 
   .ath{background:var(--navy);padding:clamp(58px,7vw,104px) 24px;border-top:1px solid #1c2942}
   .ath .inner{max-width:1040px;margin:0 auto}
   .ath .ey{font-family:var(--data);text-transform:uppercase;letter-spacing:.2em;font-weight:600;font-size:12px;color:var(--cyan)}
   .ath h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.4vw,40px);line-height:1.05;letter-spacing:-.015em;color:var(--smoke);margin:12px 0 0;max-width:20ch}
   .ath .lead{color:#9fb0c7;font-size:16.5px;line-height:1.64;margin:16px 0 0;max-width:62ch}
+  .ath .intro{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+  @media(max-width:760px){.ath .intro{grid-template-columns:1fr;gap:26px}}
+  .ath .photo{margin:0;overflow:hidden;border:1px solid #233149;background:#0f1830}
+  .ath .photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 35%;display:block}
+  .ath .photo figcaption{font-size:12.5px;color:#8295b0;padding:10px 12px;line-height:1.5}
   .tech{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:36px}
   @media(max-width:900px){.tech{grid-template-columns:repeat(3,1fr)}}
   @media(max-width:560px){.tech{grid-template-columns:1fr 1fr}}
@@ -162,6 +170,7 @@
 <section class="story">
   <div class="inner">
     <div>
+      <div class="lockup"><img src="images/jiujitsulou-logo.png" alt="JIU JITSU LOU Podcast" width="300" height="300"><span>&times;</span><img src="images/logo.png" alt="Thrive Hyperbaric" class="th"></div>
       <div class="kick">How this came about</div>
       <h2>Lou found us the way most people do</h2>
       <blockquote>
@@ -171,20 +180,23 @@
         <cite>Lou Temlett &middot; JIU JITSU LOU</cite>
       </blockquote>
     </div>
-    <div class="brand">
-      <img src="images/jiujitsulou-logo.png" alt="JIU JITSU LOU Podcast" width="300" height="300" style="max-width:190px">
-      <div class="x">&times;</div>
-      <img src="images/logo.png" alt="Thrive Hyperbaric" style="max-width:160px;filter:invert(1)">
-      <a class="ln" href="https://www.jiujitsulou.com" target="_blank" rel="noopener">The JIU JITSU LOU podcast</a>
-    </div>
+    <figure class="photo">
+      <img src="images/lou-david-clinic.webp" alt="Lou with David Gumbleton at the Thrive clinic in Bath, in front of the hyperbaric chamber">
+      <figcaption>Lou and David at the Thrive clinic, Bath. <a href="https://www.jiujitsulou.com" target="_blank" rel="noopener">The JIU JITSU LOU podcast</a></figcaption>
+    </figure>
   </div>
 </section>
 
 <section class="ath" id="athlete">
   <div class="inner">
-    <div class="ey">For people who train</div>
-    <h2>What Lou is using at Thrive in Bath</h2>
-    <p class="lead">Thrive runs a working recovery clinic in Bath. Lou's sessions there are the same ones available to anyone who trains: hyperbaric oxygen in a hard-shell chamber you sit up in, and The Pod, which runs four recovery technologies in one session.</p>
+    <div class="intro">
+      <div>
+        <div class="ey">For people who train</div>
+        <h2>What Lou is using at Thrive in Bath</h2>
+        <p class="lead">Thrive runs a working recovery clinic in Bath. Lou's sessions there are the same ones available to anyone who trains: hyperbaric oxygen in a hard-shell chamber you sit up in, and The Pod, which runs four recovery technologies in one session.</p>
+      </div>
+      <figure class="photo"><img src="images/lou-chamber.webp" alt="Lou inside the hyperbaric chamber at Thrive, breathing oxygen through the mask"><figcaption>Lou in the chamber at Thrive, oxygen on.</figcaption></figure>
+    </div>
     <div class="tech">
       <div class="t"><div class="n">Hyperbaric oxygen</div><p>A pressurised, hard-shell chamber with windows and a reclining seat. You breathe oxygen through a mask for the session.</p></div>
       <div class="t"><div class="n">Red light</div><p>Red and near-infrared light, delivered in The Pod.</p></div>
