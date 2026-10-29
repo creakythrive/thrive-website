@@ -1,479 +1,696 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-<head>
-<meta charset="UTF-8">
+<!DOCTYPE html><html lang="en-GB"><head>
+<meta name="robots" content="noindex, nofollow"><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preload" as="image" href="images/david-zeugma.webp" fetchpriority="high">
-<script>/* exclude own visits from Clarity */if(document.cookie.indexOf('exclude_clarity=true')>-1){window.clarity=function(){};}</script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MWS3R9HX');</script>
-<!-- End Google Tag Manager -->
-<title>Contact Thrive Hyperbaric - Get a Tailored Quote</title>
-<meta name="description" content="Tell us about your space and the chamber you're considering. David and the team reply within one day, with guidance tailored to you.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap"></noscript>
-<link rel="stylesheet" href="thrive.css">
+<title>Contact - Thrive Hyperbaric</title>
+<meta name="description" content="Telephone 01225 698524, WhatsApp, email or a short form. Thrive Hyperbaric, Unit F3, The Foundry, Beehive Yard, Bath BA1 5BT.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  /* Contact - page-specific layout only; system lives in thrive.css */
-  .contact{background:var(--sand);padding:clamp(44px,5.5vw,80px) 24px clamp(56px,7vw,100px)}
-  .contact .inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:.82fr 1.18fr;gap:52px;align-items:start}
-  @media(max-width:900px){.contact .inner{grid-template-columns:1fr;gap:38px}}
+:root{
+  --paper:#BDC4C8; --ink:#161A1E; --ink-50:#5C6064; --ink-30:#919598;
+  --hair:rgba(20,26,31,.18);
+  --lit:#E8EBEC; --lit-70:#D9DCDD; --lit-50:#C8CBCD;
+  --f:"Instrument Sans",system-ui,-apple-system,sans-serif;
+  --m:clamp(18px,3.4vw,58px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html{background-color:var(--paper);
+  background-image:radial-gradient(150% 160% at 18% 2%,
+    #FFFFFF 0%, #F9FAFA 16%, #EDEFF0 38%, #DEE2E4 60%, #CCD2D5 80%, #BDC4C8 100%);
+  background-attachment:fixed;background-repeat:no-repeat}
+body{background:transparent;color:var(--ink);font-family:var(--f);font-size:16px;
+  line-height:1.58;letter-spacing:-.012em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+/* light field — fixed to the viewport, content moves through it.
+   Source off-canvas upper-left. Total range ~4% luminance. */
 
-  /* left rail */
-  .rail .steps{margin:0 0 30px;counter-reset:s}
-  .rail .step{position:relative;padding:0 0 20px 44px;counter-increment:s}
-  .rail .step:last-child{padding-bottom:0}
-  .rail .step::before{content:counter(s);position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;font-family:var(--data);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
-  .rail .step h3{font-family:var(--serif);font-weight:500;font-size:18px;color:var(--navy);margin:0 0 4px;letter-spacing:-.01em}
-  .rail .step p{font-size:14.5px;line-height:1.55;color:var(--ink-soft);margin:0}
-  .rail .reassure{border-left:2px solid var(--gold);padding:2px 0 2px 20px;margin:0 0 30px;font-family:var(--serif);font-weight:500;font-size:17px;line-height:1.4;color:var(--navy)}
-  .rail .direct{border-top:1px solid var(--line-light);padding-top:22px}
-  .rail .direct .dk{font-family:var(--data);text-transform:uppercase;letter-spacing:.12em;font-weight:600;font-size:11px;color:var(--gold-ink);margin:0 0 4px}
-  .rail .direct .dv{font-size:15.5px;color:var(--navy);margin:0 0 16px;line-height:1.5}
-  .rail .direct .dv a{color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(15,23,42,.18)}
-  .rail .direct .dv a:hover{border-bottom-color:var(--navy)}
-  .rail .direct > .dv:last-child{margin-bottom:0}
-  .rail .direct .us-only .dv{margin-bottom:30px}
-  .rail-faq{margin:26px 0 0;padding-top:22px;border-top:1px solid var(--line-light);font-size:14.5px;color:var(--ink-soft)}
-  .rail-faq a{color:var(--gold-ink);text-decoration:none;border-bottom:1px solid rgba(138,107,66,.35)}
-  .rail-faq a:hover{border-bottom-color:var(--gold-ink)}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--ink);color:var(--paper)}
 
-  /* person */
-  .rail .person{display:flex;align-items:center;gap:16px;margin:0 0 26px;padding:0 0 26px;border-bottom:1px solid var(--line-light)}
-  .rail .person .pphoto{width:78px;height:78px;border-radius:50%;background-size:cover;background-position:center top;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08);flex:0 0 auto}
-  .rail .person .pname{font-family:var(--serif);font-weight:500;font-size:19px;color:var(--navy);letter-spacing:-.01em}
-  .rail .person .prole{font-family:var(--data);text-transform:uppercase;letter-spacing:.1em;font-size:11.5px;color:var(--gold-ink);font-weight:600;margin-top:3px}
-  .rail .person .pline{font-size:13.5px;line-height:1.5;color:var(--ink-soft);margin-top:7px}
+/* NAV — one running line, comma separated (6a) */
+nav{position:sticky;top:0;z-index:60;padding:16px var(--m) 14px;display:flex;align-items:center;gap:24px;
+  background-color:var(--paper);
+  background-image:radial-gradient(150% 160% at 18% 2%,
+    #FFFFFF 0%, #F9FAFA 16%, #EDEFF0 38%, #DEE2E4 60%, #CCD2D5 80%, #BDC4C8 100%);
+  background-attachment:fixed;background-repeat:no-repeat;
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:baseline;gap:24px}
+nav .id{justify-self:start}
+nav .set{justify-self:center}
+nav a.act{justify-self:end}
+nav .set{font-size:16px;letter-spacing:-.016em}
+nav .set{word-spacing:.30em}
 
-  /* form card */
-  .fcard{background:#fff;border:1px solid var(--line-light);border-radius:18px;padding:clamp(24px,3vw,36px);box-shadow:0 30px 60px -40px rgba(15,23,42,.35)}
-  .fcard .flabel{display:block;font-family:var(--data);text-transform:uppercase;letter-spacing:.1em;font-weight:600;font-size:11.5px;color:var(--ink-soft);margin:0 0 8px}
-  .field{margin:0 0 18px}
-  .frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  @media(max-width:520px){.frow{grid-template-columns:1fr}}
-  .fcard input,.fcard select,.fcard textarea{width:100%;padding:12px 14px;border:1px solid var(--line-light);border-radius:10px;font-family:var(--sans);font-size:15px;color:var(--ink);background:#fff;-webkit-appearance:none;appearance:none}
-  .fcard textarea{min-height:120px;resize:vertical}
-  .fcard select{background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path d="M1 1l5 5 5-5" fill="none" stroke="%235B6678" stroke-width="1.6"/></svg>');background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
-  .fcard input:focus,.fcard select:focus,.fcard textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(191,161,129,.18)}
-  .fcard input::placeholder,.fcard textarea::placeholder{color:#9aa4b2}
+nav .set a{color:var(--ink-50);word-spacing:normal}
+nav .set .ni{white-space:nowrap}
+nav .set .ni:not(:last-child)::after{content:"\00b7";color:var(--ink-30);font-size:.9em;margin-left:.34em}nav .set a:hover{color:var(--ink)}
+nav .id{font-size:16px;font-weight:600;letter-spacing:-.03em;word-spacing:.16em;white-space:nowrap;color:var(--ink)}
 
-  /* install-type pills */
-  .pills{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-  @media(max-width:520px){.pills{grid-template-columns:1fr 1fr}}
-  .pills input{position:absolute;opacity:0;width:0;height:0}
-  .pills label{display:flex;align-items:center;justify-content:center;text-align:center;padding:12px 8px;border:1px solid var(--line-light);border-radius:10px;font-size:14px;font-weight:500;color:var(--ink);cursor:pointer;transition:border-color .15s ease,background .15s ease,color .15s ease}
-  .pills label:hover{border-color:var(--gold)}
-  .pills input:checked + label{background:var(--navy);border-color:var(--navy);color:#fff}
-  .pills input:focus-visible + label{box-shadow:0 0 0 3px rgba(191,161,129,.3)}
+/* CASCADE — a 12-col field where nothing shares a baseline */
+.field{display:grid;grid-template-columns:repeat(12,1fr);
+  column-gap:clamp(14px,2.2vw,34px);padding:0 var(--m);align-items:start}
+/* A photographic print laid beneath a cut sheet. Two geometric terms, no
+   filters, and the image itself is never altered.
+   1. ambient occlusion - the aperture occludes ambient light from every
+      direction, so all four edges sit slightly less lit.
+   2. cast shadow - the sheet edge above interrupting the light from upper
+      left. Top and left only. Soft source, so all penumbra, no plateau.
+   Both falloffs are smootherstep, so the rate of change is zero at the far
+   end as well as the near one. A linear ramp reads as an effect because the
+   eye finds the point where it stops; a curve that arrives flat gives it
+   nothing to find. Peaks lowered, distances widened. One implementation. */
+figure div{position:relative;isolation:isolate}
+figure div img{position:relative;z-index:0}
+figure div::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to top,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to right,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to left,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px)}
+figure div::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px),
+             linear-gradient(to right,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px)}
+.f-cap{padding-top:20px;font-size:14.5px;color:var(--ink-30);letter-spacing:-.004em;line-height:1.55}
+.f-cap b{font-weight:500;color:var(--ink-50);display:block;margin-bottom:2px}
+.f-cap i{font-style:normal;display:block}
 
-  .req{color:var(--gold-ink)}
-  .fcard .submit{margin-top:6px;width:100%;text-align:center;border:0;cursor:pointer;font-size:16px;padding:16px 30px}
-  .privacy{font-size:12.5px;line-height:1.55;color:var(--ink-soft);margin:16px 0 0;text-align:center}
-  .privacy a{color:var(--gold-ink);text-decoration:none;border-bottom:1px solid rgba(138,107,66,.3)}
-  .form-done{text-align:center;padding:34px 12px}
-  .form-done h3{font-family:var(--serif);font-weight:500;font-size:24px;color:var(--navy);margin:0 0 10px;letter-spacing:-.01em}
-  .form-done p{font-size:15.5px;color:var(--ink-soft);line-height:1.6;margin:0}
-</style>
-<script>/* market-aware: flag US/GCC/EU visitors by timezone - no geo-IP, no cookies, no consent needed */
-try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','us');else if(/[?&]me(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','me');else if(/[?&]eu(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','eu');else if(/[?&]uk(=|&|$)/.test(_q))sessionStorage.setItem('thrivePreview','uk');else if(/[?&]auto(=|&|$)/.test(_q))sessionStorage.removeItem('thrivePreview');var _pv=sessionStorage.getItem('thrivePreview'),_m='';if(_pv==='us')_m='us';else if(_pv==='me')_m='gcc';else if(_pv==='eu')_m='eu';else if(_pv==='uk')_m='uk';else{var _z=Intl.DateTimeFormat().resolvedOptions().timeZone||'',_USZ=['America/New_York','America/Detroit','America/Chicago','America/Denver','America/Phoenix','America/Los_Angeles','America/Anchorage','America/Adak','America/Boise','America/Juneau','America/Sitka','America/Nome','America/Menominee','Pacific/Honolulu'],_GCC=['Asia/Dubai','Asia/Riyadh','Asia/Qatar','Asia/Kuwait','Asia/Bahrain','Asia/Muscat'],_UKZ=['Europe/London','Europe/Isle_of_Man','Europe/Guernsey','Europe/Jersey'];if(_USZ.indexOf(_z)>-1||/^America\/(Indiana|Kentucky|North_Dakota)\//.test(_z))_m='us';else if(_GCC.indexOf(_z)>-1)_m='gcc';else if(/^Europe\//.test(_z)&&_UKZ.indexOf(_z)<0)_m='eu';else if(_UKZ.indexOf(_z)>-1)_m='uk';}if(_m==='us'){document.documentElement.classList.add('us');window.__thriveUS=true;}else if(_m==='gcc'){document.documentElement.classList.add('gcc');window.__thriveGCC=true;}else if(_m==='eu'){document.documentElement.classList.add('eu');window.__thriveEU=true;}else if(_m==='uk'){document.documentElement.classList.add('uk');window.__thriveUK=true;}}catch(e){}</script>
-<link rel="canonical" href="https://www.thrivehyperbaric.com/contact">
-<meta name="theme-color" content="#0F172A">
-<link rel="icon" href="/favicon-dots.ico" sizes="any">
-<link rel="icon" type="image/svg+xml" href="/favicon-dots.svg">
-<link rel="apple-touch-icon" href="/apple-touch-dots.png">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Thrive Hyperbaric">
-<meta property="og:title" content="Contact Thrive Hyperbaric - Get a Tailored Quote">
-<meta property="og:description" content="Tell us about your space and the chamber you're considering. David and the team reply within one day, with guidance tailored to you.">
-<meta property="og:url" content="https://www.thrivehyperbaric.com/contact">
-<meta property="og:image" content="https://www.thrivehyperbaric.com/images/og-default.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contact Thrive Hyperbaric - Get a Tailored Quote">
-<meta name="twitter:description" content="Tell us about your space and the chamber you're considering. David and the team reply within one day, with guidance tailored to you.">
-<meta name="twitter:image" content="https://www.thrivehyperbaric.com/images/og-default.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="thrive-evolve.css?v=7b9daf34">
-</head>
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWS3R9HX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager -->
+/* statement — set against the field, not above it */
+.op{grid-column:1/9;padding:clamp(46px,9vh,110px) 0 clamp(30px,5vh,64px)}
+.op h1,.talk h3,.callout h3{text-wrap:balance}
+.op h1{font-size:clamp(27px,3.75vw,54px);font-weight:400;line-height:1.15;
+  letter-spacing:-.032em;max-width:20ch}
+.opsub{margin-top:22px;font-size:clamp(16px,1.5vw,20px);line-height:1.5;
+  color:var(--ink-50);max-width:40ch;letter-spacing:-.014em}
 
-<!-- ===== NAV ===== -->
-<nav class="nav" id="nav">
-  <div class="nav-inner maxw">
-    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Thrive Hyperbaric" class="logo-img"></a></div>
-    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <div class="links">
-      <a href="models.html">Models</a><a href="home-use.html">Home Use</a><a href="commercial.html">Commercial</a>
-      <a href="sport.html">Sport</a><a href="science.html">Science</a><a href="buying-guide.html">Buying Guide</a>
-      <a href="contact.html" class="quote">Get a quote</a>
-    </div>
-  </div>
+/* text set bottom-aligned against a neighbouring image (Caruso St John) */
+.tx{align-self:end;padding-bottom:6px}
+.tx p{font-size:16px;line-height:1.68;color:var(--ink-50);max-width:44ch}
+.tx p+p{margin-top:15px}
+.tx p b{font-weight:500;color:var(--ink)}
+.tx h2{font-size:clamp(20px,2.15vw,29px);font-weight:400;line-height:1.2;
+  letter-spacing:-.028em;max-width:19ch;margin-bottom:16px}
+.go{display:inline-block;margin-top:22px;font-size:15px;
+  border-bottom:1px solid var(--hair);padding-bottom:3px}
+.go:hover{border-color:var(--ink)}
+
+/* project list — running text index, no rules (6a register) */
+.pl{padding:clamp(72px,13vh,160px) var(--m)}
+.pl .lb{display:block;padding-bottom:clamp(20px,2.6vw,30px);
+  border-bottom:1px solid var(--hair);margin-bottom:clamp(24px,3.2vw,40px)}
+.pl a{display:block;padding:15px 0;font-size:clamp(19px,2.05vw,27px);
+  font-weight:400;letter-spacing:-.028em;line-height:1.28}
+.plfoot{margin-top:clamp(30px,4vw,46px);font-size:15px;color:var(--ink-50)}
+.plfoot .go{font-size:15px;border-bottom:0;padding-bottom:0;white-space:nowrap}
+.plfoot .go:hover{color:var(--ink)}
+.pl a span{color:var(--ink-30);font-size:.66em;letter-spacing:-.01em;margin-left:.7em}
+.pl a{transition:background .3s ease;margin:0 calc(var(--m) * -1);padding-left:var(--m);padding-right:var(--m)}
+.pl a:hover{background:linear-gradient(108deg,
+  rgba(255,255,255,.96) 0%, rgba(255,255,255,.70) 30%, rgba(255,255,255,.16) 62%, rgba(255,255,255,0) 92%)}
+
+/* sector + insight sets — indented list, hairline only at top */
+.set2{padding:clamp(72px,13vh,160px) var(--m)}
+.set2 .lb{margin-bottom:clamp(30px,4vw,52px)}
+.set2 a{display:grid;
+  grid-template-columns:124px minmax(150px,.72fr) minmax(0,1.28fr);
+  gap:clamp(16px,3vw,48px);padding:26px 0;border-top:1px solid var(--hair);
+  align-items:start}
+.set2 .dia{color:var(--lit-50);width:112px;height:70px;display:block;
+  transition:color .3s ease}
+.set2 .dia svg{width:100%;height:100%;display:block;overflow:visible}
+.set2 .n{padding-top:2px}
+.set2 .n{font-size:clamp(18px,1.95vw,25px);font-weight:400;letter-spacing:-.026em}
+.set2 .d{font-size:16.5px;line-height:1.62;color:var(--ink-50);max-width:50ch}
+.set2 a{transition:background .3s ease;
+  margin-left:calc(var(--m) * -1);margin-right:calc(var(--m) * -1);
+  padding-left:var(--m);padding-right:var(--m)}
+.set2 a:hover{background:linear-gradient(108deg,
+  rgba(255,255,255,.96) 0%, rgba(255,255,255,.72) 34%, rgba(255,255,255,.18) 68%, rgba(255,255,255,0) 96%)}
+.set2 a:hover .n{color:var(--ink)}
+
+/* dark band — its own light, stronger, same direction */
+.dkband{margin-top:clamp(40px,7vh,100px);color:var(--lit);
+  background-color:#242729;
+  background-image:radial-gradient(150% 160% at 18% 2%,
+    #515559 0%, #464A4E 20%, #3B3F43 42%, #313539 62%, #292C30 82%, #242729 100%);
+  background-attachment:fixed;background-repeat:no-repeat}
+/* .talk inside the band */
+.dkband.talk{grid-template-columns:1fr 1fr}
+.dkband.talk,.dkband.callout{margin-top:0;
+  padding-top:clamp(72px,13vh,160px);padding-bottom:clamp(72px,13vh,160px)}
+/* the print recess inverts on a dark ground: the lit far wall does the describing */
+
+@media(max-width:860px){.dkband{background-attachment:scroll;background-size:cover}}
+
+footer{padding:clamp(56px,9vh,120px) var(--m) 30px;border-top:1px solid var(--hair);
+  margin-top:clamp(40px,7vh,90px);
+  display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:clamp(22px,4vw,56px)}
+footer .h{display:block;font-size:13.5px;color:var(--ink-30);margin-bottom:13px}
+footer a,footer p{display:block;font-size:14.5px;line-height:1.95;color:var(--ink-50)}
+footer a:hover{color:var(--ink)}
+footer .base{grid-column:1/-1;margin-top:44px;display:flex;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;font-size:13px;color:var(--ink-30)}
+
+@media(max-width:860px){
+  /* margin: 18px was too tight for a page whose signature is air */
+  :root{--m:26px}
+
+  /* nav: wordmark first, then the list, wrapping deliberately rather than breaking */
+  /* nav scrolls away on mobile: two lines plus wordmark is too much screen to hold.
+     The footer catches anyone who reaches the end. */
+  nav{position:relative;display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;
+      gap:14px;padding-top:26px;padding-bottom:18px}
+
+  /* background-attachment:fixed is unreliable on iOS Safari, which sizes the
+     image to the document rather than the viewport. The band keeps its light,
+     it simply travels with the section. */
+  .dkband{background-attachment:scroll;background-size:cover}
+  /* tap targets: the type stays 15px, the hit area grows to 41px.
+     WCAG 2.5.8 asks 24px minimum; Apple and Material ask 44. */
+  /* wordmark and the action share the first line, the list takes the second */
+  nav .spacer{display:none}
+  nav .id{order:1;margin-right:auto}
+  nav a.act{order:2}
+  nav .set{order:3;width:100%;line-height:1;font-size:14.5px;
+    display:flex;justify-content:space-between}
+  nav .set .ni:not(:last-child)::after{margin-left:.24em}
+  nav .set .ni{display:inline-block}
+  nav .set a{display:inline-block;padding:14px 0}   /* 42.5px, clears the 41px minimum */
+  nav .id{font-size:15px}
+
+  /* statement: 27px was timid. Give it presence and let it breathe */
+  .op{padding:36px 0 26px}
+  .op h1,.talk h3,.callout h3{text-wrap:balance}
+.op h1{font-size:31px;line-height:1.14;letter-spacing:-.028em;max-width:none}
+  .opsub{margin-top:18px;font-size:16.5px;line-height:1.5;max-width:none}
+
+  /* headings inside text blocks were constrained to 19ch and breaking short */
+  .tx h2{max-width:none;font-size:23px;line-height:1.2;margin-bottom:14px}
+  .tx p{max-width:none}
+
+  /* project index: name and place stacked, not fighting on one line */
+  .pl{padding:44px var(--m) 26px}
+  .pl a{padding:13px var(--m);line-height:1.25}
+  .pl a span{display:block;margin-left:0;margin-top:4px;font-size:14px}
+
+  /* sector and insight rows: more air between name and description */
+  .set2{padding:40px var(--m)}
+  .set2 a,.set2 .row{gap:9px;padding:19px var(--m)}
+  .set2 a{grid-template-columns:1fr}
+  .set2 .dia{margin-bottom:6px}
+  .set2 .d{max-width:none}
+
+  /* figures: even spacing, captions given room */
+  .field figure{margin-bottom:34px}
+  .f-cap{padding-top:16px}
+
+  .field{grid-template-columns:1fr}
+  .field>*{grid-column:1/-1 !important;margin-top:0 !important}
+  .field figure{margin-bottom:26px}
+  .op{padding:34px 0 24px}
+  .tx{align-self:start;padding-bottom:30px}
+  .set2 a{grid-template-columns:1fr;gap:5px}
+  footer{grid-template-columns:1fr 1fr}
+}
+
+
+/* ---- blocks added for the landing order ---- */
+
+
+.route{padding:clamp(72px,13vh,160px) var(--m)}
+.route .lb{font-size:18px;color:var(--ink-30);margin-bottom:clamp(30px,4vw,52px)}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3.4vw,48px)}
+.rgrid.two{grid-template-columns:repeat(3,1fr);margin-top:clamp(34px,5vw,58px)}
+.rt{display:block;text-decoration:none}
+.rt .im{position:relative;isolation:isolate;aspect-ratio:4/3;overflow:hidden}
+.rt .im img{width:100%;height:100%;object-fit:cover;position:relative;z-index:0}
+.rt .im::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to top,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to right,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to left,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px)}
+.rt .im::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px),
+             linear-gradient(to right,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px)}
+.rt h3{font-size:clamp(20px,2.05vw,26px);font-weight:400;letter-spacing:-.026em;margin:16px 0 6px}
+.rt p{font-size:16.5px;line-height:1.6;color:var(--ink-50);max-width:40ch}
+.rt .go{display:inline-block;margin-top:14px;font-size:16px;
+  border-bottom:1px solid var(--hair);padding-bottom:3px}
+.rt:hover .go{border-color:var(--ink)}
+.rmore{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3.4vw,48px);margin-top:clamp(34px,5vw,58px)}
+.rmore a{display:grid;grid-template-columns:1fr;gap:4px;padding:18px 0;
+  border-top:1px solid var(--hair);text-decoration:none}
+.rmore .n{font-size:clamp(18px,1.9vw,24px);font-weight:400;letter-spacing:-.024em}
+.rmore .d{font-size:16.5px;color:var(--ink-50);line-height:1.58}
+
+.cap3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2.4vw,32px);
+  padding:0 var(--m)}
+.cap3 .c{border-top:1px solid var(--hair);padding-top:16px}
+.dwg{border:1px solid var(--hair);background:rgba(255,255,255,.5);padding:14px 10px;margin-bottom:14px}
+.dwg svg{width:100%;height:auto;display:block}
+.cap3 .im{position:relative;isolation:isolate;aspect-ratio:5/4;margin-bottom:14px;overflow:hidden}
+.cap3 .im img{width:100%;height:100%;object-fit:cover;position:relative;z-index:0}
+.cap3 .im::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to top,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to right,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to left,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px)}
+.cap3 .im::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px),
+             linear-gradient(to right,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px)}
+.cap3 h4{font-size:19px;font-weight:400;letter-spacing:-.02em;margin-bottom:3px}
+.cap3 .sp{font-size:13.5px;color:var(--ink-30);margin-bottom:9px}
+.cap3 p{font-size:14.5px;line-height:1.6;color:var(--ink-50)}
+
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:clamp(16px,3vw,44px);
+  margin-top:6px;border-top:1px solid var(--hair);padding-top:20px}
+.figs .n{font-size:clamp(24px,2.8vw,38px);font-weight:400;letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums;line-height:1.1}
+.figs .n small{font-size:.46em;color:var(--ink-30);letter-spacing:.01em}
+.figs .k{display:block;margin-top:8px;font-size:14.5px;color:var(--ink-30);line-height:1.5}
+
+.callout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,80px);
+  padding:clamp(72px,13vh,160px) var(--m);align-items:start}
+.callout h3{font-size:clamp(23px,2.5vw,34px);font-weight:400;line-height:1.2;
+  letter-spacing:-.028em;max-width:20ch;margin-bottom:14px}
+.callout p{font-size:18px;line-height:1.66;color:var(--ink-50);max-width:32em}
+.callout p+p{margin-top:13px}
+.callout ul{list-style:none;margin:14px 0 0}
+.callout li{font-size:17px;line-height:1.6;color:var(--ink-50);padding:8px 0 8px 22px;
+  position:relative;border-top:1px solid var(--hair)}
+.callout li:first-child{border-top:0}
+.callout li::before{content:"";position:absolute;left:2px;top:1.05em;width:9px;height:1px;background:var(--ink-30)}
+.callout .go{display:inline-block;margin-top:20px;font-size:15px;
+  border-bottom:1px solid var(--hair);padding-bottom:3px}
+
+.talk{padding:clamp(72px,13vh,160px) var(--m);display:grid;
+  grid-template-columns:.55fr 1.45fr;gap:clamp(24px,5vw,80px);align-items:center}
+.talk .im{position:relative;isolation:isolate;aspect-ratio:4/5;overflow:hidden;max-width:400px}
+.dkband.talk .im{max-width:none;aspect-ratio:4/3}
+.talk .im img{width:100%;height:100%;object-fit:cover;position:relative;z-index:0}
+.talk .im::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to top,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to right,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to left,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px)}
+.talk .im::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px),
+             linear-gradient(to right,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px)}
+.talk h3{font-size:clamp(23px,2.5vw,34px);font-weight:400;line-height:1.18;
+  letter-spacing:-.028em;max-width:19ch;margin-bottom:16px}
+.talk p{font-size:18px;line-height:1.66;color:var(--ink-50);max-width:32em}
+.talk p+p{margin-top:13px}
+.talk .lines{margin-top:22px;border-top:1px solid var(--hair)}
+.talk .lines div{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:11px 0;
+  border-bottom:1px solid var(--hair)}
+.talk .lines dt{font-size:14.5px;color:var(--ink-30)}
+.talk .lines dd{margin:0;font-size:17px;color:var(--ink)}
+.talk .cta{margin-top:30px;display:flex;gap:28px;flex-wrap:wrap;align-items:center}
+.talk .cta .act{margin-top:0}
+.talk .cta a{font-size:16px;border-bottom:1px solid var(--hair);padding-bottom:3px}
+.talk .cta a:hover{border-color:var(--ink)}
+.talk.flip{grid-template-columns:minmax(0,32em) minmax(0,400px);
+  justify-content:space-between;align-items:center}
+.talk.flip .im{order:2;width:100%}
+.talk.flip h3{max-width:14em}
+.talk .cta .tel{font-size:19px;letter-spacing:-.02em;border:0}
+
+@media(max-width:860px){
+  .rgrid,.rgrid.two{grid-template-columns:1fr;gap:34px}
+  .rmore{grid-template-columns:1fr;gap:0}
+  .cap3{grid-template-columns:1fr;gap:26px}
+  .figs{grid-template-columns:1fr;gap:18px}
+  .callout,.talk{grid-template-columns:1fr;gap:22px}
+  .talk.flip{grid-template-columns:1fr}
+  .talk.flip .im{order:-1}
+  .talk .im{aspect-ratio:4/3}
+  .callout h3,.talk h3{max-width:none}
+}
+
+
+
+/* ---- the opening frame ----
+   Full bleed: the first image is the page. Everything after it is a print set
+   into the page. One exception, stated, and not repeated further down. */
+/* Bleed is a trim, not a different kind of thing. The reveal appears on any
+   edge where the print meets the page; where it is trimmed at the page edge
+   there is no margin, so there is nothing to reveal. This plate is trimmed
+   left and right, and meets the page top and bottom. */
+figure.bleed{margin:0;padding:0}
+figure.bleed>div{position:relative;isolation:isolate}
+figure.bleed>div::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to top,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px)}
+figure.bleed>div::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px)}
+figure.bleed img{display:block;width:100%;height:clamp(300px,54vh,560px);object-fit:cover}
+figure.bleed .f-cap{padding:22px var(--m) 0}
+figure.bleed{margin-bottom:0}
+@media(max-width:860px){
+  figure.bleed img{height:clamp(240px,44vh,380px)}
+  figure.bleed .f-cap{padding-top:18px}
+}
+
+.fin{padding:clamp(72px,13vh,160px) var(--m);
+  display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,80px);align-items:start}
+.finfig{margin:0}
+.finfig .im{position:relative;isolation:isolate;aspect-ratio:16/11;overflow:hidden}
+.finfig .im img{width:100%;height:100%;object-fit:cover;position:relative;z-index:0;display:block}
+.finfig .im::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to top,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to right,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to left,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px)}
+.finfig .im::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px),
+             linear-gradient(to right,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px)}
+@media(max-width:860px){.fin{grid-template-columns:1fr}}
+.fin h3{font-size:clamp(23px,2.5vw,34px);font-weight:400;line-height:1.2;letter-spacing:-.028em;
+  max-width:20ch;margin-bottom:16px;text-wrap:balance}
+.fin p{font-size:18px;line-height:1.66;color:var(--ink-50);max-width:32em}
+.finrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:clamp(20px,3vw,44px);margin-top:clamp(34px,5vw,56px);padding-top:26px;border-top:1px solid var(--hair)}
+.finrow .k{display:block;font-size:15px;color:var(--ink-30);margin-bottom:6px}
+.finrow .v{font-size:17px;color:var(--ink);line-height:1.5}
+.fin .cta{margin-top:clamp(30px,4vw,46px);display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.fin .cta .act{margin-top:0}
+.fin .cta a:not(.act){font-size:16px;border-bottom:1px solid var(--hair);padding-bottom:3px}
+@media(max-width:860px){.fin h3{max-width:none}}
+
+
+/* ── chambers typology ───────────────────────────────────────────────
+   A drawing is a different class of information from a photograph, so it
+   takes no print treatment. Line weight is uniform; nothing is filled. */
+.chm{padding:clamp(56px,9vh,110px) var(--m) clamp(40px,6vh,72px)}
+.chm .lb{display:block;margin-bottom:clamp(28px,4.5vh,52px)}
+.chbody{display:grid;grid-template-columns:minmax(0,.36fr) minmax(0,.64fr);
+  gap:clamp(26px,5vw,76px);align-items:start}
+.chlede{font-size:16.5px;line-height:1.6;color:var(--ink-50);max-width:42em;
+  margin-bottom:clamp(24px,3.5vh,38px)}
+.chright .go{display:inline-block;margin-top:clamp(22px,3vh,32px);font-size:15px;
+  border-bottom:1px solid var(--hair);padding-bottom:3px}
+.chright .go:hover{border-color:var(--ink)}
+.chfig{margin:0}
+.chfig img{display:block;width:100%;height:auto}
+.chfig figcaption{padding-top:14px}
+.chspec{border-top:1px solid var(--hair)}
+.chspec div{display:grid;grid-template-columns:minmax(130px,.42fr) 1fr;
+  gap:clamp(14px,2.4vw,32px);padding:12px 0;border-bottom:1px solid var(--hair)}
+.chspec dt{font-size:14.5px;color:var(--ink-30);line-height:1.5}
+.chspec dd{margin:0;font-size:16px;color:var(--ink);line-height:1.5}
+@media(max-width:860px){
+  .chm{padding:40px var(--m) 30px}
+  .chm .lb{margin-bottom:24px}
+  .chdraw .dl{font-size:230px}
+  .chdraw .rm{stroke-width:14}
+  .chdraw .dm,.chdraw .dr{stroke-width:11}
+  .chbody{grid-template-columns:1fr;gap:26px}
+  .chspec div{grid-template-columns:1fr;gap:2px;padding:10px 0}
+}
+
+/* ── section title ───────────────────────────────────────────────────
+   The drawing convention: name set large, scale set small on the same
+   baseline. The honest equivalent of scale here is the count, so every
+   title carries a figure that is checkable. */
+.lb{font-size:clamp(24px,2.65vw,38px);color:var(--ink-50);
+  letter-spacing:-.026em;line-height:1.2}
+.lb i{font-style:normal;font-size:15px;color:var(--ink-30);
+  margin-left:1.15em;letter-spacing:-.01em}
+@media(max-width:860px){
+  .lb{font-size:24px}
+  .lb i{display:block;margin-left:0;margin-top:5px}
+}
+
+/* ---- field ----
+   Sectors as a field, not a grid: a 12-column frame where nothing shares a
+   baseline and no two items are the same width. */
+.field{padding:clamp(52px,8vh,96px) var(--m) clamp(56px,9vh,110px);
+  display:grid;grid-template-columns:repeat(12,1fr);
+  column-gap:clamp(14px,2.2vw,30px);row-gap:clamp(28px,3.6vw,50px)}
+.field .lb{grid-column:1/-1;margin-bottom:clamp(10px,1.6vw,22px)}
+.fi{display:block;text-decoration:none}
+.fi .im{position:relative;isolation:isolate;overflow:hidden}
+.fi .im img{width:100%;height:100%;object-fit:cover;position:relative;z-index:0;display:block}
+.fi .im::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to top,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to right,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to left,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px)}
+.fi .im::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px),
+             linear-gradient(to right,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px)}
+.fi h3{font-size:clamp(18px,1.72vw,22px);font-weight:400;letter-spacing:-.024em;margin:13px 0 5px}
+.fi .num{color:var(--ink-30);font-size:14px;letter-spacing:0;margin-right:.85em;
+  font-variant-numeric:tabular-nums}
+.fi p{font-size:15.5px;line-height:1.5;color:var(--ink-50);max-width:30em;
+  min-height:2.98em}   /* two lines, so photograph bottoms stay aligned across a row */
+.fi:hover h3{color:var(--ink-50)}
+
+.a1{grid-column:1/4;align-self:end}   .a1 .im{aspect-ratio:2/3}
+.a2{grid-column:4/8;align-self:end}   .a2 .im{aspect-ratio:16/9}
+.a3{grid-column:8/12;align-self:end}  .a3 .im{aspect-ratio:4/3}
+.a4{grid-column:2/8;align-self:end}   .a4 .im{aspect-ratio:12/5}
+.a5{grid-column:8/12;align-self:end}  .a5 .im{aspect-ratio:1/1}
+
+@media(max-width:860px){
+  .field{grid-template-columns:1fr;row-gap:38px}
+  .a1,.a2,.a3,.a4,.a5{grid-column:1/-1}
+  .a1 .im,.a2 .im,.a3 .im,.a4 .im,.a5 .im{aspect-ratio:4/3}
+  .fi p{max-width:none}
+}
+
+/* ---- action ----
+   A button means: this is an action, not something to read. Solid ink, zero
+   radius, paper text. On hover it catches the light like every other surface. */
+.act{display:inline-block;margin-top:28px;background:var(--ink);color:var(--paper);
+  padding:14px 26px;font-size:15px;letter-spacing:-.012em;border:0;
+  transition:background .3s ease}
+.act:hover{background:#2C343B}
+.act.on-dark{background:var(--lit);color:var(--ink)}
+.act.on-dark:hover{background:#FFFFFF}
+/* the action is one size everywhere it appears in the body, and one smaller
+   size in the nav. Nothing local may resize it. */
+.talk .cta a.act,.callout a.act,section a.act{
+  padding:15px 28px;font-size:16px;border-bottom:0;line-height:1.4}
+nav a.act{padding:10px 20px;font-size:14.5px;line-height:1.4}
+nav .act{margin-top:0;padding:9px 18px;font-size:14.5px}
+nav .spacer{flex:1}
+@media(max-width:860px){
+  nav .act{margin-left:0;padding:11px 20px}
+  .act{padding:13px 22px}
+}
+
+/* ---- dark ground: the ramp, applied once, last, and above the light rules ---- */
+section.dkband{color:var(--lit)}
+section.dkband p,section.dkband .tx p{color:var(--lit-70)}
+section.dkband p b,section.dkband .tx p b{color:var(--lit)}
+section.dkband h3,section.dkband h4{color:var(--lit)}
+section.dkband .lines{border-top-color:rgba(232,235,236,.30)}
+section.dkband .lines div{border-bottom-color:rgba(232,235,236,.22)}
+section.dkband .lines dt{color:var(--lit-50)}
+section.dkband .lines dd,section.dkband .lines dd a{color:var(--lit)}
+section.dkband .f-cap{color:var(--lit-50)}
+section.dkband .f-cap b{color:var(--lit-70)}
+section.dkband .go,section.dkband .cta a{color:var(--lit);border-bottom-color:rgba(232,235,236,.34)}
+section.dkband.set2{padding-top:clamp(72px,13vh,160px);padding-bottom:clamp(72px,13vh,160px)}
+section.dkband .lb{color:var(--lit-50)}
+section.dkband .lb i{color:var(--lit-50);opacity:.72}
+section.dkband .set2 a,section.dkband a{border-top-color:rgba(232,235,236,.22)}
+section.dkband .n{color:var(--lit)}
+section.dkband .d{color:var(--lit-70)}
+section.dkband a:hover{background:linear-gradient(108deg,
+  rgba(255,255,255,.13) 0%, rgba(255,255,255,.08) 34%,
+  rgba(255,255,255,.02) 68%, rgba(255,255,255,0) 96%)}
+/* the dark ramp holds on hover. Defined once, here, above the light rules. */
+section.dkband.set2 a:hover .n{color:var(--lit)}
+section.dkband.set2 a:hover .d{color:var(--lit-70)}
+section.dkband.set2 a:hover .dia{color:var(--lit)}
+section.dkband .figs{border-top-color:rgba(232,235,236,.30)}
+section.dkband .figs .n{color:var(--lit)}
+section.dkband .figs .n small,section.dkband .figs .k{color:var(--lit-50)}
+section.dkband .act{background:var(--lit);color:var(--ink)}
+section.dkband .act:hover{background:#FFFFFF}
+section.dkband .go:hover,section.dkband .cta a:hover{border-bottom-color:var(--lit)}
+
+/* four routes, and nothing competing with them. The contact detail is the
+   largest type on the page because it is what the page is for. */
+.op{padding:clamp(40px,7vh,86px) var(--m) clamp(24px,3.6vh,38px)}
+.op h1{font-size:clamp(24px,2.5vw,34px);font-weight:400;letter-spacing:-.03em;line-height:1.16}
+.op p{margin-top:14px;font-size:clamp(16px,1.45vw,19px);line-height:1.55;
+  letter-spacing:-.014em;color:var(--ink-50);max-width:34em;text-wrap:balance}
+.routes{padding:0 var(--m) clamp(40px,6vh,72px);
+  display:grid;grid-template-columns:repeat(3,1fr);
+  column-gap:clamp(18px,3vw,44px);row-gap:clamp(30px,4.5vh,48px)}
+.rt{border-top:1px solid var(--ink-30);padding-top:16px}
+.rt .k{display:block;font-size:14px;color:var(--ink-30);margin-bottom:11px}
+.rt .v{display:inline-block;font-size:clamp(20px,2vw,26px);letter-spacing:-.026em;
+  line-height:1.2;color:var(--ink);border-bottom:1px solid var(--hair);padding-bottom:4px}
+.rt .v:hover{border-color:var(--ink)}
+.rt .m{display:block;margin-top:11px;font-size:14.5px;line-height:1.5;color:var(--ink-50)}
+.rt .m a{border-bottom:1px solid var(--hair)}
+.rt .m a:hover{border-color:var(--ink)}
+
+.formw .k{display:block;font-size:14px;color:var(--ink-30);margin-bottom:11px}
+.sh{font-size:clamp(18px,1.7vw,22px);font-weight:400;letter-spacing:-.024em;
+  line-height:1.2;margin-bottom:14px}
+.sh2{margin-top:clamp(28px,4vh,42px);padding-top:clamp(20px,2.8vh,28px);
+  border-top:1px solid var(--hair)}
+.intl{border-top:1px solid var(--hair);margin-top:0}
+.intl div{display:grid;grid-template-columns:minmax(104px,.34fr) 1fr;
+  gap:clamp(12px,2vw,22px);padding:8px 0;border-bottom:1px solid var(--hair)}
+.intl dt{font-size:13.5px;color:var(--ink-30);line-height:1.5}
+.intl dd{margin:0;font-size:14.5px;line-height:1.5;color:var(--ink)}
+.addr{font-size:17px;line-height:1.62;color:var(--ink);font-style:normal}
+.formw .map{display:inline-block;margin-top:14px;font-size:15px;
+  border-bottom:1px solid var(--hair);padding-bottom:3px}
+.formw .map:hover{border-color:var(--ink)}
+/* 12 · a photograph is a print laid beneath the page: occlusion on four
+   edges, cast shadow on the two the light reaches first. */
+.loc{margin:clamp(22px,3vh,30px) 0 0}
+.loc .im{position:relative;isolation:isolate;overflow:hidden;aspect-ratio:3/2}
+.loc .im img{width:100%;height:100%;object-fit:cover;position:relative;z-index:0;display:block}
+.loc .im::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to top,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to right,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to left,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px)}
+.loc .im::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px),
+             linear-gradient(to right,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px)}
+.loc figcaption{padding-top:11px}
+.formw p.intro,.formw > div > p{font-size:15.5px;line-height:1.6;color:var(--ink-50);max-width:28em;margin-top:22px}
+
+/* the form reads as a form: filled fields with a full border, not a hairline
+   lost in the gradient */
+
+.formw{padding:0 var(--m) clamp(56px,9vh,110px);border-top:1px solid var(--hair);
+  padding-top:clamp(28px,4vh,42px);display:grid;
+  grid-template-columns:minmax(0,.4fr) minmax(0,.6fr);gap:clamp(24px,5vw,70px);
+  align-items:start}
+.formw .k{display:block;font-size:14px;color:var(--ink-30);margin-bottom:11px}
+.sh{font-size:clamp(18px,1.7vw,22px);font-weight:400;letter-spacing:-.024em;
+  line-height:1.2;margin-bottom:14px}
+.sh2{margin-top:clamp(28px,4vh,42px);padding-top:clamp(20px,2.8vh,28px);
+  border-top:1px solid var(--hair)}
+.intl{border-top:1px solid var(--hair);margin-top:0}
+.intl div{display:grid;grid-template-columns:minmax(104px,.34fr) 1fr;
+  gap:clamp(12px,2vw,22px);padding:8px 0;border-bottom:1px solid var(--hair)}
+.intl dt{font-size:13.5px;color:var(--ink-30);line-height:1.5}
+.intl dd{margin:0;font-size:14.5px;line-height:1.5;color:var(--ink)}
+.formw h2{font-size:clamp(19px,1.8vw,23px);font-weight:400;letter-spacing:-.024em}
+form .pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.6vw,26px)}
+form label{display:block;font-size:14px;color:var(--ink-30);margin-bottom:7px}
+form .f{margin-bottom:clamp(16px,2.4vh,22px)}
+form input,form textarea,form select{width:100%;font-family:var(--f);font-size:16.5px;
+  color:var(--ink);background:#FBFCFC;border:1px solid rgba(20,26,31,.28);
+  padding:12px 13px;border-radius:0;letter-spacing:-.012em;-webkit-appearance:none;appearance:none}
+form select{background-image:linear-gradient(45deg,transparent 50%,var(--ink-50) 50%),
+  linear-gradient(135deg,var(--ink-50) 50%,transparent 50%);
+  background-position:calc(100% - 18px) calc(50% + 2px),calc(100% - 12px) calc(50% + 2px);
+  background-size:6px 6px,6px 6px;background-repeat:no-repeat;padding-right:38px;cursor:pointer}
+form select:invalid{color:var(--ink-30)}
+form textarea{min-height:132px;resize:vertical;line-height:1.55}
+form input:focus,form textarea:focus,form select:focus{outline:0;border-color:var(--ink);background:#fff}
+form .act{margin-top:4px;cursor:pointer;font-family:var(--f)}
+.consent{margin-top:15px;font-size:13.5px;line-height:1.6;color:var(--ink-30);max-width:32em}
+.consent a{border-bottom:1px solid var(--hair)}
+
+@media(max-width:860px){
+  .routes{grid-template-columns:1fr;row-gap:26px}
+  .op p{max-width:none}
+  .formw{grid-template-columns:1fr;gap:22px}
+  .intl div{grid-template-columns:1fr;gap:2px}
+  form .pair{grid-template-columns:1fr;gap:0}
+}
+</style></head><body>
+<nav>
+  <a class="id" href="index.html">Thrive Hyperbaric</a>
+  <div class="set">
+    <span class="ni"><a href="projects.html">Projects</a></span>
+    <span class="ni"><a href="chambers.html">Chambers</a></span>
+    <span class="ni"><a href="practice.html">Practice</a></span>
+    <span class="ni"><a href="notes.html">Notes</a></span></div>
+  <a class="act navact" href="contact.html">Contact</a>
 </nav>
 
-<!-- ===== HEADER ===== -->
-<section class="header-band">
-  <div class="inner">
-    <div class="block">
-      <div class="eyebrow">Contact</div>
-      <h1>Ask us anything, or tell us your space and we will quote it</h1>
-      <p class="sub">Tell us which models you are looking at, how you plan to use it and the space you have in mind. We will advise on which chamber suits and come back with a quote. If you are earlier than that and just have questions, ask those instead.</p>
-      <p class="spec-note">We handle specification, installation and support, from the first conversation through to handover.</p>
-    </div>
-  </div>
+<section class="op">
+  <h1>Contact</h1>
+  <p>We reply to every enquiry within one working day, usually within the hour.</p>
 </section>
 
-<!-- ===== CONTACT ===== -->
-<section class="contact">
-  <div class="inner">
-
-    <!-- LEFT RAIL -->
-    <div class="rail">
-      <div class="person">
-        <div class="pphoto" style="background-image:url(images/david-zeugma.webp)"></div>
-        <div>
-          <div class="pname">David Gumbleton</div>
-          <div class="prole">Founder &middot; Thrive Hyperbaric</div>
-          <div class="pline">You'll deal with our team directly - people who run these chambers every day.</div>
-        </div>
-      </div>
-      <div class="steps">
-        <div class="step">
-          <h3>Tell us about it</h3>
-          <p>Your space, the model you're weighing up, and where you are. Rough is fine.</p>
-        </div>
-        <div class="step">
-          <h3>We reply within one day, in your hours</h3>
-          <p>We come back with guidance and pricing tailored to you. We work across international time zones daily.</p>
-        </div>
-        <div class="step">
-          <h3>Specified to your room</h3>
-          <p>We spec each chamber to the room, the access route and how you'll use it, then handle delivery, installation and getting you running.</p>
-        </div>
-      </div>
-
-      <p class="reassure">We make it straightforward - guiding the specification, fitting the chamber to your space and how it'll be used, and handling delivery and installation.</p>
-
-      <div class="direct">
-        <div class="us-only">
-          <p class="dk">Buying from the US?</p>
-          <p class="dv">Many of these chambers are installed in the US. We work with US-based install and servicing teams, run from Detroit, Michigan - so your chamber is fitted and looked after locally.</p>
-        </div>
-        <p class="dk">Call or email</p>
-        <p class="dv"><a href="tel:+447799772383">+44 779 977 2383</a><br><a href="mailto:hello@thrivehyperbaric.com">hello@thrivehyperbaric.com</a></p>
-      </div>
-      <p class="rail-faq">Questions before you enquire? <a href="faq.html">Read the FAQ</a></p>
-    </div>
-
-    <!-- FORM -->
-    <div class="fcard">
-      <form action="https://api.web3forms.com/submit" method="POST" id="enquiry-form">
-        <input type="hidden" name="access_key" value="9a1a0a7f-e4c7-4722-842b-e4c753e69147">
-        <input type="hidden" name="subject" value="New enquiry - thrivehyperbaric.com">
-        <input type="hidden" name="from_name" value="Thrive Hyperbaric website">
-        <input type="hidden" name="redirect" value="https://www.thrivehyperbaric.com/thank-you">
-        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none !important">
-        <div class="field">
-          <span class="flabel">Type of installation <span class="req">*</span></span>
-          <div class="pills">
-            <input type="radio" id="t-home" name="installation" value="Home" required><label for="t-home">Home</label>
-            <input type="radio" id="t-comm" name="installation" value="Commercial"><label for="t-comm">Commercial</label>
-            <input type="radio" id="t-sport" name="installation" value="Sports"><label for="t-sport">Sports</label>
-            <input type="radio" id="t-med" name="installation" value="Medical"><label for="t-med">Medical</label>
-          </div>
-        </div>
-
-        <div class="frow">
-          <div class="field"><label class="flabel" for="fname">First name <span class="req">*</span></label><input id="fname" name="first_name" type="text" autocomplete="given-name" required></div>
-          <div class="field"><label class="flabel" for="lname">Last name <span class="req">*</span></label><input id="lname" name="last_name" type="text" autocomplete="family-name" required></div>
-        </div>
-
-        <div class="frow">
-          <div class="field"><label class="flabel" for="email">Email <span class="req">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
-          <div class="field"><label class="flabel" for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
-        </div>
-
-        <div class="frow">
-          <div class="field">
-            <label class="flabel" for="country">Country <span class="req">*</span></label>
-            <select id="country" name="country" required>
-              <option value="" disabled selected>Select country</option>
-              <option value="United Kingdom">United Kingdom</option>
-              <option value="United States">United States</option>
-              <option value="United Arab Emirates">United Arab Emirates</option>
-              <option value="Ireland">Ireland</option>
-              <option value="Canada">Canada</option>
-              <option value="Australia">Australia</option>
-              <option value="" disabled>──────────</option>
-              <option value="Afghanistan">Afghanistan</option>
-              <option value="Albania">Albania</option>
-              <option value="Algeria">Algeria</option>
-              <option value="Andorra">Andorra</option>
-              <option value="Angola">Angola</option>
-              <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-              <option value="Argentina">Argentina</option>
-              <option value="Armenia">Armenia</option>
-              <option value="Australia">Australia</option>
-              <option value="Austria">Austria</option>
-              <option value="Azerbaijan">Azerbaijan</option>
-              <option value="Bahamas">Bahamas</option>
-              <option value="Bahrain">Bahrain</option>
-              <option value="Bangladesh">Bangladesh</option>
-              <option value="Barbados">Barbados</option>
-              <option value="Belarus">Belarus</option>
-              <option value="Belgium">Belgium</option>
-              <option value="Belize">Belize</option>
-              <option value="Benin">Benin</option>
-              <option value="Bhutan">Bhutan</option>
-              <option value="Bolivia">Bolivia</option>
-              <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-              <option value="Botswana">Botswana</option>
-              <option value="Brazil">Brazil</option>
-              <option value="Brunei">Brunei</option>
-              <option value="Bulgaria">Bulgaria</option>
-              <option value="Burkina Faso">Burkina Faso</option>
-              <option value="Burundi">Burundi</option>
-              <option value="Cambodia">Cambodia</option>
-              <option value="Cameroon">Cameroon</option>
-              <option value="Canada">Canada</option>
-              <option value="Cape Verde">Cape Verde</option>
-              <option value="Central African Republic">Central African Republic</option>
-              <option value="Chad">Chad</option>
-              <option value="Chile">Chile</option>
-              <option value="China">China</option>
-              <option value="Colombia">Colombia</option>
-              <option value="Comoros">Comoros</option>
-              <option value="Congo">Congo</option>
-              <option value="Costa Rica">Costa Rica</option>
-              <option value="Croatia">Croatia</option>
-              <option value="Cuba">Cuba</option>
-              <option value="Cyprus">Cyprus</option>
-              <option value="Czech Republic">Czech Republic</option>
-              <option value="Denmark">Denmark</option>
-              <option value="Djibouti">Djibouti</option>
-              <option value="Dominica">Dominica</option>
-              <option value="Dominican Republic">Dominican Republic</option>
-              <option value="Ecuador">Ecuador</option>
-              <option value="Egypt">Egypt</option>
-              <option value="El Salvador">El Salvador</option>
-              <option value="Equatorial Guinea">Equatorial Guinea</option>
-              <option value="Eritrea">Eritrea</option>
-              <option value="Estonia">Estonia</option>
-              <option value="Eswatini">Eswatini</option>
-              <option value="Ethiopia">Ethiopia</option>
-              <option value="Fiji">Fiji</option>
-              <option value="Finland">Finland</option>
-              <option value="France">France</option>
-              <option value="Gabon">Gabon</option>
-              <option value="Gambia">Gambia</option>
-              <option value="Georgia">Georgia</option>
-              <option value="Germany">Germany</option>
-              <option value="Ghana">Ghana</option>
-              <option value="Greece">Greece</option>
-              <option value="Grenada">Grenada</option>
-              <option value="Guatemala">Guatemala</option>
-              <option value="Guinea">Guinea</option>
-              <option value="Guinea-Bissau">Guinea-Bissau</option>
-              <option value="Guyana">Guyana</option>
-              <option value="Haiti">Haiti</option>
-              <option value="Honduras">Honduras</option>
-              <option value="Hong Kong">Hong Kong</option>
-              <option value="Hungary">Hungary</option>
-              <option value="Iceland">Iceland</option>
-              <option value="India">India</option>
-              <option value="Indonesia">Indonesia</option>
-              <option value="Iran">Iran</option>
-              <option value="Iraq">Iraq</option>
-              <option value="Ireland">Ireland</option>
-              <option value="Israel">Israel</option>
-              <option value="Italy">Italy</option>
-              <option value="Ivory Coast">Ivory Coast</option>
-              <option value="Jamaica">Jamaica</option>
-              <option value="Japan">Japan</option>
-              <option value="Jordan">Jordan</option>
-              <option value="Kazakhstan">Kazakhstan</option>
-              <option value="Kenya">Kenya</option>
-              <option value="Kiribati">Kiribati</option>
-              <option value="Kosovo">Kosovo</option>
-              <option value="Kuwait">Kuwait</option>
-              <option value="Kyrgyzstan">Kyrgyzstan</option>
-              <option value="Laos">Laos</option>
-              <option value="Latvia">Latvia</option>
-              <option value="Lebanon">Lebanon</option>
-              <option value="Lesotho">Lesotho</option>
-              <option value="Liberia">Liberia</option>
-              <option value="Libya">Libya</option>
-              <option value="Liechtenstein">Liechtenstein</option>
-              <option value="Lithuania">Lithuania</option>
-              <option value="Luxembourg">Luxembourg</option>
-              <option value="Macau">Macau</option>
-              <option value="Madagascar">Madagascar</option>
-              <option value="Malawi">Malawi</option>
-              <option value="Malaysia">Malaysia</option>
-              <option value="Maldives">Maldives</option>
-              <option value="Mali">Mali</option>
-              <option value="Malta">Malta</option>
-              <option value="Marshall Islands">Marshall Islands</option>
-              <option value="Mauritania">Mauritania</option>
-              <option value="Mauritius">Mauritius</option>
-              <option value="Mexico">Mexico</option>
-              <option value="Micronesia">Micronesia</option>
-              <option value="Moldova">Moldova</option>
-              <option value="Monaco">Monaco</option>
-              <option value="Mongolia">Mongolia</option>
-              <option value="Montenegro">Montenegro</option>
-              <option value="Morocco">Morocco</option>
-              <option value="Mozambique">Mozambique</option>
-              <option value="Myanmar">Myanmar</option>
-              <option value="Namibia">Namibia</option>
-              <option value="Nauru">Nauru</option>
-              <option value="Nepal">Nepal</option>
-              <option value="Netherlands">Netherlands</option>
-              <option value="New Zealand">New Zealand</option>
-              <option value="Nicaragua">Nicaragua</option>
-              <option value="Niger">Niger</option>
-              <option value="Nigeria">Nigeria</option>
-              <option value="North Korea">North Korea</option>
-              <option value="North Macedonia">North Macedonia</option>
-              <option value="Norway">Norway</option>
-              <option value="Oman">Oman</option>
-              <option value="Pakistan">Pakistan</option>
-              <option value="Palau">Palau</option>
-              <option value="Palestine">Palestine</option>
-              <option value="Panama">Panama</option>
-              <option value="Papua New Guinea">Papua New Guinea</option>
-              <option value="Paraguay">Paraguay</option>
-              <option value="Peru">Peru</option>
-              <option value="Philippines">Philippines</option>
-              <option value="Poland">Poland</option>
-              <option value="Portugal">Portugal</option>
-              <option value="Qatar">Qatar</option>
-              <option value="Romania">Romania</option>
-              <option value="Russia">Russia</option>
-              <option value="Rwanda">Rwanda</option>
-              <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
-              <option value="Saint Lucia">Saint Lucia</option>
-              <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
-              <option value="Samoa">Samoa</option>
-              <option value="San Marino">San Marino</option>
-              <option value="Sao Tome and Principe">Sao Tome and Principe</option>
-              <option value="Saudi Arabia">Saudi Arabia</option>
-              <option value="Senegal">Senegal</option>
-              <option value="Serbia">Serbia</option>
-              <option value="Seychelles">Seychelles</option>
-              <option value="Sierra Leone">Sierra Leone</option>
-              <option value="Singapore">Singapore</option>
-              <option value="Slovakia">Slovakia</option>
-              <option value="Slovenia">Slovenia</option>
-              <option value="Solomon Islands">Solomon Islands</option>
-              <option value="Somalia">Somalia</option>
-              <option value="South Africa">South Africa</option>
-              <option value="South Korea">South Korea</option>
-              <option value="South Sudan">South Sudan</option>
-              <option value="Spain">Spain</option>
-              <option value="Sri Lanka">Sri Lanka</option>
-              <option value="Sudan">Sudan</option>
-              <option value="Suriname">Suriname</option>
-              <option value="Sweden">Sweden</option>
-              <option value="Switzerland">Switzerland</option>
-              <option value="Syria">Syria</option>
-              <option value="Taiwan">Taiwan</option>
-              <option value="Tajikistan">Tajikistan</option>
-              <option value="Tanzania">Tanzania</option>
-              <option value="Thailand">Thailand</option>
-              <option value="Timor-Leste">Timor-Leste</option>
-              <option value="Togo">Togo</option>
-              <option value="Tonga">Tonga</option>
-              <option value="Trinidad and Tobago">Trinidad and Tobago</option>
-              <option value="Tunisia">Tunisia</option>
-              <option value="Turkey">Turkey</option>
-              <option value="Turkmenistan">Turkmenistan</option>
-              <option value="Tuvalu">Tuvalu</option>
-              <option value="Uganda">Uganda</option>
-              <option value="Ukraine">Ukraine</option>
-              <option value="United Arab Emirates">United Arab Emirates</option>
-              <option value="United Kingdom">United Kingdom</option>
-              <option value="United States">United States</option>
-              <option value="Uruguay">Uruguay</option>
-              <option value="Uzbekistan">Uzbekistan</option>
-              <option value="Vanuatu">Vanuatu</option>
-              <option value="Vatican City">Vatican City</option>
-              <option value="Venezuela">Venezuela</option>
-              <option value="Vietnam">Vietnam</option>
-              <option value="Yemen">Yemen</option>
-              <option value="Zambia">Zambia</option>
-              <option value="Zimbabwe">Zimbabwe</option>
-            </select>
-          </div>
-          <div class="field"><label class="flabel" for="business">Business name</label><input id="business" name="business" type="text" autocomplete="organization" placeholder="If applicable"></div>
-        </div>
-
-        <div class="field">
-          <label class="flabel" for="request">What can we help with? <span class="req">*</span></label>
-          <select id="request" name="request_type" required>
-            <option value="" disabled selected>Choose one</option>
-            <option value="Pricing and a tailored quote">Pricing and a tailored quote</option>
-            <option value="A call to talk it through">A call to talk it through</option>
-            <option value="See a chamber in person">See one in person (Bath or nearest to you)</option>
-            <option value="General question / not sure yet">General question / not sure yet</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label class="flabel" for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Tell us about your space, your goals, and anything you're unsure about."></textarea>
-        </div>
-
-        <button type="submit" class="btn gold submit">Send enquiry</button>
-        <p class="privacy">By submitting, you agree we may use your details to respond to your enquiry, as set out in our <a href="privacy-policy.html">Privacy Policy</a>.</p>
-      </form>
-    </div>
-
-  </div>
+<section class="routes">
+  <div class="rt"><span class="k">Telephone</span>
+    <a class="v" href="tel:+441225698524">+44 1225 698524</a>
+    <span class="m">Bath, 8am to 8pm UK time</span></div>
+  <div class="rt"><span class="k">Mobile and WhatsApp</span>
+    <a class="v" href="tel:+447799772383">+44 779 977 2383</a>
+    <span class="m">Katherine, who takes enquiries. <a href="https://wa.me/447799772383">Open in WhatsApp</a></span></div>
+  <div class="rt"><span class="k">Email</span>
+    <a class="v" href="mailto:hello@thrivehyperbaric.com">hello@thrivehyperbaric.com</a>
+    <span class="m">Tenders and procurement, <a href="mailto:chris@thrivehyperbaric.com">chris@thrivehyperbaric.com</a></span></div>
 </section>
 
-<!-- ===== FOOTER ===== -->
+
+
+
+<section class="formw" id="form">
+  <div><h2 class="sh">Where we are</h2>
+    <address class="addr">Thrive Hyperbaric<br>Unit F3, The Foundry<br>Beehive Yard, Walcot Street<br>Bath BA1 5BT</address>
+    <a class="map" href="https://www.google.com/maps/search/?api=1&query=Thrive+Hyperbaric,+Unit+F3,+The+Foundry,+Beehive+Yard,+Walcot+Street,+Bath+BA1+5BT" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+    <figure class="loc">
+      <div class="im"><img src="images/thrive-clinic-bath.jpg" alt="The Foundry, Beehive Yard, Bath"></div>
+      <figcaption class="f-cap"><i>The Foundry, Beehive Yard &middot; Bath &middot; [ year ] &middot; Photography: [ credit ]</i></figcaption>
+    </figure>
+    <p>The clinic is at the same address and runs sessions daily. You can sit in a chamber under pressure, by appointment.</p>
+    <h2 class="sh sh2">Outside the UK</h2>
+    <dl class="intl">
+      <div><dt>Telephone hours</dt><dd>8am to 8pm UK. From 11am in the Gulf, until 3pm on the US east coast and noon on the west</dd></div>
+      <div><dt>Other times</dt><dd>Say when suits and we will call then</dd></div>
+      <div><dt>Installed in</dt><dd>The UK, Europe, the United States, the Middle East and Asia</dd></div>
+      <div><dt>Delivery</dt><dd>Door to door from the factory in Istanbul, customs and on-site placement included</dd></div>
+      <div><dt>Warranty</dt><dd>Two years on every system, from the manufacturer</dd></div>
+      <div><dt>Servicing</dt><dd>An annual programme after that, by the manufacturer&rsquo;s teams and local partners. We remain the point of contact</dd></div>
+      <div><dt>Finance</dt><dd>No-deposit asset-backed leases, arranged by us, available to newly incorporated businesses</dd></div>
+      <div><dt>Quotations</dt><dd>Sterling, euros or dollars</dd></div>
+    </dl>
+  </div>
+  <form action="[ endpoint ]" method="post">
+    <div class="pair">
+      <div class="f"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+      <div class="f"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+    </div>
+    <div class="f"><label for="country">Country</label><select id="country" name="country" required><option value="" disabled selected>Select</option><option>United Kingdom</option><option>United States</option><option>United Arab Emirates</option><option>Saudi Arabia</option><option>Ireland</option><option>France</option><option>Germany</option><option>Spain</option><option>Italy</option><option>Switzerland</option><option>Malta</option><option>Qatar</option><option>Kuwait</option><option>Australia</option><option>Canada</option><option disabled>&mdash;&mdash;&mdash;</option><option>Afghanistan</option><option>Albania</option><option>Algeria</option><option>American Samoa</option><option>Andorra</option><option>Angola</option><option>Anguilla</option><option>Antarctica</option><option>Antigua and Barbuda</option><option>Argentina</option><option>Armenia</option><option>Aruba</option><option>Austria</option><option>Azerbaijan</option><option>Bahamas</option><option>Bahrain</option><option>Bangladesh</option><option>Barbados</option><option>Belarus</option><option>Belgium</option><option>Belize</option><option>Benin</option><option>Bermuda</option><option>Bhutan</option><option>Bolivia, Plurinational State of</option><option>Bonaire, Sint Eustatius and Saba</option><option>Bosnia and Herzegovina</option><option>Botswana</option><option>Bouvet Island</option><option>Brazil</option><option>British Indian Ocean Territory</option><option>Brunei Darussalam</option><option>Bulgaria</option><option>Burkina Faso</option><option>Burundi</option><option>Cabo Verde</option><option>Cambodia</option><option>Cameroon</option><option>Cayman Islands</option><option>Central African Republic</option><option>Chad</option><option>Chile</option><option>China</option><option>Christmas Island</option><option>Cocos (Keeling) Islands</option><option>Colombia</option><option>Comoros</option><option>Congo</option><option>Congo, The Democratic Republic of the</option><option>Cook Islands</option><option>Costa Rica</option><option>Croatia</option><option>Cuba</option><option>Curaçao</option><option>Cyprus</option><option>Czechia</option><option>Côte d&#x27;Ivoire</option><option>Denmark</option><option>Djibouti</option><option>Dominica</option><option>Dominican Republic</option><option>Ecuador</option><option>Egypt</option><option>El Salvador</option><option>Equatorial Guinea</option><option>Eritrea</option><option>Estonia</option><option>Eswatini</option><option>Ethiopia</option><option>Falkland Islands (Malvinas)</option><option>Faroe Islands</option><option>Fiji</option><option>Finland</option><option>French Guiana</option><option>French Polynesia</option><option>French Southern Territories</option><option>Gabon</option><option>Gambia</option><option>Georgia</option><option>Ghana</option><option>Gibraltar</option><option>Greece</option><option>Greenland</option><option>Grenada</option><option>Guadeloupe</option><option>Guam</option><option>Guatemala</option><option>Guernsey</option><option>Guinea</option><option>Guinea-Bissau</option><option>Guyana</option><option>Haiti</option><option>Heard Island and McDonald Islands</option><option>Holy See (Vatican City State)</option><option>Honduras</option><option>Hong Kong</option><option>Hungary</option><option>Iceland</option><option>India</option><option>Indonesia</option><option>Iran, Islamic Republic of</option><option>Iraq</option><option>Isle of Man</option><option>Israel</option><option>Jamaica</option><option>Japan</option><option>Jersey</option><option>Jordan</option><option>Kazakhstan</option><option>Kenya</option><option>Kiribati</option><option>Korea, Democratic People&#x27;s Republic of</option><option>Korea, Republic of</option><option>Kyrgyzstan</option><option>Lao People&#x27;s Democratic Republic</option><option>Latvia</option><option>Lebanon</option><option>Lesotho</option><option>Liberia</option><option>Libya</option><option>Liechtenstein</option><option>Lithuania</option><option>Luxembourg</option><option>Macao</option><option>Madagascar</option><option>Malawi</option><option>Malaysia</option><option>Maldives</option><option>Mali</option><option>Marshall Islands</option><option>Martinique</option><option>Mauritania</option><option>Mauritius</option><option>Mayotte</option><option>Mexico</option><option>Micronesia, Federated States of</option><option>Moldova, Republic of</option><option>Monaco</option><option>Mongolia</option><option>Montenegro</option><option>Montserrat</option><option>Morocco</option><option>Mozambique</option><option>Myanmar</option><option>Namibia</option><option>Nauru</option><option>Nepal</option><option>Netherlands</option><option>New Caledonia</option><option>New Zealand</option><option>Nicaragua</option><option>Niger</option><option>Nigeria</option><option>Niue</option><option>Norfolk Island</option><option>North Macedonia</option><option>Northern Mariana Islands</option><option>Norway</option><option>Oman</option><option>Pakistan</option><option>Palau</option><option>Palestine, State of</option><option>Panama</option><option>Papua New Guinea</option><option>Paraguay</option><option>Peru</option><option>Philippines</option><option>Pitcairn</option><option>Poland</option><option>Portugal</option><option>Puerto Rico</option><option>Romania</option><option>Russian Federation</option><option>Rwanda</option><option>Réunion</option><option>Saint Barthélemy</option><option>Saint Helena, Ascension and Tristan da Cunha</option><option>Saint Kitts and Nevis</option><option>Saint Lucia</option><option>Saint Martin (French part)</option><option>Saint Pierre and Miquelon</option><option>Saint Vincent and the Grenadines</option><option>Samoa</option><option>San Marino</option><option>Sao Tome and Principe</option><option>Senegal</option><option>Serbia</option><option>Seychelles</option><option>Sierra Leone</option><option>Singapore</option><option>Sint Maarten (Dutch part)</option><option>Slovakia</option><option>Slovenia</option><option>Solomon Islands</option><option>Somalia</option><option>South Africa</option><option>South Georgia and the South Sandwich Islands</option><option>South Sudan</option><option>Sri Lanka</option><option>Sudan</option><option>Suriname</option><option>Svalbard and Jan Mayen</option><option>Sweden</option><option>Syrian Arab Republic</option><option>Taiwan, Province of China</option><option>Tajikistan</option><option>Tanzania, United Republic of</option><option>Thailand</option><option>Timor-Leste</option><option>Togo</option><option>Tokelau</option><option>Tonga</option><option>Trinidad and Tobago</option><option>Tunisia</option><option>Turkmenistan</option><option>Turks and Caicos Islands</option><option>Tuvalu</option><option>Türkiye</option><option>Uganda</option><option>Ukraine</option><option>United States Minor Outlying Islands</option><option>Uruguay</option><option>Uzbekistan</option><option>Vanuatu</option><option>Venezuela, Bolivarian Republic of</option><option>Viet Nam</option><option>Virgin Islands, British</option><option>Virgin Islands, U.S.</option><option>Wallis and Futuna</option><option>Western Sahara</option><option>Yemen</option><option>Zambia</option><option>Zimbabwe</option><option>Åland Islands</option></select></div>
+    <div class="f"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+    <button class="act" type="submit">Send</button>
+    <p class="consent">Used to answer your enquiry and nothing else. <a href="privacy-policy.html">Privacy</a>.</p>
+  </form>
+</section>
 <footer>
-  <div class="maxw">
-    <div class="fgrid">
-      <div>
-        <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Thrive Hyperbaric" class="logo-img" style="height:30px;margin-bottom:18px"></a></div>
-        <p class="addr uk-hide">Supplying, installing and supporting chambers worldwide.<br>UK &middot; Europe &middot; US &middot; Middle East &middot; Asia<span class="us-only"><br>US install &amp; servicing teams - Detroit, Michigan</span></p>
-        <p class="addr" style="margin-top:14px"><span style="color:#aeb9cc;font-family:var(--data);text-transform:uppercase;letter-spacing:.1em;font-size:11px;font-weight:600">Contact</span><br><a href="tel:+447799772383">+44 779 977 2383</a><br><a class="maillink" href="mailto:hello@thrivehyperbaric.com">hello@thrivehyperbaric.com</a></p>
-        <p class="addr" style="margin-top:14px"><span style="color:#aeb9cc;font-family:var(--data);text-transform:uppercase;letter-spacing:.1em;font-size:11px;font-weight:600">Visit the clinic</span><br><a class="maillink" href="https://maps.app.goo.gl/1AncxfpsFBJcQJEE9" target="_blank" rel="noopener">The Foundry, Beehive Yard, Bath, UK</a></p>
-      </div>
-      <div><h4>Explore</h4><a href="models.html">Models</a><a href="home-use.html">Home Use</a><a href="commercial.html">Commercial</a><a href="sport.html">Sport</a><a href="science.html">Science</a><a href="buying-guide.html">Buying Guide</a></div>
-      <div><h4>More</h4><a href="about.html">About</a><a href="certifications.html">Certifications</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
-      <div><h4>Legal</h4><a href="privacy-policy.html">Privacy Policy</a><a href="cookie-policy.html">Cookie Policy</a><a href="terms-of-use.html">Website Terms of Use</a><img src="images/logo-hpotech.png" alt="HPO.TECH" class="hpo-img">
-<p class="spec hpo-spec">The official HPO.TECH worldwide specialist.</p></div>
-    </div>
-    <div class="fbar"><span class="copy" style="display:block;margin-bottom:8px;opacity:.7;font-size:11.5px;line-height:1.5">Thrive Bath Ltd, registered in England &amp; Wales &middot; Company no. 15018698 &middot; Registered office: Unit F3, The Foundry, Beehive Yard, Walcot Street, Bath, BA1 5BT</span><span class="copy">&copy; 2026 Thrive Bath Ltd t/a Thrive Hyperbaric</span></div>
-  </div>
+  <div><span class="h">Thrive Hyperbaric</span>
+    <p>The official HPO.TECH worldwide specialist</p>
+    <p>Unit F3, The Foundry, Beehive Yard,<br>Walcot Street, Bath BA1 5BT, United Kingdom</p></div>
+  <div><span class="h">Pages</span>
+    <a href="projects.html">Projects</a><a href="chambers.html">Chambers</a><a href="practice.html">Practice</a><a href="notes.html">Notes</a></div>
+  <div><span class="h">Contact</span>
+    <a href="tel:+447799772383">+44 779 977 2383</a>
+    <a href="mailto:hello@thrivehyperbaric.com">hello@thrivehyperbaric.com</a>
+    <a href="https://www.instagram.com/thrivehyperbaric/" target="_blank" rel="noopener">Instagram</a></div>
+  <div><span class="h">Legal</span>
+    <a href="privacy-policy.html">Privacy</a></div>
+  <div class="base"><span>&copy; 2026 Thrive Hyperbaric &middot; Company 15018698</span><span>CE &middot; PED &middot; ASME &middot; T&uuml;rk Loydu inspected</span></div>
 </footer>
-
-<script src="thrive.js?v=src1"></script>
-<script>
-(function(){
-  var f=document.getElementById('enquiry-form'); if(!f) return;
-  f.addEventListener('submit',function(e){
-    e.preventDefault();
-    if(!f.checkValidity()){ f.reportValidity(); return; }
-    var g=function(n){var el=f.querySelector('[name="'+n+'"]');return el?el.value.trim():'';};
-    var ud={email:g('email').toLowerCase(),first_name:g('first_name'),last_name:g('last_name'),phone:g('phone'),country:g('country')};
-    var btn=f.querySelector('.submit'), old=btn.textContent;
-    btn.textContent='Sending...'; btn.disabled=true;
-    fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
-      .then(function(r){return r.json();})
-      .then(function(j){
-        if(j.success){ window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'fluent_form_success',user_data:ud}); f.innerHTML='<div class="form-done"><h3>Thank you - your enquiry is in.</h3><p>David and the team will reply within one day, in your hours.</p></div>'; f.scrollIntoView({behavior:'smooth',block:'center'}); }
-        else { btn.textContent=old; btn.disabled=false; alert('Sorry, something went wrong. Please email hello@thrivehyperbaric.com.'); }
-      })
-      .catch(function(){ btn.textContent=old; btn.disabled=false; alert('Sorry, something went wrong. Please email hello@thrivehyperbaric.com.'); });
-  });
-})();
-</script>
-</body>
-</html>
+</body></html>

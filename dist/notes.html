@@ -1,0 +1,660 @@
+<!DOCTYPE html><html lang="en-GB"><head>
+<meta name="robots" content="noindex, nofollow"><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notes - Thrive Hyperbaric</title>
+<meta name="description" content="Notes on practice: the buying guide, the evidence, procurement, delivery and operating economics.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#BDC4C8; --ink:#161A1E; --ink-50:#5C6064; --ink-30:#919598;
+  --hair:rgba(20,26,31,.18);
+  --lit:#E8EBEC; --lit-70:#D9DCDD; --lit-50:#C8CBCD;
+  --f:"Instrument Sans",system-ui,-apple-system,sans-serif;
+  --m:clamp(18px,3.4vw,58px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html{background-color:var(--paper);
+  background-image:radial-gradient(150% 160% at 18% 2%,
+    #FFFFFF 0%, #F9FAFA 16%, #EDEFF0 38%, #DEE2E4 60%, #CCD2D5 80%, #BDC4C8 100%);
+  background-attachment:fixed;background-repeat:no-repeat}
+body{background:transparent;color:var(--ink);font-family:var(--f);font-size:16px;
+  line-height:1.58;letter-spacing:-.012em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+/* light field — fixed to the viewport, content moves through it.
+   Source off-canvas upper-left. Total range ~4% luminance. */
+
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--ink);color:var(--paper)}
+
+/* NAV — one running line, comma separated (6a) */
+nav{position:sticky;top:0;z-index:60;padding:16px var(--m) 14px;display:flex;align-items:center;gap:24px;
+  background-color:var(--paper);
+  background-image:radial-gradient(150% 160% at 18% 2%,
+    #FFFFFF 0%, #F9FAFA 16%, #EDEFF0 38%, #DEE2E4 60%, #CCD2D5 80%, #BDC4C8 100%);
+  background-attachment:fixed;background-repeat:no-repeat;
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:baseline;gap:24px}
+nav .id{justify-self:start}
+nav .set{justify-self:center}
+nav a.act{justify-self:end}
+nav .set{font-size:16px;letter-spacing:-.016em}
+nav .set{word-spacing:.30em}
+
+nav .set a{color:var(--ink-50);word-spacing:normal}
+nav .set .ni{white-space:nowrap}
+nav .set .ni:not(:last-child)::after{content:"\00b7";color:var(--ink-30);font-size:.9em;margin-left:.34em}nav .set a:hover{color:var(--ink)}
+nav .id{font-size:16px;font-weight:600;letter-spacing:-.03em;word-spacing:.16em;white-space:nowrap;color:var(--ink)}
+
+/* CASCADE — a 12-col field where nothing shares a baseline */
+.field{display:grid;grid-template-columns:repeat(12,1fr);
+  column-gap:clamp(14px,2.2vw,34px);padding:0 var(--m);align-items:start}
+/* A photographic print laid beneath a cut sheet. Two geometric terms, no
+   filters, and the image itself is never altered.
+   1. ambient occlusion - the aperture occludes ambient light from every
+      direction, so all four edges sit slightly less lit.
+   2. cast shadow - the sheet edge above interrupting the light from upper
+      left. Top and left only. Soft source, so all penumbra, no plateau.
+   Both falloffs are smootherstep, so the rate of change is zero at the far
+   end as well as the near one. A linear ramp reads as an effect because the
+   eye finds the point where it stops; a curve that arrives flat gives it
+   nothing to find. Peaks lowered, distances widened. One implementation. */
+figure div{position:relative;isolation:isolate}
+figure div img{position:relative;z-index:0}
+figure div::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to top,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to right,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to left,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px)}
+figure div::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px),
+             linear-gradient(to right,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px)}
+.f-cap{padding-top:20px;font-size:14.5px;color:var(--ink-30);letter-spacing:-.004em;line-height:1.55}
+.f-cap b{font-weight:500;color:var(--ink-50);display:block;margin-bottom:2px}
+.f-cap i{font-style:normal;display:block}
+
+/* statement — set against the field, not above it */
+.op{grid-column:1/9;padding:clamp(46px,9vh,110px) 0 clamp(30px,5vh,64px)}
+.op h1,.talk h3,.callout h3{text-wrap:balance}
+.op h1{font-size:clamp(27px,3.75vw,54px);font-weight:400;line-height:1.15;
+  letter-spacing:-.032em;max-width:20ch}
+.opsub{margin-top:22px;font-size:clamp(16px,1.5vw,20px);line-height:1.5;
+  color:var(--ink-50);max-width:40ch;letter-spacing:-.014em}
+
+/* text set bottom-aligned against a neighbouring image (Caruso St John) */
+.tx{align-self:end;padding-bottom:6px}
+.tx p{font-size:16px;line-height:1.68;color:var(--ink-50);max-width:44ch}
+.tx p+p{margin-top:15px}
+.tx p b{font-weight:500;color:var(--ink)}
+.tx h2{font-size:clamp(20px,2.15vw,29px);font-weight:400;line-height:1.2;
+  letter-spacing:-.028em;max-width:19ch;margin-bottom:16px}
+.go{display:inline-block;margin-top:22px;font-size:15px;
+  border-bottom:1px solid var(--hair);padding-bottom:3px}
+.go:hover{border-color:var(--ink)}
+
+/* project list — running text index, no rules (6a register) */
+.pl{padding:clamp(72px,13vh,160px) var(--m)}
+.pl .lb{display:block;padding-bottom:clamp(20px,2.6vw,30px);
+  border-bottom:1px solid var(--hair);margin-bottom:clamp(24px,3.2vw,40px)}
+.pl a{display:block;padding:15px 0;font-size:clamp(19px,2.05vw,27px);
+  font-weight:400;letter-spacing:-.028em;line-height:1.28}
+.plfoot{margin-top:clamp(30px,4vw,46px);font-size:15px;color:var(--ink-50)}
+.plfoot .go{font-size:15px;border-bottom:0;padding-bottom:0;white-space:nowrap}
+.plfoot .go:hover{color:var(--ink)}
+.pl a span{color:var(--ink-30);font-size:.66em;letter-spacing:-.01em;margin-left:.7em}
+.pl a{transition:background .3s ease;margin:0 calc(var(--m) * -1);padding-left:var(--m);padding-right:var(--m)}
+.pl a:hover{background:linear-gradient(108deg,
+  rgba(255,255,255,.96) 0%, rgba(255,255,255,.70) 30%, rgba(255,255,255,.16) 62%, rgba(255,255,255,0) 92%)}
+
+/* sector + insight sets — indented list, hairline only at top */
+.set2{padding:clamp(72px,13vh,160px) var(--m)}
+.set2 .lb{margin-bottom:clamp(30px,4vw,52px)}
+.set2 a{display:grid;
+  grid-template-columns:124px minmax(150px,.72fr) minmax(0,1.28fr);
+  gap:clamp(16px,3vw,48px);padding:26px 0;border-top:1px solid var(--hair);
+  align-items:start}
+.set2 .dia{color:var(--lit-50);width:112px;height:70px;display:block;
+  transition:color .3s ease}
+.set2 .dia svg{width:100%;height:100%;display:block;overflow:visible}
+.set2 .n{padding-top:2px}
+.set2 .n{font-size:clamp(18px,1.95vw,25px);font-weight:400;letter-spacing:-.026em}
+.set2 .d{font-size:16.5px;line-height:1.62;color:var(--ink-50);max-width:50ch}
+.set2 a{transition:background .3s ease;
+  margin-left:calc(var(--m) * -1);margin-right:calc(var(--m) * -1);
+  padding-left:var(--m);padding-right:var(--m)}
+.set2 a:hover{background:linear-gradient(108deg,
+  rgba(255,255,255,.96) 0%, rgba(255,255,255,.72) 34%, rgba(255,255,255,.18) 68%, rgba(255,255,255,0) 96%)}
+.set2 a:hover .n{color:var(--ink)}
+
+/* dark band — its own light, stronger, same direction */
+.dkband{margin-top:clamp(40px,7vh,100px);color:var(--lit);
+  background-color:#242729;
+  background-image:radial-gradient(150% 160% at 18% 2%,
+    #515559 0%, #464A4E 20%, #3B3F43 42%, #313539 62%, #292C30 82%, #242729 100%);
+  background-attachment:fixed;background-repeat:no-repeat}
+/* .talk inside the band */
+.dkband.talk{grid-template-columns:1fr 1fr}
+.dkband.talk,.dkband.callout{margin-top:0;
+  padding-top:clamp(72px,13vh,160px);padding-bottom:clamp(72px,13vh,160px)}
+/* the print recess inverts on a dark ground: the lit far wall does the describing */
+
+@media(max-width:860px){.dkband{background-attachment:scroll;background-size:cover}}
+
+footer{padding:clamp(56px,9vh,120px) var(--m) 30px;border-top:1px solid var(--hair);
+  margin-top:clamp(40px,7vh,90px);
+  display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:clamp(22px,4vw,56px)}
+footer .h{display:block;font-size:13.5px;color:var(--ink-30);margin-bottom:13px}
+footer a,footer p{display:block;font-size:14.5px;line-height:1.95;color:var(--ink-50)}
+footer a:hover{color:var(--ink)}
+footer .base{grid-column:1/-1;margin-top:44px;display:flex;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;font-size:13px;color:var(--ink-30)}
+
+@media(max-width:860px){
+  /* margin: 18px was too tight for a page whose signature is air */
+  :root{--m:26px}
+
+  /* nav: wordmark first, then the list, wrapping deliberately rather than breaking */
+  /* nav scrolls away on mobile: two lines plus wordmark is too much screen to hold.
+     The footer catches anyone who reaches the end. */
+  nav{position:relative;display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;
+      gap:14px;padding-top:26px;padding-bottom:18px}
+
+  /* background-attachment:fixed is unreliable on iOS Safari, which sizes the
+     image to the document rather than the viewport. The band keeps its light,
+     it simply travels with the section. */
+  .dkband{background-attachment:scroll;background-size:cover}
+  /* tap targets: the type stays 15px, the hit area grows to 41px.
+     WCAG 2.5.8 asks 24px minimum; Apple and Material ask 44. */
+  /* wordmark and the action share the first line, the list takes the second */
+  nav .spacer{display:none}
+  nav .id{order:1;margin-right:auto}
+  nav a.act{order:2}
+  nav .set{order:3;width:100%;line-height:1;font-size:14.5px;
+    display:flex;justify-content:space-between}
+  nav .set .ni:not(:last-child)::after{margin-left:.24em}
+  nav .set .ni{display:inline-block}
+  nav .set a{display:inline-block;padding:14px 0}   /* 42.5px, clears the 41px minimum */
+  nav .id{font-size:15px}
+
+  /* statement: 27px was timid. Give it presence and let it breathe */
+  .op{padding:36px 0 26px}
+  .op h1,.talk h3,.callout h3{text-wrap:balance}
+.op h1{font-size:31px;line-height:1.14;letter-spacing:-.028em;max-width:none}
+  .opsub{margin-top:18px;font-size:16.5px;line-height:1.5;max-width:none}
+
+  /* headings inside text blocks were constrained to 19ch and breaking short */
+  .tx h2{max-width:none;font-size:23px;line-height:1.2;margin-bottom:14px}
+  .tx p{max-width:none}
+
+  /* project index: name and place stacked, not fighting on one line */
+  .pl{padding:44px var(--m) 26px}
+  .pl a{padding:13px var(--m);line-height:1.25}
+  .pl a span{display:block;margin-left:0;margin-top:4px;font-size:14px}
+
+  /* sector and insight rows: more air between name and description */
+  .set2{padding:40px var(--m)}
+  .set2 a,.set2 .row{gap:9px;padding:19px var(--m)}
+  .set2 a{grid-template-columns:1fr}
+  .set2 .dia{margin-bottom:6px}
+  .set2 .d{max-width:none}
+
+  /* figures: even spacing, captions given room */
+  .field figure{margin-bottom:34px}
+  .f-cap{padding-top:16px}
+
+  .field{grid-template-columns:1fr}
+  .field>*{grid-column:1/-1 !important;margin-top:0 !important}
+  .field figure{margin-bottom:26px}
+  .op{padding:34px 0 24px}
+  .tx{align-self:start;padding-bottom:30px}
+  .set2 a{grid-template-columns:1fr;gap:5px}
+  footer{grid-template-columns:1fr 1fr}
+}
+
+
+/* ---- blocks added for the landing order ---- */
+
+
+.route{padding:clamp(72px,13vh,160px) var(--m)}
+.route .lb{font-size:18px;color:var(--ink-30);margin-bottom:clamp(30px,4vw,52px)}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3.4vw,48px)}
+.rgrid.two{grid-template-columns:repeat(3,1fr);margin-top:clamp(34px,5vw,58px)}
+.rt{display:block;text-decoration:none}
+.rt .im{position:relative;isolation:isolate;aspect-ratio:4/3;overflow:hidden}
+.rt .im img{width:100%;height:100%;object-fit:cover;position:relative;z-index:0}
+.rt .im::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to top,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to right,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to left,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px)}
+.rt .im::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px),
+             linear-gradient(to right,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px)}
+.rt h3{font-size:clamp(20px,2.05vw,26px);font-weight:400;letter-spacing:-.026em;margin:16px 0 6px}
+.rt p{font-size:16.5px;line-height:1.6;color:var(--ink-50);max-width:40ch}
+.rt .go{display:inline-block;margin-top:14px;font-size:16px;
+  border-bottom:1px solid var(--hair);padding-bottom:3px}
+.rt:hover .go{border-color:var(--ink)}
+.rmore{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3.4vw,48px);margin-top:clamp(34px,5vw,58px)}
+.rmore a{display:grid;grid-template-columns:1fr;gap:4px;padding:18px 0;
+  border-top:1px solid var(--hair);text-decoration:none}
+.rmore .n{font-size:clamp(18px,1.9vw,24px);font-weight:400;letter-spacing:-.024em}
+.rmore .d{font-size:16.5px;color:var(--ink-50);line-height:1.58}
+
+.cap3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2.4vw,32px);
+  padding:0 var(--m)}
+.cap3 .c{border-top:1px solid var(--hair);padding-top:16px}
+.dwg{border:1px solid var(--hair);background:rgba(255,255,255,.5);padding:14px 10px;margin-bottom:14px}
+.dwg svg{width:100%;height:auto;display:block}
+.cap3 .im{position:relative;isolation:isolate;aspect-ratio:5/4;margin-bottom:14px;overflow:hidden}
+.cap3 .im img{width:100%;height:100%;object-fit:cover;position:relative;z-index:0}
+.cap3 .im::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to top,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to right,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to left,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px)}
+.cap3 .im::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px),
+             linear-gradient(to right,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px)}
+.cap3 h4{font-size:19px;font-weight:400;letter-spacing:-.02em;margin-bottom:3px}
+.cap3 .sp{font-size:13.5px;color:var(--ink-30);margin-bottom:9px}
+.cap3 p{font-size:14.5px;line-height:1.6;color:var(--ink-50)}
+
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:clamp(16px,3vw,44px);
+  margin-top:6px;border-top:1px solid var(--hair);padding-top:20px}
+.figs .n{font-size:clamp(24px,2.8vw,38px);font-weight:400;letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums;line-height:1.1}
+.figs .n small{font-size:.46em;color:var(--ink-30);letter-spacing:.01em}
+.figs .k{display:block;margin-top:8px;font-size:14.5px;color:var(--ink-30);line-height:1.5}
+
+.callout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,80px);
+  padding:clamp(72px,13vh,160px) var(--m);align-items:start}
+.callout h3{font-size:clamp(23px,2.5vw,34px);font-weight:400;line-height:1.2;
+  letter-spacing:-.028em;max-width:20ch;margin-bottom:14px}
+.callout p{font-size:18px;line-height:1.66;color:var(--ink-50);max-width:32em}
+.callout p+p{margin-top:13px}
+.callout ul{list-style:none;margin:14px 0 0}
+.callout li{font-size:17px;line-height:1.6;color:var(--ink-50);padding:8px 0 8px 22px;
+  position:relative;border-top:1px solid var(--hair)}
+.callout li:first-child{border-top:0}
+.callout li::before{content:"";position:absolute;left:2px;top:1.05em;width:9px;height:1px;background:var(--ink-30)}
+.callout .go{display:inline-block;margin-top:20px;font-size:15px;
+  border-bottom:1px solid var(--hair);padding-bottom:3px}
+
+.talk{padding:clamp(72px,13vh,160px) var(--m);display:grid;
+  grid-template-columns:.55fr 1.45fr;gap:clamp(24px,5vw,80px);align-items:center}
+.talk .im{position:relative;isolation:isolate;aspect-ratio:4/5;overflow:hidden;max-width:400px}
+.dkband.talk .im{max-width:none;aspect-ratio:4/3}
+.talk .im img{width:100%;height:100%;object-fit:cover;position:relative;z-index:0}
+.talk .im::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to top,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to right,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to left,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px)}
+.talk .im::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px),
+             linear-gradient(to right,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px)}
+.talk h3{font-size:clamp(23px,2.5vw,34px);font-weight:400;line-height:1.18;
+  letter-spacing:-.028em;max-width:19ch;margin-bottom:16px}
+.talk p{font-size:18px;line-height:1.66;color:var(--ink-50);max-width:32em}
+.talk p+p{margin-top:13px}
+.talk .lines{margin-top:22px;border-top:1px solid var(--hair)}
+.talk .lines div{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:11px 0;
+  border-bottom:1px solid var(--hair)}
+.talk .lines dt{font-size:14.5px;color:var(--ink-30)}
+.talk .lines dd{margin:0;font-size:17px;color:var(--ink)}
+.talk .cta{margin-top:30px;display:flex;gap:28px;flex-wrap:wrap;align-items:center}
+.talk .cta .act{margin-top:0}
+.talk .cta a{font-size:16px;border-bottom:1px solid var(--hair);padding-bottom:3px}
+.talk .cta a:hover{border-color:var(--ink)}
+.talk.flip{grid-template-columns:minmax(0,32em) minmax(0,400px);
+  justify-content:space-between;align-items:center}
+.talk.flip .im{order:2;width:100%}
+.talk.flip h3{max-width:14em}
+.talk .cta .tel{font-size:19px;letter-spacing:-.02em;border:0}
+
+@media(max-width:860px){
+  .rgrid,.rgrid.two{grid-template-columns:1fr;gap:34px}
+  .rmore{grid-template-columns:1fr;gap:0}
+  .cap3{grid-template-columns:1fr;gap:26px}
+  .figs{grid-template-columns:1fr;gap:18px}
+  .callout,.talk{grid-template-columns:1fr;gap:22px}
+  .talk.flip{grid-template-columns:1fr}
+  .talk.flip .im{order:-1}
+  .talk .im{aspect-ratio:4/3}
+  .callout h3,.talk h3{max-width:none}
+}
+
+
+
+/* ---- the opening frame ----
+   Full bleed: the first image is the page. Everything after it is a print set
+   into the page. One exception, stated, and not repeated further down. */
+/* Bleed is a trim, not a different kind of thing. The reveal appears on any
+   edge where the print meets the page; where it is trimmed at the page edge
+   there is no margin, so there is nothing to reveal. This plate is trimmed
+   left and right, and meets the page top and bottom. */
+figure.bleed{margin:0;padding:0}
+figure.bleed>div{position:relative;isolation:isolate}
+figure.bleed>div::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to top,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px)}
+figure.bleed>div::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px)}
+figure.bleed img{display:block;width:100%;height:clamp(300px,54vh,560px);object-fit:cover}
+figure.bleed .f-cap{padding:22px var(--m) 0}
+figure.bleed{margin-bottom:0}
+@media(max-width:860px){
+  figure.bleed img{height:clamp(240px,44vh,380px)}
+  figure.bleed .f-cap{padding-top:18px}
+}
+
+.fin{padding:clamp(72px,13vh,160px) var(--m);
+  display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,80px);align-items:start}
+.finfig{margin:0}
+.finfig .im{position:relative;isolation:isolate;aspect-ratio:16/11;overflow:hidden}
+.finfig .im img{width:100%;height:100%;object-fit:cover;position:relative;z-index:0;display:block}
+.finfig .im::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to top,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to right,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to left,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px)}
+.finfig .im::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px),
+             linear-gradient(to right,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px)}
+@media(max-width:860px){.fin{grid-template-columns:1fr}}
+.fin h3{font-size:clamp(23px,2.5vw,34px);font-weight:400;line-height:1.2;letter-spacing:-.028em;
+  max-width:20ch;margin-bottom:16px;text-wrap:balance}
+.fin p{font-size:18px;line-height:1.66;color:var(--ink-50);max-width:32em}
+.finrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:clamp(20px,3vw,44px);margin-top:clamp(34px,5vw,56px);padding-top:26px;border-top:1px solid var(--hair)}
+.finrow .k{display:block;font-size:15px;color:var(--ink-30);margin-bottom:6px}
+.finrow .v{font-size:17px;color:var(--ink);line-height:1.5}
+.fin .cta{margin-top:clamp(30px,4vw,46px);display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.fin .cta .act{margin-top:0}
+.fin .cta a:not(.act){font-size:16px;border-bottom:1px solid var(--hair);padding-bottom:3px}
+@media(max-width:860px){.fin h3{max-width:none}}
+
+
+/* ── chambers typology ───────────────────────────────────────────────
+   A drawing is a different class of information from a photograph, so it
+   takes no print treatment. Line weight is uniform; nothing is filled. */
+.chm{padding:clamp(56px,9vh,110px) var(--m) clamp(40px,6vh,72px)}
+.chm .lb{display:block;margin-bottom:clamp(28px,4.5vh,52px)}
+.chbody{display:grid;grid-template-columns:minmax(0,.36fr) minmax(0,.64fr);
+  gap:clamp(26px,5vw,76px);align-items:start}
+.chlede{font-size:16.5px;line-height:1.6;color:var(--ink-50);max-width:42em;
+  margin-bottom:clamp(24px,3.5vh,38px)}
+.chright .go{display:inline-block;margin-top:clamp(22px,3vh,32px);font-size:15px;
+  border-bottom:1px solid var(--hair);padding-bottom:3px}
+.chright .go:hover{border-color:var(--ink)}
+.chfig{margin:0}
+.chfig img{display:block;width:100%;height:auto}
+.chfig figcaption{padding-top:14px}
+.chspec{border-top:1px solid var(--hair)}
+.chspec div{display:grid;grid-template-columns:minmax(130px,.42fr) 1fr;
+  gap:clamp(14px,2.4vw,32px);padding:12px 0;border-bottom:1px solid var(--hair)}
+.chspec dt{font-size:14.5px;color:var(--ink-30);line-height:1.5}
+.chspec dd{margin:0;font-size:16px;color:var(--ink);line-height:1.5}
+@media(max-width:860px){
+  .chm{padding:40px var(--m) 30px}
+  .chm .lb{margin-bottom:24px}
+  .chdraw .dl{font-size:230px}
+  .chdraw .rm{stroke-width:14}
+  .chdraw .dm,.chdraw .dr{stroke-width:11}
+  .chbody{grid-template-columns:1fr;gap:26px}
+  .chspec div{grid-template-columns:1fr;gap:2px;padding:10px 0}
+}
+
+/* ── section title ───────────────────────────────────────────────────
+   The drawing convention: name set large, scale set small on the same
+   baseline. The honest equivalent of scale here is the count, so every
+   title carries a figure that is checkable. */
+.lb{font-size:clamp(24px,2.65vw,38px);color:var(--ink-50);
+  letter-spacing:-.026em;line-height:1.2}
+.lb i{font-style:normal;font-size:15px;color:var(--ink-30);
+  margin-left:1.15em;letter-spacing:-.01em}
+@media(max-width:860px){
+  .lb{font-size:24px}
+  .lb i{display:block;margin-left:0;margin-top:5px}
+}
+
+/* ---- field ----
+   Sectors as a field, not a grid: a 12-column frame where nothing shares a
+   baseline and no two items are the same width. */
+.field{padding:clamp(52px,8vh,96px) var(--m) clamp(56px,9vh,110px);
+  display:grid;grid-template-columns:repeat(12,1fr);
+  column-gap:clamp(14px,2.2vw,30px);row-gap:clamp(28px,3.6vw,50px)}
+.field .lb{grid-column:1/-1;margin-bottom:clamp(10px,1.6vw,22px)}
+.fi{display:block;text-decoration:none}
+.fi .im{position:relative;isolation:isolate;overflow:hidden}
+.fi .im img{width:100%;height:100%;object-fit:cover;position:relative;z-index:0;display:block}
+.fi .im::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to top,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to right,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px),
+             linear-gradient(to left,rgba(16,22,30,0.1550) 0px,rgba(16,22,30,0.1547) 1.2px,rgba(16,22,30,0.1525) 2.5px,rgba(16,22,30,0.1474) 3.8px,rgba(16,22,30,0.1390) 5px,rgba(16,22,30,0.1271) 6.2px,rgba(16,22,30,0.1123) 7.5px,rgba(16,22,30,0.0955) 8.8px,rgba(16,22,30,0.0775) 10px,rgba(16,22,30,0.0595) 11.2px,rgba(16,22,30,0.0427) 12.5px,rgba(16,22,30,0.0279) 13.8px,rgba(16,22,30,0.0160) 15px,rgba(16,22,30,0.0076) 16.2px,rgba(16,22,30,0.0025) 17.5px,rgba(16,22,30,0.0003) 18.8px,rgba(16,22,30,0.0000) 20px)}
+.fi .im::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  mix-blend-mode:multiply;
+  background:linear-gradient(to bottom,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px),
+             linear-gradient(to right,rgba(16,22,30,0.1900) 0px,rgba(16,22,30,0.1896) 2.9px,rgba(16,22,30,0.1870) 5.8px,rgba(16,22,30,0.1807) 8.6px,rgba(16,22,30,0.1703) 11.5px,rgba(16,22,30,0.1558) 14.4px,rgba(16,22,30,0.1377) 17.2px,rgba(16,22,30,0.1170) 20.1px,rgba(16,22,30,0.0950) 23px,rgba(16,22,30,0.0730) 25.9px,rgba(16,22,30,0.0523) 28.8px,rgba(16,22,30,0.0342) 31.6px,rgba(16,22,30,0.0197) 34.5px,rgba(16,22,30,0.0093) 37.4px,rgba(16,22,30,0.0030) 40.2px,rgba(16,22,30,0.0004) 43.1px,rgba(16,22,30,0.0000) 46px)}
+.fi h3{font-size:clamp(18px,1.72vw,22px);font-weight:400;letter-spacing:-.024em;margin:13px 0 5px}
+.fi .num{color:var(--ink-30);font-size:14px;letter-spacing:0;margin-right:.85em;
+  font-variant-numeric:tabular-nums}
+.fi p{font-size:15.5px;line-height:1.5;color:var(--ink-50);max-width:30em;
+  min-height:2.98em}   /* two lines, so photograph bottoms stay aligned across a row */
+.fi:hover h3{color:var(--ink-50)}
+
+.a1{grid-column:1/4;align-self:end}   .a1 .im{aspect-ratio:2/3}
+.a2{grid-column:4/8;align-self:end}   .a2 .im{aspect-ratio:16/9}
+.a3{grid-column:8/12;align-self:end}  .a3 .im{aspect-ratio:4/3}
+.a4{grid-column:2/8;align-self:end}   .a4 .im{aspect-ratio:12/5}
+.a5{grid-column:8/12;align-self:end}  .a5 .im{aspect-ratio:1/1}
+
+@media(max-width:860px){
+  .field{grid-template-columns:1fr;row-gap:38px}
+  .a1,.a2,.a3,.a4,.a5{grid-column:1/-1}
+  .a1 .im,.a2 .im,.a3 .im,.a4 .im,.a5 .im{aspect-ratio:4/3}
+  .fi p{max-width:none}
+}
+
+/* ---- action ----
+   A button means: this is an action, not something to read. Solid ink, zero
+   radius, paper text. On hover it catches the light like every other surface. */
+.act{display:inline-block;margin-top:28px;background:var(--ink);color:var(--paper);
+  padding:14px 26px;font-size:15px;letter-spacing:-.012em;border:0;
+  transition:background .3s ease}
+.act:hover{background:#2C343B}
+.act.on-dark{background:var(--lit);color:var(--ink)}
+.act.on-dark:hover{background:#FFFFFF}
+/* the action is one size everywhere it appears in the body, and one smaller
+   size in the nav. Nothing local may resize it. */
+.talk .cta a.act,.callout a.act,section a.act{
+  padding:15px 28px;font-size:16px;border-bottom:0;line-height:1.4}
+nav a.act{padding:10px 20px;font-size:14.5px;line-height:1.4}
+nav .act{margin-top:0;padding:9px 18px;font-size:14.5px}
+nav .spacer{flex:1}
+@media(max-width:860px){
+  nav .act{margin-left:0;padding:11px 20px}
+  .act{padding:13px 22px}
+}
+
+/* ---- dark ground: the ramp, applied once, last, and above the light rules ---- */
+section.dkband{color:var(--lit)}
+section.dkband p,section.dkband .tx p{color:var(--lit-70)}
+section.dkband p b,section.dkband .tx p b{color:var(--lit)}
+section.dkband h3,section.dkband h4{color:var(--lit)}
+section.dkband .lines{border-top-color:rgba(232,235,236,.30)}
+section.dkband .lines div{border-bottom-color:rgba(232,235,236,.22)}
+section.dkband .lines dt{color:var(--lit-50)}
+section.dkband .lines dd,section.dkband .lines dd a{color:var(--lit)}
+section.dkband .f-cap{color:var(--lit-50)}
+section.dkband .f-cap b{color:var(--lit-70)}
+section.dkband .go,section.dkband .cta a{color:var(--lit);border-bottom-color:rgba(232,235,236,.34)}
+section.dkband.set2{padding-top:clamp(72px,13vh,160px);padding-bottom:clamp(72px,13vh,160px)}
+section.dkband .lb{color:var(--lit-50)}
+section.dkband .lb i{color:var(--lit-50);opacity:.72}
+section.dkband .set2 a,section.dkband a{border-top-color:rgba(232,235,236,.22)}
+section.dkband .n{color:var(--lit)}
+section.dkband .d{color:var(--lit-70)}
+section.dkband a:hover{background:linear-gradient(108deg,
+  rgba(255,255,255,.13) 0%, rgba(255,255,255,.08) 34%,
+  rgba(255,255,255,.02) 68%, rgba(255,255,255,0) 96%)}
+/* the dark ramp holds on hover. Defined once, here, above the light rules. */
+section.dkband.set2 a:hover .n{color:var(--lit)}
+section.dkband.set2 a:hover .d{color:var(--lit-70)}
+section.dkband.set2 a:hover .dia{color:var(--lit)}
+section.dkband .figs{border-top-color:rgba(232,235,236,.30)}
+section.dkband .figs .n{color:var(--lit)}
+section.dkband .figs .n small,section.dkband .figs .k{color:var(--lit-50)}
+section.dkband .act{background:var(--lit);color:var(--ink)}
+section.dkband .act:hover{background:#FFFFFF}
+section.dkband .go:hover,section.dkband .cta a:hover{border-bottom-color:var(--lit)}
+
+.ix{padding:clamp(46px,8vh,100px) var(--m) clamp(22px,3.4vh,36px);
+  display:grid;grid-template-columns:repeat(12,1fr);column-gap:clamp(16px,2.6vw,36px)}
+.ixs{grid-column:1/6}
+.ixs p{font-size:clamp(19px,1.75vw,23px);line-height:1.45;letter-spacing:-.02em;
+  color:var(--ink);text-wrap:balance}
+.ixr{grid-column:7/13}
+.ixr p{font-size:16.5px;line-height:1.62;color:var(--ink-50);max-width:32em}
+
+/* the same rows as the homepage set, with what makes a note a note: a date
+   and a name. 06 · notes on practice, something learned in the doing. */
+.notes{padding:clamp(20px,3.4vh,40px) var(--m) clamp(46px,7vh,90px)}
+.nt{display:grid;
+  grid-template-columns:124px minmax(0,1fr) minmax(180px,.28fr);
+  gap:clamp(20px,3.4vw,50px);align-items:start;
+  padding:clamp(24px,3.6vh,36px) 0;border-top:1px solid var(--hair)}
+.nt:last-of-type{border-bottom:1px solid var(--hair)}
+.dia{color:var(--ink-50);width:112px}
+.dia svg{width:100%;height:auto;display:block}
+.nt h2{font-size:clamp(19px,1.85vw,24px);font-weight:400;line-height:1.18;
+  letter-spacing:-.026em}
+.nt h2 a:hover{color:var(--ink-50)}
+.nt p{margin-top:9px;font-size:16px;line-height:1.6;color:var(--ink-50);max-width:34em}
+.meta{display:block}
+.meta .dt{display:block;font-size:14px;color:var(--ink-30)}
+.meta .by{display:block;margin-top:5px;font-size:14px;color:var(--ink-30)}
+.meta .rd{display:inline-block;margin-top:13px;font-size:15px;
+  border-bottom:1px solid var(--hair);padding-bottom:3px}
+.meta .rd:hover{border-color:var(--ink)}
+.nt.dead h2,.nt.dead .dia{color:var(--ink-30)}
+.nt.dead h2{color:var(--ink-30)}
+
+.sfoot{padding:0 var(--m) clamp(56px,9vh,110px)}
+.sfoot p{font-size:clamp(17px,1.5vw,20px);line-height:1.5;letter-spacing:-.016em;max-width:34em}
+.sfoot a{display:inline-block;margin-top:18px;font-size:15px;
+  border-bottom:1px solid var(--hair);padding-bottom:3px}
+.sfoot a:hover{border-color:var(--ink)}
+
+@media(max-width:860px){
+  .ix{grid-template-columns:1fr;row-gap:20px;padding-top:30px}
+  .ixs,.ixr{grid-column:1/-1}
+  .nt{grid-template-columns:112px 1fr;gap:18px 20px}
+  .meta{grid-column:2}
+  .nt p{max-width:none}
+}
+</style></head><body>
+<nav>
+  <a class="id" href="index.html">Thrive Hyperbaric</a>
+  <div class="set">
+    <span class="ni"><a href="projects.html">Projects</a></span>
+    <span class="ni"><a href="chambers.html">Chambers</a></span>
+    <span class="ni"><a href="practice.html">Practice</a></span>
+    <span class="ni"><a href="notes.html">Notes</a></span></div>
+  <a class="act navact" href="contact.html">Contact</a>
+</nav>
+<section class="ix">
+  <div class="ixs"><p>Notes on practice: something learned in the doing.</p></div>
+  <div class="ixr"><p>Written as the questions come up. Each one names its sources and shows the reasoning, so you can disagree with it on the evidence.</p></div>
+</section>
+
+<section class="notes">
+  <article class="nt">
+  <div class="dia"><svg viewBox="0 0 96 60" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 24 H90" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<circle cx="6" cy="24" r="3.4" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke" fill="currentColor"/>
+<circle cx="27" cy="24" r="3.4" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/><circle cx="48" cy="24" r="3.4" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<circle cx="69" cy="24" r="3.4" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/><circle cx="90" cy="24" r="3.4" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<path d="M6 30 V44 M27 30 V38 M48 30 V44 M69 30 V38 M90 30 V44" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<path d="M2 52 H94" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke" stroke-dasharray="2 3"/>
+</svg></div>
+  <div class="ntx"><h2><a href="note-buying-guide.html">The buying guide</a></h2><p>What you decide, and the order the decisions arrive in: capacity, pressure, the room, the plant, and who will operate it.</p></div>
+  <div class="meta"><span class="dt">[ date ]</span><span class="by">Written by David</span><a class="rd" href="note-buying-guide.html">Read &rarr;</a></div>
+</article><article class="nt dead">
+  <div class="dia"><svg viewBox="0 0 96 60" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 52 H94" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<path d="M8 52 L22 16 H62 L74 52" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<path d="M62 16 V6" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke" stroke-dasharray="2 3"/>
+<circle cx="62" cy="16" r="2.5" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<path d="M22 56 H62" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/><path d="M22 54 V58 M62 54 V58" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+</svg></div>
+  <div class="ntx"><h2>The evidence question</h2><p>Two published trials sit behind this. What they measured, at what pressure, over how many sessions, and what they did not measure.</p></div>
+  <div class="meta"><span class="dt">In preparation</span><span class="by">Written by Chris</span></div>
+</article><article class="nt dead">
+  <div class="dia"><svg viewBox="0 0 96 60" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 12 H58" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/><path d="M4 8 V16 M58 8 V16" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<path d="M4 30 H88" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/><path d="M4 26 V34 M88 26 V34" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<path d="M26 48 H70" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/><path d="M26 44 V52 M70 44 V52" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+</svg></div>
+  <div class="ntx"><h2>The procurement question</h2><p>What each certificate governs. A quality system is not a device approval, and the two are routinely confused in tenders.</p></div>
+  <div class="meta"><span class="dt">In preparation</span><span class="by">Written by Chris</span></div>
+</article><article class="nt dead">
+  <div class="dia"><svg viewBox="0 0 96 60" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 6 H94" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke" stroke-dasharray="2 3"/>
+<path d="M2 48 H94" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="10" y="26" width="34" height="22" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="70" y="32" width="18" height="16" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<path d="M44 38 H70" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<path d="M8 48 V55 M20 48 V55 M32 48 V55 M44 48 V55" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+</svg></div>
+  <div class="ntx"><h2>The delivery question</h2><p>Why installations fail, and where the risk sits in a building: the slab, the door, the services and the plant room.</p></div>
+  <div class="meta"><span class="dt">In preparation</span><span class="by">Written by David</span></div>
+</article><article class="nt dead">
+  <div class="dia"><svg viewBox="0 0 96 60" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 52 H94" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="6"  y="34" width="12" height="18" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke" fill="currentColor" fill-opacity=".55"/>
+<rect x="24" y="24" width="12" height="28" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke" fill="currentColor" fill-opacity=".55"/>
+<rect x="42" y="30" width="12" height="22" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke" fill="currentColor" fill-opacity=".55"/>
+<rect x="60" y="14" width="12" height="38" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="78" y="20" width="12" height="32" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<path d="M2 18 H94" stroke="currentColor" fill="none" stroke-width="1" vector-effect="non-scaling-stroke" stroke-dasharray="2 3"/>
+</svg></div>
+  <div class="ntx"><h2>Operating economics</h2><p>Utilisation, staffing, running costs and capital recovery, taken from our own clinic rather than from projections.</p></div>
+  <div class="meta"><span class="dt">In preparation</span><span class="by">Written by David</span></div>
+</article>
+</section>
+
+<div class="sfoot">
+  <p>Notes are published as they are finished. If there is something you need answered before then, ask.</p>
+  <a href="contact.html">Contact &rarr;</a>
+</div>
+<footer>
+  <div><span class="h">Thrive Hyperbaric</span>
+    <p>The official HPO.TECH worldwide specialist</p>
+    <p>Unit F3, The Foundry, Beehive Yard,<br>Walcot Street, Bath BA1 5BT</p></div>
+  <div><span class="h">Pages</span>
+    <a href="projects.html">Projects</a><a href="chambers.html">Chambers</a><a href="practice.html">Practice</a><a href="notes.html">Notes</a></div>
+  <div><span class="h">Contact</span>
+    <a href="tel:+447799772383">+44 779 977 2383</a>
+    <a href="mailto:hello@thrivehyperbaric.com">hello@thrivehyperbaric.com</a>
+    <a href="https://www.instagram.com/thrivehyperbaric/" target="_blank" rel="noopener">Instagram</a></div>
+  <div><span class="h">Legal</span>
+    <a href="privacy-policy.html">Privacy</a></div>
+  <div class="base"><span>&copy; 2026 Thrive Hyperbaric &middot; Company 15018698</span><span>CE &middot; PED &middot; ASME &middot; T&uuml;rk Loydu inspected</span></div>
+</footer>
+</body></html>
