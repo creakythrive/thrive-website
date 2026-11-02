@@ -77,3 +77,16 @@
     if (subj && subj.value.indexOf(v.source) < 0) subj.value += ' - via ' + v.source;
   }
 })();
+
+/* Lazy background images. Elements with data-bg get their image when they come within 400px of
+   the viewport, so a phone does not download every section's photo before the page is usable. */
+(function () {
+  var els = document.querySelectorAll('[data-bg]');
+  if (!els.length) return;
+  var load = function (el) { el.style.backgroundImage = 'url(' + el.getAttribute('data-bg') + ')'; el.removeAttribute('data-bg'); };
+  if (!('IntersectionObserver' in window)) { Array.prototype.forEach.call(els, load); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { load(e.target); io.unobserve(e.target); } });
+  }, { rootMargin: '400px 0px' });
+  Array.prototype.forEach.call(els, function (el) { io.observe(el); });
+})();
