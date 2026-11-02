@@ -7,14 +7,14 @@
 <link rel="preload" as="image" href="images/home-hero.webp" media="(min-width:701px)" fetchpriority="high">
 <script>/* exclude own visits from Clarity */if(document.cookie.indexOf('exclude_clarity=true')>-1){window.clarity=function(){};}</script>
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MWS3R9HX');</script>
+<script>/* GTM loads on the first scroll, tap or key press, or after 3 s - whichever comes first. Keeps tracking and consent intact but off the critical path on phones. */window.dataLayer=window.dataLayer||[];(function(){var done=false,evs=['scroll','touchstart','pointerdown','keydown','mousemove'];function go(){if(done)return;done=true;evs.forEach(function(e){removeEventListener(e,go,{passive:true})});(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MWS3R9HX');}evs.forEach(function(e){addEventListener(e,go,{passive:true})});setTimeout(go,3000);})();</script>
 <!-- End Google Tag Manager -->
 <meta name="description" content="Hard-shell hyperbaric chambers, specified, installed and supported worldwide by Thrive - run from a working hyperbaric clinic in Bath.">
 <title>Hyperbaric Chambers for Home, Clinic & Sport - Thrive</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700;900&family=Rajdhani:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700;900&family=Rajdhani:wght@500;600;700&display=swap"></noscript>
 <link rel="stylesheet" href="thrive.css">
 <style>/* homepage only: chamber-framed, lighter hero on phones */@media(max-width:700px){.hero .bg{background-image:url(images/home-hero-m.webp)!important;background-position:20% 70%;background-size:auto 108%}.hero .wrap{align-items:flex-end;padding:78px 22px 26px}.hero .scrim{background:linear-gradient(0deg,rgba(6,8,14,.95) 0%,rgba(6,8,14,.86) 24%,rgba(6,8,14,.52) 46%,rgba(6,8,14,.2) 66%,rgba(6,8,14,.34) 100%)}}</style>
 
@@ -36,7 +36,6 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
 <meta name="twitter:description" content="Hard-shell hyperbaric chambers, specified, installed and supported worldwide by Thrive - run from a working hyperbaric clinic in Bath.">
 <meta name="twitter:image" content="https://www.thrivehyperbaric.com/images/og-default.jpg">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Thrive Hyperbaric", "legalName": "Thrive Bath Ltd", "url": "https://www.thrivehyperbaric.com/", "logo": "https://www.thrivehyperbaric.com/images/logo.png", "description": "Premium hard-shell hyperbaric chambers, specified, installed and supported worldwide.", "sameAs": ["https://instagram.com/thrivehyperbaric", "https://www.thrivebath.co.uk/"], "founder": {"@type": "Person", "name": "David Gumbleton"}, "contactPoint": {"@type": "ContactPoint", "telephone": "+44-779-977-2383", "email": "hello@thrivehyperbaric.com", "contactType": "sales", "areaServed": "Worldwide", "availableLanguage": "English"}, "address": {"@type": "PostalAddress", "streetAddress": "The Foundry, Beehive Yard", "addressLocality": "Bath", "postalCode": "BA1 5BT", "addressCountry": "GB"}}</script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="thrive-evolve.css?v=7b9daf34">
 </head>
 <body>
@@ -87,7 +86,7 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
   <div class="maxw">
     <div class="pad">
       <div class="spec-grid">
-        <div class="spec-photo frame-bl" style="background-image:url(images/david-clinic.webp)"></div>
+        <div class="spec-photo frame-bl" data-bg="images/david-clinic.webp"></div>
         <div class="spec-copy">
           <h2>Get chamber advice from an actual clinic operator</h2>
           <p class="spec-lede">Thrive founder David Gumbleton runs a hyperbaric clinic in the UK, including chambers used by elite athletes. Thrive can help you with all your hyperbaric questions and can install your chamber, wherever you are in the world.</p>
@@ -114,7 +113,7 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
     </div>
     <div class="panels pad">
       <a href="home-use.html" class="panel">
-        <div class="pbg" style="background-image:url(images/home-use-hero.webp);background-position:60% center"></div>
+        <div class="pbg" style="background-position:60% center" data-bg="images/home-use-hero.webp"></div>
         <div class="pscrim"></div>
         <div class="pc">
           <div class="pix"><span class="ln"></span>01 &middot; Private</div>
@@ -124,7 +123,7 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
         </div>
       </a>
       <a href="commercial.html" class="panel">
-        <div class="pbg" style="background-image:url(images/home-panel-commercial.webp);background-position:center"></div>
+        <div class="pbg" style="background-position:center" data-bg="images/home-panel-commercial.webp"></div>
         <div class="pscrim"></div>
         <div class="pc">
           <div class="pix"><span class="ln"></span>02 &middot; Commercial</div>
@@ -134,7 +133,7 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
         </div>
       </a>
       <a href="sport.html" class="panel">
-        <div class="pbg" style="background-image:url(images/home-panel-sport.webp);background-position:center"></div>
+        <div class="pbg" style="background-position:center" data-bg="images/home-panel-sport.webp"></div>
         <div class="pscrim"></div>
         <div class="pc">
           <div class="pix"><span class="ln"></span>03 &middot; Sport</div>
@@ -158,7 +157,7 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
       </div>
       <div class="mpromo-grid">
         <a class="mpromo-card" href="models.html#zeugma">
-          <div class="mpromo-img" style="background-image:url(images/zeugma-hero.webp)"></div>
+          <div class="mpromo-img" data-bg="images/zeugma-hero.webp"></div>
           <div class="mpromo-body">
             <h3>Zeugma</h3>
             <div class="mpromo-spec">One seat &middot; up to 2.4 ATA</div>
@@ -166,7 +165,7 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
           </div>
         </a>
         <a class="mpromo-card" href="models.html#atlantis">
-          <div class="mpromo-img" style="background-image:url(images/atlantis-hero.webp)"></div>
+          <div class="mpromo-img" data-bg="images/atlantis-hero.webp"></div>
           <div class="mpromo-body">
             <h3>Atlantis</h3>
             <div class="mpromo-spec">Two seats &middot; up to 2.4 ATA</div>
@@ -174,7 +173,7 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
           </div>
         </a>
         <a class="mpromo-card" href="models.html#mediterranean">
-          <div class="mpromo-img" style="background-image:url(images/mediterranean-hero.webp)"></div>
+          <div class="mpromo-img" data-bg="images/mediterranean-hero.webp"></div>
           <div class="mpromo-body">
             <h3>Mediterranean</h3>
             <div class="mpromo-spec">Four seats &middot; up to 2.4 ATA</div>
@@ -220,11 +219,11 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
 <section class="irl">
   <div class="maxw">
     <div class="bento pad">
-      <div class="tile feature" style="background-image:url(images/gallery-bath-clinic.webp)"></div>
-      <div class="tile" style="background-image:url(images/gallery-bath-rugby.webp);background-position:50% 30%"></div>
-      <div class="tile" style="background-image:url(images/gallery-plant-room.webp)"></div>
-      <div class="tile" style="background-image:url(images/gallery-brentford.webp)"></div>
-      <div class="tile" style="background-image:url(images/gallery-everest.webp);background-position:50% 25%"></div>
+      <div class="tile feature" data-bg="images/gallery-bath-clinic.webp"></div>
+      <div class="tile" style="background-position:50% 30%" data-bg="images/gallery-bath-rugby.webp"></div>
+      <div class="tile" data-bg="images/gallery-plant-room.webp"></div>
+      <div class="tile" data-bg="images/gallery-brentford.webp"></div>
+      <div class="tile" style="background-position:50% 25%" data-bg="images/gallery-everest.webp"></div>
     </div>
     <div class="igbar pad">
       <div class="h"><a href="https://www.instagram.com/thrivehyperbaric/" target="_blank" rel="noopener">@thrivehyperbaric</a></div>
@@ -239,7 +238,7 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
   <div class="maxw">
     <div class="pad">
       <div class="bgpromo-grid">
-        <div class="bgpromo-img" role="img" aria-label="Hyperbaric chamber" style="background-image:url(images/buying-guide-hero.webp)"></div>
+        <div class="bgpromo-img" role="img" aria-label="Hyperbaric chamber" data-bg="images/buying-guide-hero.webp"></div>
         <div class="bgpromo-copy">
           <h2>What to check before you buy any chamber</h2>
           <p class="bgpromo-lede">We wrote the guide we wanted when we were first looking. It applies to every chamber on the market, ours included.</p>
@@ -342,6 +341,6 @@ try{var _q=location.search;if(/[?&]us(=|&|$)/.test(_q))sessionStorage.setItem('t
   }
 </script>
 
-<script src="thrive.js?v=src1"></script>
+<script src="thrive.js?v=src2"></script>
 </body>
 </html>
