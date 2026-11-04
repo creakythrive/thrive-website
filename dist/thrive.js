@@ -131,7 +131,7 @@
       '</div><span class="ctr">1 / ' + s.media.length + '</span><button class="nav-b prev" aria-label="Previous">&#8249;</button><button class="nav-b next" aria-label="Next">&#8250;</button></div>' +
       '<div class="side"><span class="place">' + esc(s.place) + '</span>' + esc(excerpt(s)) +
       '<div class="row"><a class="st-btn" href="contact.html">Talk to us about your project</a>' +
-      (s.instagram ? '<a class="st-btn ghost" href="' + esc(s.instagram) + '" target="_blank" rel="noopener">View on Instagram</a>' : '') + '</div></div></div>';
+      '<a class="st-btn ghost" href="' + esc(s.instagram || 'https://www.instagram.com/thrivehyperbaric/') + '" target="_blank" rel="noopener">See more on Instagram</a>' + '</div></div></div>';
     var track = view.querySelector('.track'), ctr = view.querySelector('.ctr');
     var idx = function () { return Math.round(track.scrollLeft / track.clientWidth); };
     track.addEventListener('scroll', function () {
@@ -154,7 +154,7 @@
       if (!items.length) { if (sec) sec.hidden = true; return; }
       var html = '', first = items[0], i0 = list.push(first) - 1;
       html += '<div class="st-feature">' + cover(first, i0) + '<div class="st-body"><span class="place">' + esc(first.place) + '</span><h3>' + esc(first.title) + '</h3><p>' +
-        esc(excerpt(first)) + '</p><div class="row"><button type="button" class="st-btn" data-open="' + i0 + '">See the project</button><a class="st-btn ghost" href="contact.html">Talk to us</a></div></div></div>';
+        esc(excerpt(first)) + '</p><div class="row"><a class="st-btn" href="contact.html">Talk to us</a><a class="st-btn ghost" href="' + esc(first.instagram || 'https://www.instagram.com/thrivehyperbaric/') + '" target="_blank" rel="noopener">See more on Instagram</a></div></div></div>';
       if (items.length > 1) {
         html += '<div class="st-grid">' + items.slice(1).map(function (s) { var i = list.push(s) - 1;
           return '<div class="st-card">' + cover(s, i) + '<span class="place">' + esc(s.place) + '</span><h3>' + esc(s.title) + '</h3></div>'; }).join('') + '</div>';
