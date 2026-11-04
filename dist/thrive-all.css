@@ -1,3 +1,4 @@
+/* sized images keep their aspect ratio; any CSS height still wins */:where(img[width][height]){height:auto}
 /* Thrive Hyperbaric - shared design system
    Tokens, type, nav, buttons, bands, components, footer.
    Edit once; every page inherits. */
