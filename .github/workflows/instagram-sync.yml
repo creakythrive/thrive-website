@@ -1,0 +1,38 @@
+name: Instagram feed sync
+# Pulls recent @thrivehyperbaric posts into dist/social (feed.json + cover images),
+# commits any change and deploys. Runs twice a day; can also be run by hand from Actions.
+on:
+  schedule:
+    - cron: '17 6,18 * * *'
+  workflow_dispatch:
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pillow
+      - name: Sync feed
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: python3 tools/sync_instagram.py
+      - name: Commit if changed
+        id: commit
+        run: |
+          git add dist/social
+          if git diff --cached --quiet; then echo "changed=no" >> $GITHUB_OUTPUT; exit 0; fi
+          git -c user.name="Thrive feed bot" -c user.email="hello@thrivehyperbaric.com" commit -m "Instagram feed sync"
+          git push
+          echo "changed=yes" >> $GITHUB_OUTPUT
+      - name: Deploy
+        if: steps.commit.outputs.changed == 'yes'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name thrive-hyperbaric --branch ${{ github.ref_name }} --commit-dirty=true

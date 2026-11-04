@@ -91,24 +91,25 @@
   Array.prototype.forEach.call(els, function (el) { io.observe(el); });
 })();
 
-/* Project stories. Any element with [data-stories] is filled from stories/stories.json.
-   data-tag filters by tag (commercial, home, sport...); data-limit caps the number shown.
-   The newest story is shown large, the rest as cards. The section stays hidden if nothing matches. */
+/* Social feed. Any element with [data-feed] is filled from our own project stories
+   (stories/stories.json, open in an on-site viewer) and recent Instagram posts
+   (social/feed.json, kept up to date by tools/sync_instagram.py, open on Instagram).
+   data-tag picks posts for that page (home, commercial, sport); if too few match, the
+   newest other posts fill the row. The section stays hidden if there is nothing to show. */
 (function () {
-  var hosts = document.querySelectorAll('[data-stories]');
+  var hosts = document.querySelectorAll('[data-feed]');
   if (!hosts.length) return;
+  var IG = 'https://www.instagram.com/thrivehyperbaric/';
   var esc = function (s) { return String(s || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
   var base = function (s) { return 'stories/' + s.id + '/'; };
-  var cover = function (s, i) {
-    var m = s.media[0];
-    return '<button type="button" class="st-cover" data-open="' + i + '" aria-label="View ' + esc(s.title) + '">' +
-      '<img loading="lazy" src="' + base(s) + m.src + '.webp" alt="' + esc(m.alt) + '">' +
-      (s.media.length > 1 ? '<span class="count">1 / ' + s.media.length + '</span>' : '') + '</button>';
-  };
   var excerpt = function (s) {
-    var parts = s.caption.split(/\n\s*\n/).filter(function (p) { return !/^Chamber by|^@|^#/.test(p.trim()); });
-    return parts.join('\n\n');
+    return s.caption.split(/\n\s*\n/).filter(function (p) { return !/^Chamber by|^@|^#/.test(p.trim()); }).join('\n\n');
   };
+  var MK = {
+    video: '<svg class="mk" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>',
+    carousel_album: '<svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="7" y="7" width="13" height="13" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg>'
+  };
+  var fmt = function (d) { try { return new Date(d + 'T12:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }); } catch (e) { return d; } };
   var view, list = [];
   var openView = function (s) {
     if (!view) {
@@ -131,7 +132,7 @@
       '</div><span class="ctr">1 / ' + s.media.length + '</span><button class="nav-b prev" aria-label="Previous">&#8249;</button><button class="nav-b next" aria-label="Next">&#8250;</button></div>' +
       '<div class="side"><span class="place">' + esc(s.place) + '</span>' + esc(excerpt(s)) +
       '<div class="row"><a class="st-btn" href="contact.html">Talk to us about your project</a>' +
-      '<a class="st-btn ghost" href="' + esc(s.instagram || 'https://www.instagram.com/thrivehyperbaric/') + '" target="_blank" rel="noopener">See more on Instagram</a>' + '</div></div></div>';
+      '<a class="st-btn ghost" href="' + esc(s.instagram || IG) + '" target="_blank" rel="noopener">See more on Instagram</a>' + '</div></div></div>';
     var track = view.querySelector('.track'), ctr = view.querySelector('.ctr');
     var idx = function () { return Math.round(track.scrollLeft / track.clientWidth); };
     track.addEventListener('scroll', function () {
@@ -145,23 +146,33 @@
   };
   var step = function (d) { var t = view.querySelector('.track'); t.scrollBy({ left: d * t.clientWidth, behavior: 'smooth' }); };
   var closeView = function () { view.classList.remove('open'); view.innerHTML = ''; document.body.style.overflow = ''; };
-  fetch('stories/stories.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (all) {
-    all.sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+  var get = function (u) { return fetch(u, { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }); };
+  Promise.all([get('stories/stories.json'), get('social/feed.json')]).then(function (res) {
+    var stories = res[0], feed = res[1];
+    var linked = {};
+    stories.forEach(function (s) { if (s.instagram) linked[s.instagram.replace(/\/$/, '')] = 1; });
+    var items = stories.map(function (s) {
+      return { kind: 'story', date: s.date, tags: s.tags, story: s, img: base(s) + s.media[0].src + '.webp', alt: s.media[0].alt,
+        type: s.media.length > 1 ? 'carousel_album' : 'image', meta: s.place, text: s.summary || s.title };
+    }).concat(feed.filter(function (p) { return !linked[p.permalink.replace(/\/$/, '')]; }).map(function (p) {
+      return { kind: 'ig', date: p.date, tags: p.tags, href: p.permalink, img: p.img, alt: p.text, type: p.type, meta: fmt(p.date), text: p.text };
+    }));
+    items.sort(function (a, b) { return a.date < b.date ? 1 : -1; });
     Array.prototype.forEach.call(hosts, function (host) {
       var tag = host.getAttribute('data-tag'), lim = +host.getAttribute('data-limit') || 4;
-      var items = all.filter(function (s) { return !tag || s.tags.indexOf(tag) > -1; }).slice(0, lim);
+      var pick = items.filter(function (i) { return !tag || i.tags.indexOf(tag) > -1; });
+      if (pick.length < lim) pick = pick.concat(items.filter(function (i) { return pick.indexOf(i) < 0; }));
+      pick = pick.slice(0, lim);
       var sec = host.closest('section');
-      if (!items.length) { if (sec) sec.hidden = true; return; }
-      var html = '', first = items[0], i0 = list.push(first) - 1;
-      html += '<div class="st-feature">' + cover(first, i0) + '<div class="st-body"><span class="place">' + esc(first.place) + '</span><h3>' + esc(first.title) + '</h3><p>' +
-        esc(excerpt(first)) + '</p><div class="row"><a class="st-btn" href="contact.html">Talk to us</a><a class="st-btn ghost" href="' + esc(first.instagram || 'https://www.instagram.com/thrivehyperbaric/') + '" target="_blank" rel="noopener">See more on Instagram</a></div></div></div>';
-      if (items.length > 1) {
-        html += '<div class="st-grid">' + items.slice(1).map(function (s) { var i = list.push(s) - 1;
-          return '<div class="st-card">' + cover(s, i) + '<span class="place">' + esc(s.place) + '</span><h3>' + esc(s.title) + '</h3></div>'; }).join('') + '</div>';
-      }
-      host.innerHTML = html;
+      if (!pick.length) { if (sec) sec.hidden = true; return; }
+      host.innerHTML = pick.map(function (i) {
+        var inner = '<span class="ph"><img loading="lazy" src="' + esc(i.img) + '" alt="' + esc(i.alt) + '">' + (MK[i.type] || '') + '</span>' +
+          '<span class="meta">' + esc(i.meta) + '</span><span class="tx">' + esc(i.text) + '</span>';
+        if (i.kind === 'story') { var n = list.push(i.story) - 1; return '<button type="button" class="fd" data-open="' + n + '">' + inner + '</button>'; }
+        return '<a class="fd" href="' + esc(i.href) + '" target="_blank" rel="noopener">' + inner + '</a>';
+      }).join('');
       if (sec) sec.hidden = false;
       host.addEventListener('click', function (e) { var b = e.target.closest('[data-open]'); if (b) openView(list[+b.getAttribute('data-open')]); });
     });
-  }).catch(function () {});
+  });
 })();
