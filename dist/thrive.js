@@ -90,3 +90,78 @@
   }, { rootMargin: '400px 0px' });
   Array.prototype.forEach.call(els, function (el) { io.observe(el); });
 })();
+
+/* Project stories. Any element with [data-stories] is filled from stories/stories.json.
+   data-tag filters by tag (commercial, home, sport...); data-limit caps the number shown.
+   The newest story is shown large, the rest as cards. The section stays hidden if nothing matches. */
+(function () {
+  var hosts = document.querySelectorAll('[data-stories]');
+  if (!hosts.length) return;
+  var esc = function (s) { return String(s || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var base = function (s) { return 'stories/' + s.id + '/'; };
+  var cover = function (s, i) {
+    var m = s.media[0];
+    return '<button type="button" class="st-cover" data-open="' + i + '" aria-label="View ' + esc(s.title) + '">' +
+      '<img loading="lazy" src="' + base(s) + m.src + '.webp" alt="' + esc(m.alt) + '">' +
+      (s.media.length > 1 ? '<span class="count">1 / ' + s.media.length + '</span>' : '') + '</button>';
+  };
+  var excerpt = function (s) {
+    var parts = s.caption.split(/\n\s*\n/).filter(function (p) { return !/^Chamber by|^@|^#/.test(p.trim()); });
+    return parts.join('\n\n');
+  };
+  var view, list = [];
+  var openView = function (s) {
+    if (!view) {
+      view = document.createElement('div'); view.className = 'st-view'; view.setAttribute('role', 'dialog'); view.setAttribute('aria-modal', 'true');
+      document.body.appendChild(view);
+      view.addEventListener('click', function (e) { if (e.target === view || e.target.classList.contains('close')) closeView(); });
+      document.addEventListener('keydown', function (e) {
+        if (!view.classList.contains('open')) return;
+        if (e.key === 'Escape') closeView();
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') step(e.key === 'ArrowRight' ? 1 : -1);
+      });
+    }
+    var slides = s.media.map(function (m) {
+      var src = base(s) + m.src;
+      return '<div class="slide">' + (m.type === 'video'
+        ? '<video src="' + src + '.mp4" poster="' + src + '.webp" muted loop playsinline controls preload="none" aria-label="' + esc(m.alt) + '"></video>'
+        : '<img loading="lazy" src="' + src + '.jpg" alt="' + esc(m.alt) + '">') + '</div>';
+    }).join('');
+    view.innerHTML = '<button class="close" aria-label="Close">&times;</button><div class="box"><div class="media"><div class="track">' + slides +
+      '</div><span class="ctr">1 / ' + s.media.length + '</span><button class="nav-b prev" aria-label="Previous">&#8249;</button><button class="nav-b next" aria-label="Next">&#8250;</button></div>' +
+      '<div class="side"><span class="place">' + esc(s.place) + '</span>' + esc(excerpt(s)) +
+      '<div class="row"><a class="st-btn" href="contact.html">Talk to us about your project</a>' +
+      (s.instagram ? '<a class="st-btn ghost" href="' + esc(s.instagram) + '" target="_blank" rel="noopener">View on Instagram</a>' : '') + '</div></div></div>';
+    var track = view.querySelector('.track'), ctr = view.querySelector('.ctr');
+    var idx = function () { return Math.round(track.scrollLeft / track.clientWidth); };
+    track.addEventListener('scroll', function () {
+      var i = idx(); ctr.textContent = (i + 1) + ' / ' + s.media.length;
+      Array.prototype.forEach.call(track.querySelectorAll('video'), function (v, k) { var on = v.parentNode === track.children[i]; if (on && v.paused) v.play().catch(function () {}); if (!on && !v.paused) v.pause(); });
+    }, { passive: true });
+    view.querySelector('.prev').onclick = function () { step(-1); };
+    view.querySelector('.next').onclick = function () { step(1); };
+    view.classList.add('open'); document.body.style.overflow = 'hidden';
+    view.querySelector('.close').focus();
+  };
+  var step = function (d) { var t = view.querySelector('.track'); t.scrollBy({ left: d * t.clientWidth, behavior: 'smooth' }); };
+  var closeView = function () { view.classList.remove('open'); view.innerHTML = ''; document.body.style.overflow = ''; };
+  fetch('stories/stories.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (all) {
+    all.sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+    Array.prototype.forEach.call(hosts, function (host) {
+      var tag = host.getAttribute('data-tag'), lim = +host.getAttribute('data-limit') || 4;
+      var items = all.filter(function (s) { return !tag || s.tags.indexOf(tag) > -1; }).slice(0, lim);
+      var sec = host.closest('section');
+      if (!items.length) { if (sec) sec.hidden = true; return; }
+      var html = '', first = items[0], i0 = list.push(first) - 1;
+      html += '<div class="st-feature">' + cover(first, i0) + '<div class="st-body"><span class="place">' + esc(first.place) + '</span><h3>' + esc(first.title) + '</h3><p>' +
+        esc(excerpt(first)) + '</p><div class="row"><button type="button" class="st-btn" data-open="' + i0 + '">See the project</button><a class="st-btn ghost" href="contact.html">Talk to us</a></div></div></div>';
+      if (items.length > 1) {
+        html += '<div class="st-grid">' + items.slice(1).map(function (s) { var i = list.push(s) - 1;
+          return '<div class="st-card">' + cover(s, i) + '<span class="place">' + esc(s.place) + '</span><h3>' + esc(s.title) + '</h3></div>'; }).join('') + '</div>';
+      }
+      host.innerHTML = html;
+      if (sec) sec.hidden = false;
+      host.addEventListener('click', function (e) { var b = e.target.closest('[data-open]'); if (b) openView(list[+b.getAttribute('data-open')]); });
+    });
+  }).catch(function () {});
+})();

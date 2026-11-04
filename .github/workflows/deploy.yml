@@ -1,7 +1,7 @@
 name: Deploy to Cloudflare Pages
 on:
   push:
-    branches: [main]
+    branches: [main, stories]
   workflow_dispatch:
 jobs:
   deploy:
@@ -15,4 +15,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name thrive-hyperbaric --branch main --commit-dirty=true
+          command: pages deploy dist --project-name thrive-hyperbaric --branch ${{ github.ref_name }} --commit-dirty=true
