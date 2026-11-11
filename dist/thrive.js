@@ -78,6 +78,37 @@
   }
 })();
 
+/* Google Ads click ID. When a visitor arrives from an ad (?gclid=, or ?gbraid= / ?wbraid= on iOS),
+   keeps the click ID, click time and landing page for 90 days in localStorage, the same way as the
+   source attribution above, and stamps them into the enquiry form as hidden fields. The enquiry
+   email then shows whether it came from an ad, and the click ID is uploaded to Google Ads as an
+   offline conversion. This works whatever the visitor chooses on the cookie banner. */
+(function () {
+  var KEY = 'thriveClick', DAYS = 90;
+  try {
+    var q = new URLSearchParams(location.search), id = null, type = null;
+    ['gclid', 'gbraid', 'wbraid'].some(function (k) { var v = q.get(k); if (v) { id = v; type = k; } return !!v; });
+    if (id) localStorage.setItem(KEY, JSON.stringify({ id: id, type: type, page: location.pathname, ts: Date.now() }));
+  } catch (e) {}
+  var f = document.getElementById('enquiry-form');
+  if (!f) return;
+  var c = null;
+  try { c = JSON.parse(localStorage.getItem(KEY) || 'null'); if (c && (!c.ts || (Date.now() - c.ts) > DAYS * 864e5)) c = null; } catch (e) { c = null; }
+  if (!c || !c.id) return;
+  var add = function (name, val) {
+    var el = f.querySelector('input[name="' + name + '"]');
+    if (!el) { el = document.createElement('input'); el.type = 'hidden'; el.name = name; f.insertBefore(el, f.firstChild); }
+    el.value = val;
+  };
+  var t = new Date(c.ts).toISOString().replace('T', ' ').slice(0, 19) + '+00:00';
+  add('google_click_id', c.id);
+  add('google_click_type', c.type);
+  add('ad_click_time', t);
+  add('ad_landing_page', c.page || '');
+  var subj = f.querySelector('input[name="subject"]');
+  if (subj && subj.value.indexOf('Google Ads') < 0) subj.value += ' - via Google Ads';
+})();
+
 /* Lazy background images. Elements with data-bg get their image when they come within 400px of
    the viewport, so a phone does not download every section's photo before the page is usable. */
 (function () {
