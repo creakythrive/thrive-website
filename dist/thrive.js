@@ -79,10 +79,10 @@
 })();
 
 /* Google Ads click ID. When a visitor arrives from an ad (?gclid=, or ?gbraid= / ?wbraid= on iOS),
-   keeps the click ID, click time and landing page for 90 days in localStorage, the same way as the
-   source attribution above, and stamps them into the enquiry form as hidden fields. The enquiry
-   email then shows whether it came from an ad, and the click ID is uploaded to Google Ads as an
-   offline conversion. This works whatever the visitor chooses on the cookie banner. */
+   keeps the click ID for 90 days in localStorage, the same way as the source attribution above,
+   and adds it to the enquiry form as one hidden "ref" field. The daily Ads task reads it from the
+   enquiry email and uploads it to Google Ads as an offline conversion, whatever the visitor chose
+   on the cookie banner. */
 (function () {
   var KEY = 'thriveClick', DAYS = 90;
   try {
@@ -95,18 +95,11 @@
   var c = null;
   try { c = JSON.parse(localStorage.getItem(KEY) || 'null'); if (c && (!c.ts || (Date.now() - c.ts) > DAYS * 864e5)) c = null; } catch (e) { c = null; }
   if (!c || !c.id) return;
-  var add = function (name, val) {
-    var el = f.querySelector('input[name="' + name + '"]');
-    if (!el) { el = document.createElement('input'); el.type = 'hidden'; el.name = name; f.insertBefore(el, f.firstChild); }
-    el.value = val;
-  };
-  var t = new Date(c.ts).toISOString().replace('T', ' ').slice(0, 19) + '+00:00';
-  add('google_click_id', c.id);
-  add('google_click_type', c.type);
-  add('ad_click_time', t);
-  add('ad_landing_page', c.page || '');
-  var subj = f.querySelector('input[name="subject"]');
-  if (subj && subj.value.indexOf('Google Ads') < 0) subj.value += ' - via Google Ads';
+  /* One small, unlabelled line at the bottom of the enquiry email: "ref : <click id>".
+     gbraid/wbraid IDs get a "b:" or "w:" prefix so the upload knows which type it is. */
+  var el = f.querySelector('input[name="ref"]');
+  if (!el) { el = document.createElement('input'); el.type = 'hidden'; el.name = 'ref'; f.appendChild(el); }
+  el.value = (c.type === 'gclid' ? '' : c.type.charAt(0) + ':') + c.id;
 })();
 
 /* Lazy background images. Elements with data-bg get their image when they come within 400px of
