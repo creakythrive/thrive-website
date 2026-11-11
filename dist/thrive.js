@@ -99,7 +99,7 @@
      gbraid/wbraid IDs get a "b:" or "w:" prefix so the upload knows which type it is. */
   var el = f.querySelector('input[name="ref"]');
   if (!el) { el = document.createElement('input'); el.type = 'hidden'; el.name = 'ref'; f.appendChild(el); }
-  el.value = (c.type === 'gclid' ? '' : c.type.charAt(0) + ':') + c.id;
+  el.value = ({ gbraid: 'b:', wbraid: 'w:' }[c.type] || '') + c.id;
 })();
 
 /* Lazy background images. Elements with data-bg get their image when they come within 400px of
