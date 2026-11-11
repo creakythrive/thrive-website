@@ -78,6 +78,30 @@
   }
 })();
 
+/* Google Ads click ID. When a visitor arrives from an ad (?gclid=, or ?gbraid= / ?wbraid= on iOS),
+   keeps the click ID for 90 days in localStorage, the same way as the source attribution above,
+   and adds it to the enquiry form as one hidden "ref" field. The daily Ads task reads it from the
+   enquiry email and uploads it to Google Ads as an offline conversion, whatever the visitor chose
+   on the cookie banner. */
+(function () {
+  var KEY = 'thriveClick', DAYS = 90;
+  try {
+    var q = new URLSearchParams(location.search), id = null, type = null;
+    ['gclid', 'gbraid', 'wbraid'].some(function (k) { var v = q.get(k); if (v) { id = v; type = k; } return !!v; });
+    if (id) localStorage.setItem(KEY, JSON.stringify({ id: id, type: type, page: location.pathname, ts: Date.now() }));
+  } catch (e) {}
+  var f = document.getElementById('enquiry-form');
+  if (!f) return;
+  var c = null;
+  try { c = JSON.parse(localStorage.getItem(KEY) || 'null'); if (c && (!c.ts || (Date.now() - c.ts) > DAYS * 864e5)) c = null; } catch (e) { c = null; }
+  if (!c || !c.id) return;
+  /* One small, unlabelled line at the bottom of the enquiry email: "ref : <click id>".
+     gbraid/wbraid IDs get a "b:" or "w:" prefix so the upload knows which type it is. */
+  var el = f.querySelector('input[name="ref"]');
+  if (!el) { el = document.createElement('input'); el.type = 'hidden'; el.name = 'ref'; f.appendChild(el); }
+  el.value = ({ gbraid: 'b:', wbraid: 'w:' }[c.type] || '') + c.id;
+})();
+
 /* Lazy background images. Elements with data-bg get their image when they come within 400px of
    the viewport, so a phone does not download every section's photo before the page is usable. */
 (function () {
