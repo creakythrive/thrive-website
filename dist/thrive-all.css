@@ -1069,7 +1069,7 @@ svg rect{rx:0 !important;ry:0 !important}
 .bj-section .photo.frame-tr::after{
   background:linear-gradient(180deg,var(--navy) 0%,var(--navy) 34%,rgba(15,23,42,0) 100%) !important;
 }
-@media(max-width:900px){.bj-section .photo{min-height:280px}}
+@media(max-width:900px){.bj-section .photo{min-height:0 !important;width:100%;height:auto;aspect-ratio:1508/892}}
 
 /* caption under the Bryan Johnson photo */
 .bj-section .bj-cap{
