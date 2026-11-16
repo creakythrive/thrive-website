@@ -200,7 +200,11 @@
           '<span class="meta">' + esc(i.meta) + '</span><span class="tx">' + esc(i.text) + '</span>';
         if (i.kind === 'story') { var n = list.push(i.story) - 1; return '<button type="button" class="fd" data-open="' + n + '">' + inner + '</button>'; }
         return '<a class="fd" href="' + esc(i.href) + '" target="_blank" rel="noopener">' + inner + '</a>';
-      }).join('');
+      }).join('') + (host.getAttribute('data-cta') ?
+        '<a class="fd fd-cta" href="' + IG + '" target="_blank" rel="noopener"><span class="ph">' +
+        '<svg class="ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>' +
+        '<span class="h">See more on Instagram</span><span class="t">' + esc(host.getAttribute('data-cta')) + '</span>' +
+        '<span class="b">Follow @thrivehyperbaric</span></span></a>' : '');
       if (sec) sec.hidden = false;
       host.addEventListener('click', function (e) { var b = e.target.closest('[data-open]'); if (b) openView(list[+b.getAttribute('data-open')]); });
     });

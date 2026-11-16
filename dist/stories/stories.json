@@ -143,9 +143,7 @@
     "alt": "WTTC Global Summit - photo 4"
    }
   ],
-  "show": {
-   "commercial": 5
-  }
+  "show": {}
  },
  {
   "id": "new-york",
@@ -176,7 +174,6 @@
    }
   ],
   "show": {
-   "index": 6,
    "commercial": 3
   }
  },
@@ -203,10 +200,7 @@
     "alt": "Croydon PT studio - photo 2"
    }
   ],
-  "show": {
-   "index": 8,
-   "commercial": 4
-  }
+  "show": {}
  },
  {
   "id": "stock",
@@ -252,9 +246,7 @@
     "alt": "Zeugmas in stock - photo 6"
    }
   ],
-  "show": {
-   "home-use": 6
-  }
+  "show": {}
  },
  {
   "id": "air-breaks",
@@ -329,9 +321,7 @@
     "alt": "Customisation - photo 6"
    }
   ],
-  "show": {
-   "home-use": 5
-  }
+  "show": {}
  },
  {
   "id": "granada-1",
@@ -361,9 +351,7 @@
     "alt": "Granada single-seater - photo 3"
    }
   ],
-  "show": {
-   "home-use": 4
-  }
+  "show": {}
  },
  {
   "id": "granada-2",
@@ -409,10 +397,7 @@
     "alt": "Granada two-seater - photo 6"
    }
   ],
-  "show": {
-   "commercial": 6,
-   "home-use": 7
-  }
+  "show": {}
  },
  {
   "id": "masks",
@@ -459,9 +444,7 @@
     "alt": "Why the mask matters - photo 6"
    }
   ],
-  "show": {
-   "sport": 4
-  }
+  "show": {}
  },
  {
   "id": "medica",
@@ -506,9 +489,7 @@
     "alt": "Exhibitions (MEDICA + HOS) - photo 6"
    }
   ],
-  "show": {
-   "commercial": 8
-  }
+  "show": {}
  },
  {
   "id": "brentford",
@@ -602,7 +583,6 @@
    }
   ],
   "show": {
-   "index": 5,
    "sport": 2
   }
  },
@@ -645,7 +625,6 @@
    }
   ],
   "show": {
-   "index": 4,
    "home-use": 1
   }
  },
@@ -688,7 +667,6 @@
    }
   ],
   "show": {
-   "index": 7,
    "home-use": 2
   }
  },
@@ -712,10 +690,7 @@
     "alt": "3D design service - photo 1"
    }
   ],
-  "show": {
-   "commercial": 7,
-   "home-use": 8
-  }
+  "show": {}
  },
  {
   "id": "hand-painting",
