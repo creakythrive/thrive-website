@@ -173,25 +173,25 @@
   var get = function (u) { return fetch(u, { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }); };
   Promise.all([get('stories/stories.json'), get('social/feed.json')]).then(function (res) {
     var stories = res[0], feed = res[1];
+    // Preview: ?preview shows every planned post; ?preview=2026-12-01 shows what will be live on that date.
+    var pv = (location.search.match(/[?&]preview(?:=(\d{4}-\d{2}-\d{2}))?/) || null);
+    var live = function (s) { return s.instagram || (pv && (!pv[1] || (s.scheduled || s.date) <= pv[1])); };
     var linked = {};
     stories.forEach(function (s) { if (s.instagram) linked[s.instagram.replace(/\/$/, '')] = 1; });
-    var items = stories.map(function (s) {
-      return { kind: 'story', date: s.date, tags: s.tags, story: s, img: base(s) + s.media[0].src + '.webp', alt: s.media[0].alt,
+    var items = stories.filter(live).map(function (s) {
+      return { kind: 'story', date: s.date, pages: s.pages || [], story: s, img: base(s) + s.media[0].src + '.webp', alt: s.media[0].alt,
         type: s.media.length > 1 ? 'carousel_album' : 'image', meta: s.place, text: s.summary || s.title };
-    }).concat(feed.filter(function (p) { return !linked[p.permalink.replace(/\/$/, '')]; }).map(function (p) {
-      return { kind: 'ig', date: p.date, tags: p.tags, href: p.permalink, img: p.img, alt: p.text, type: p.type, meta: fmt(p.date), text: p.text };
-    }));
-    items.sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+    });
+    var older = feed.filter(function (p) { return !linked[p.permalink.replace(/\/$/, '')] && p.tags && p.tags !== 'hide'; }).map(function (p) {
+      return { kind: 'ig', date: p.date, pages: p.tags, href: p.permalink, img: p.img, alt: p.text, type: p.type, meta: fmt(p.date), text: p.text };
+    });
+    var newest = function (a, b) { return a.date < b.date ? 1 : -1; };
     Array.prototype.forEach.call(hosts, function (host) {
-      var page = host.getAttribute('data-page'), tag = host.getAttribute('data-tag'), lim = +host.getAttribute('data-limit') || 8;
-      var pick;
-      if (page) {
-        // hand-picked per page: stories with a rank for this page, in rank order; no filler
-        pick = items.filter(function (i) { return i.kind === 'story' && i.story.show && i.story.show[page]; })
-          .sort(function (a, b) { return a.story.show[page] - b.story.show[page]; });
-      } else {
-        pick = items.filter(function (i) { return !tag || i.tags.indexOf(tag) > -1; });
-      }
+      var page = host.getAttribute('data-page'), lim = +host.getAttribute('data-limit') || 3;
+      var mine = function (i) { return i.pages.indexOf(page) > -1; };
+      // newest relevant posts for this page; older Instagram posts tagged for the page only fill gaps; nothing unrelated
+      var pick = items.filter(mine).sort(newest);
+      if (pick.length < lim) pick = pick.concat(older.filter(mine).sort(newest));
       pick = pick.slice(0, lim);
       var sec = host.closest('section');
       if (!pick.length) { if (sec) sec.hidden = true; return; }

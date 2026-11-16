@@ -9,7 +9,11 @@ Run by .github/workflows/instagram-sync.yml on a schedule; can also be run by ha
 Which page a post appears on comes from dist/social/tags.json:
     {"<post id>": ["home", "commercial"]}   -> shown on those pages (and the homepage)
     {"<post id>": "hide"}                   -> never shown on the site
-Untagged posts are shown on the homepage only. Posts whose caption uses wording that
+Untagged posts are not shown (most new posts are project stories, matched below).
+
+It also switches on project stories (dist/stories/stories.json): a story whose caption's
+opening matches a live Instagram post gets that post's link and date, which makes it
+appear on its pages. A story can also be switched on by hand by setting "instagram". Posts whose caption uses wording that
 breaks the Thrive claims rules are hidden automatically, whatever tags.json says.
 """
 import io, json, os, re, sys, urllib.parse, urllib.request
@@ -37,7 +41,7 @@ def main():
     out = []
     for p in posts:
         cap = p.get('caption') or ''
-        t = tags.get(p['id'], ['all'])
+        t = tags.get(p['id'], 'hide')
         if t == 'hide' or any(re.search(b, cap, re.I) for b in BANNED):
             continue
         src = p
@@ -61,6 +65,27 @@ def main():
                     'text': first[:140], 'tags': t})
     json.dump(out, open(os.path.join(ROOT, 'feed.json'), 'w'), indent=1, ensure_ascii=False)
     print(f'{len(out)} posts written, {len(posts) - len(out)} hidden')
+    match_stories(posts)
+
+def norm(t):
+    t = re.sub(r'Get @reshare_app\s*•\s*@\S+\s*', '', t or '')
+    return re.sub(r'[^a-z0-9]+', ' ', t.lower()).strip()[:60]
+
+def match_stories(posts):
+    path = os.path.join(ROOT, '..', 'stories', 'stories.json')
+    stories = json.load(open(path))
+    changed = 0
+    for s in stories:
+        if s.get('instagram'):
+            continue
+        key = norm(s.get('caption'))
+        for p in posts:
+            if key and norm(p.get('caption')).startswith(key[:40]):
+                s['instagram'] = p['permalink']; s['date'] = p['timestamp'][:10]; changed += 1
+                print('switched on:', s['id'], p['permalink'])
+                break
+    if changed:
+        json.dump(stories, open(path, 'w'), indent=1, ensure_ascii=False)
 
 if __name__ == '__main__':
     sys.exit(main())
