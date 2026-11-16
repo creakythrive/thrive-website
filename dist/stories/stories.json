@@ -1,64 +1,703 @@
 [
-  {
-    "id": "health-hideout",
-    "date": "2026-11-04",
-    "place": "Albrighton, Shropshire",
-    "client": "The Health Hideout",
-    "title": "The Health Hideout",
-    "model": "Atlantis Plus",
-    "tags": [
-      "commercial",
-      "clinic"
-    ],
-    "caption": "We're helping to bring the world's best hyperbaric chambers to every part of the UK.\n\nA new Atlantis Plus at The Health Hideout in Albrighton, Shropshire.\n\nGreat project to be part of. Matte black with the Health Hideout logo on the shell. We love the contrasting dark seats and light honeycomb interior. Chamber + plant in one room works perfectly when the equipment looks this good.\n\nChamber by @hpotech.hyperbaric",
-    "media": [
-      {
-        "type": "image",
-        "src": "01",
-        "alt": "Matte black Atlantis Plus hyperbaric chamber lit blue in the treatment room at The Health Hideout"
-      },
-      {
-        "type": "image",
-        "src": "02",
-        "alt": "Chamber crates arriving on the lorry"
-      },
-      {
-        "type": "image",
-        "src": "03",
-        "alt": "A crate coming off by forklift"
-      },
-      {
-        "type": "image",
-        "src": "04",
-        "alt": "A wrapped chamber module being moved into place"
-      },
-      {
-        "type": "image",
-        "src": "05",
-        "alt": "Chamber modules joined during assembly"
-      },
-      {
-        "type": "image",
-        "src": "06",
-        "alt": "Two seats inside the Atlantis Plus against the honeycomb interior"
-      },
-      {
-        "type": "image",
-        "src": "07",
-        "alt": "The Health Hideout logo on the chamber shell"
-      },
-      {
-        "type": "video",
-        "src": "08",
-        "alt": "The chamber's control screen and The Health Hideout logo"
-      },
-      {
-        "type": "image",
-        "src": "09",
-        "alt": "A session under way inside the chamber"
-      }
-    ],
-    "instagram": null,
-    "summary": "A new Atlantis Plus at The Health Hideout in Albrighton, Shropshire."
-  }
+ {
+  "id": "health-hideout",
+  "date": "2026-11-16",
+  "place": "Albrighton, Shropshire",
+  "title": "The Health Hideout",
+  "tags": [
+   "commercial"
+  ],
+  "summary": "A new Atlantis Plus at The Health Hideout in Albrighton, Shropshire.",
+  "caption": "We're bringing the world's best hyperbaric chambers to every part of the UK.\n\nA new Atlantis Plus at The Health Hideout in Albrighton, Shropshire.\n\nMatte black with the Health Hideout logo on the shell. We love the contrasting dark seats and light honeycomb interior. Chamber + plant in one room works perfectly when the equipment looks this good.\n\nChamber by @hpotech.hyperbaric",
+  "instagram": null,
+  "media": [
+   {
+    "type": "image",
+    "src": "01",
+    "alt": "Matte black Atlantis Plus hyperbaric chamber lit blue in the treatment room at The Health Hideout"
+   },
+   {
+    "type": "image",
+    "src": "02",
+    "alt": "Chamber crates arriving on the lorry"
+   },
+   {
+    "type": "image",
+    "src": "03",
+    "alt": "A crate coming off by forklift"
+   },
+   {
+    "type": "image",
+    "src": "04",
+    "alt": "A wrapped chamber module being moved into place"
+   },
+   {
+    "type": "image",
+    "src": "05",
+    "alt": "Chamber modules joined during assembly"
+   },
+   {
+    "type": "image",
+    "src": "06",
+    "alt": "Two seats inside the Atlantis Plus against the honeycomb interior"
+   },
+   {
+    "type": "image",
+    "src": "07",
+    "alt": "The Health Hideout logo on the chamber shell"
+   },
+   {
+    "type": "video",
+    "src": "08",
+    "alt": "The chamber's control screen and The Health Hideout logo"
+   },
+   {
+    "type": "image",
+    "src": "09",
+    "alt": "A session under way inside the chamber"
+   }
+  ]
+ },
+ {
+  "id": "botree",
+  "date": "2026-11-15",
+  "place": "Marylebone, London",
+  "title": "triplebond at The BoTree",
+  "tags": [
+   "commercial"
+  ],
+  "summary": "A copper Zeugma for triplebond at The BoTree.",
+  "caption": "A stunning copper 2.0 ATA Zeugma for triplebond, the new social wellness club at The BoTree in Marylebone.\n\nWe had paint samples hand sprayed and flown over, so the client could see them in the actual light where the chamber would sit. That way we knew the finish would be just right for this amazing space.",
+  "instagram": null,
+  "media": [
+   {
+    "type": "image",
+    "src": "01",
+    "alt": "triplebond at The BoTree - photo 1"
+   },
+   {
+    "type": "image",
+    "src": "02",
+    "alt": "triplebond at The BoTree - photo 2"
+   },
+   {
+    "type": "image",
+    "src": "03",
+    "alt": "triplebond at The BoTree - photo 3"
+   },
+   {
+    "type": "image",
+    "src": "04",
+    "alt": "triplebond at The BoTree - photo 4"
+   },
+   {
+    "type": "image",
+    "src": "05",
+    "alt": "triplebond at The BoTree - photo 5"
+   },
+   {
+    "type": "image",
+    "src": "06",
+    "alt": "triplebond at The BoTree - photo 6"
+   }
+  ]
+ },
+ {
+  "id": "wttc",
+  "date": "2026-11-14",
+  "place": "Valletta, Malta",
+  "title": "WTTC Global Summit",
+  "tags": [
+   "commercial"
+  ],
+  "summary": "Our Zeugma at the WTTC Global Summit, Valletta.",
+  "caption": "Our Zeugma at the WTTC Global Summit in Valletta, Malta, as part of a showcase of the WITHIN spa at @inialavalletta.\n\nInternational wellness tourists spend 41% more per trip than the typical tourist.\n\nGreat to talk to so many people from hospitality about putting a chamber in front of their guests.",
+  "instagram": null,
+  "media": [
+   {
+    "type": "image",
+    "src": "01",
+    "alt": "WTTC Global Summit - photo 1"
+   },
+   {
+    "type": "image",
+    "src": "02",
+    "alt": "WTTC Global Summit - photo 2"
+   },
+   {
+    "type": "image",
+    "src": "03",
+    "alt": "WTTC Global Summit - photo 3"
+   },
+   {
+    "type": "image",
+    "src": "04",
+    "alt": "WTTC Global Summit - photo 4"
+   }
+  ]
+ },
+ {
+  "id": "new-york",
+  "date": "2026-11-13",
+  "place": "New York",
+  "title": "On its way to New York",
+  "tags": [
+   "commercial"
+  ],
+  "summary": "A cream Zeugma on its way to a Manhattan hotel.",
+  "caption": "On its way to the Big Apple.\n\nA Zeugma in cream, with the interior to match, leaving the factory for a very special hotel in Manhattan.\n\nChamber by @hpotech.hyperbaric",
+  "instagram": null,
+  "media": [
+   {
+    "type": "image",
+    "src": "01",
+    "alt": "On its way to New York - photo 1"
+   },
+   {
+    "type": "image",
+    "src": "02",
+    "alt": "On its way to New York - photo 2"
+   },
+   {
+    "type": "image",
+    "src": "03",
+    "alt": "On its way to New York - photo 3"
+   }
+  ]
+ },
+ {
+  "id": "green-tree",
+  "date": "2026-11-12",
+  "place": "Croydon, London",
+  "title": "Croydon PT studio",
+  "tags": [
+   "commercial"
+  ],
+  "summary": "An Atlantis in olive green for a personal training studio.",
+  "caption": "An Atlantis in olive green for a personal training studio in Croydon.",
+  "instagram": null,
+  "media": [
+   {
+    "type": "image",
+    "src": "01",
+    "alt": "Croydon PT studio - photo 1"
+   },
+   {
+    "type": "image",
+    "src": "02",
+    "alt": "Croydon PT studio - photo 2"
+   }
+  ]
+ },
+ {
+  "id": "stock",
+  "date": "2026-11-11",
+  "place": "Ready to ship",
+  "title": "Zeugmas in stock",
+  "tags": [
+   "home",
+   "commercial"
+  ],
+  "summary": "Zeugma stock units, ready for immediate dispatch.",
+  "caption": "Nearly all our chambers are built to order, but we occasionally have stock units of our single-seat chamber, the Zeugma, ready for immediate dispatch.\n\n@hpotech.hyperbaric",
+  "instagram": null,
+  "media": [
+   {
+    "type": "image",
+    "src": "01",
+    "alt": "Zeugmas in stock - photo 1"
+   },
+   {
+    "type": "image",
+    "src": "02",
+    "alt": "Zeugmas in stock - photo 2"
+   },
+   {
+    "type": "image",
+    "src": "03",
+    "alt": "Zeugmas in stock - photo 3"
+   },
+   {
+    "type": "image",
+    "src": "04",
+    "alt": "Zeugmas in stock - photo 4"
+   },
+   {
+    "type": "image",
+    "src": "05",
+    "alt": "Zeugmas in stock - photo 5"
+   },
+   {
+    "type": "image",
+    "src": "06",
+    "alt": "Zeugmas in stock - photo 6"
+   }
+  ]
+ },
+ {
+  "id": "air-breaks",
+  "date": "2026-11-10",
+  "place": "How it works",
+  "title": "Automatic air breaks",
+  "tags": [
+   "home",
+   "commercial",
+   "sport"
+  ],
+  "summary": "Automatic air breaks and HIF-1α.",
+  "caption": "Automatic air breaks come as standard on HPO.TECH chambers.\n\nAt set points in a session the chamber switches you from oxygen to air for a few minutes. On many other manufacturers' chambers you'd take your mask off for five minutes. Here you don't have to. Air breaks help manage oxygen exposure, and the change in oxygen level may also help activate HIF-1α, the body's oxygen-sensing mechanism. The research behind it won the 2019 Nobel Prize.\n\n@hpotech.hyperbaric",
+  "instagram": null,
+  "media": [
+   {
+    "type": "image",
+    "src": "01",
+    "alt": "Automatic air breaks - photo 1"
+   },
+   {
+    "type": "image",
+    "src": "02",
+    "alt": "Automatic air breaks - photo 2"
+   }
+  ]
+ },
+ {
+  "id": "customisation",
+  "date": "2026-11-09",
+  "place": "Finishes",
+  "title": "Customisation",
+  "tags": [
+   "home",
+   "commercial"
+  ],
+  "summary": "Vinyl wraps, automotive paint, logos and interiors.",
+  "caption": "Some of the ways we can finish a chamber: vinyl wraps, any automotive paint colour, your logo on the shell, and a choice of interior colours and patterns.\n\n@hpotech.hyperbaric",
+  "instagram": null,
+  "media": [
+   {
+    "type": "image",
+    "src": "01",
+    "alt": "Customisation - photo 1"
+   },
+   {
+    "type": "image",
+    "src": "02",
+    "alt": "Customisation - photo 2"
+   },
+   {
+    "type": "image",
+    "src": "03",
+    "alt": "Customisation - photo 3"
+   },
+   {
+    "type": "image",
+    "src": "04",
+    "alt": "Customisation - photo 4"
+   },
+   {
+    "type": "image",
+    "src": "05",
+    "alt": "Customisation - photo 5"
+   },
+   {
+    "type": "image",
+    "src": "06",
+    "alt": "Customisation - photo 6"
+   }
+  ]
+ },
+ {
+  "id": "granada-1",
+  "date": "2026-11-08",
+  "place": "New model",
+  "title": "Granada single-seater",
+  "tags": [
+   "home"
+  ],
+  "summary": "The new single-seat Granada, finished in copper.",
+  "caption": "SO MUCH ROOM! The new single-seat Granada, finished in copper. If you want to go on your HBOT journey in the biggest cabin, this one's for you.\n\n@hpotech.hyperbaric",
+  "instagram": null,
+  "media": [
+   {
+    "type": "image",
+    "src": "01",
+    "alt": "Granada single-seater - photo 1"
+   },
+   {
+    "type": "image",
+    "src": "02",
+    "alt": "Granada single-seater - photo 2"
+   },
+   {
+    "type": "image",
+    "src": "03",
+    "alt": "Granada single-seater - photo 3"
+   }
+  ]
+ },
+ {
+  "id": "granada-2",
+  "date": "2026-11-07",
+  "place": "New model",
+  "title": "Granada two-seater",
+  "tags": [
+   "home",
+   "commercial"
+  ],
+  "summary": "The Omega-shaped two-seat Granada, now available to order.",
+  "caption": "The Omega-shaped two-seat Granada is now available to order.\n\n@hpotech.hyperbaric",
+  "instagram": null,
+  "media": [
+   {
+    "type": "image",
+    "src": "01",
+    "alt": "Granada two-seater - photo 1"
+   },
+   {
+    "type": "image",
+    "src": "02",
+    "alt": "Granada two-seater - photo 2"
+   },
+   {
+    "type": "image",
+    "src": "03",
+    "alt": "Granada two-seater - photo 3"
+   },
+   {
+    "type": "image",
+    "src": "04",
+    "alt": "Granada two-seater - photo 4"
+   },
+   {
+    "type": "image",
+    "src": "05",
+    "alt": "Granada two-seater - photo 5"
+   },
+   {
+    "type": "image",
+    "src": "06",
+    "alt": "Granada two-seater - photo 6"
+   }
+  ]
+ },
+ {
+  "id": "masks",
+  "date": "2026-11-06",
+  "place": "How it works",
+  "title": "Why the mask matters",
+  "tags": [
+   "home",
+   "commercial",
+   "sport"
+  ],
+  "summary": "Why the mask matters.",
+  "caption": "Why the mask matters.\n\nA sealed BIBS mask means you breathe around 93%+ oxygen for the whole session. A normal hospital mask or cannula lets room air in, so you typically get 40-60%.\n\n@hpotech.hyperbaric",
+  "instagram": null,
+  "media": [
+   {
+    "type": "image",
+    "src": "01",
+    "alt": "Why the mask matters - photo 1"
+   },
+   {
+    "type": "image",
+    "src": "02",
+    "alt": "Why the mask matters - photo 2"
+   },
+   {
+    "type": "image",
+    "src": "03",
+    "alt": "Why the mask matters - photo 3"
+   },
+   {
+    "type": "image",
+    "src": "04",
+    "alt": "Why the mask matters - photo 4"
+   },
+   {
+    "type": "image",
+    "src": "05",
+    "alt": "Why the mask matters - photo 5"
+   },
+   {
+    "type": "image",
+    "src": "06",
+    "alt": "Why the mask matters - photo 6"
+   }
+  ]
+ },
+ {
+  "id": "medica",
+  "date": "2026-11-05",
+  "place": "Exhibitions",
+  "title": "Exhibitions (MEDICA + HOS)",
+  "tags": [
+   "commercial"
+  ],
+  "summary": "Find us at MEDICA and the Health Optimisation Summit.",
+  "caption": "You'll find us at the big health and wellness shows.\n\nWe're at MEDICA in Düsseldorf this week, 16-19 November, and we had three great days at the Health Optimisation Summit in London, meeting so many people using the latest tech to build the wellness scene in London and beyond. Come and say hello!\n\n@hpotech.hyperbaric",
+  "instagram": null,
+  "media": [
+   {
+    "type": "image",
+    "src": "01",
+    "alt": "Exhibitions (MEDICA + HOS) - photo 1"
+   },
+   {
+    "type": "image",
+    "src": "02",
+    "alt": "Exhibitions (MEDICA + HOS) - photo 2"
+   },
+   {
+    "type": "image",
+    "src": "03",
+    "alt": "Exhibitions (MEDICA + HOS) - photo 3"
+   },
+   {
+    "type": "image",
+    "src": "04",
+    "alt": "Exhibitions (MEDICA + HOS) - photo 4"
+   },
+   {
+    "type": "image",
+    "src": "05",
+    "alt": "Exhibitions (MEDICA + HOS) - photo 5"
+   },
+   {
+    "type": "image",
+    "src": "06",
+    "alt": "Exhibitions (MEDICA + HOS) - photo 6"
+   }
+  ]
+ },
+ {
+  "id": "brentford",
+  "date": "2026-11-04",
+  "place": "Brentford FC",
+  "title": "Brentford FC",
+  "tags": [
+   "sport"
+  ],
+  "summary": "The Mediterranean Plus at Brentford's training ground.",
+  "caption": "The Mediterranean Plus at Brentford's training ground.\n\nOnly the best for this innovative club. Our Plus size chambers have a larger diameter, and this model comes with an extra module for length - perfect for when four players want to recline. On top of the standard engineer training, we also provide extra training for teams, giving greater depth in hyperbaric theory and day-to-day use.",
+  "instagram": null,
+  "media": [
+   {
+    "type": "image",
+    "src": "01",
+    "alt": "Brentford FC - photo 1"
+   },
+   {
+    "type": "image",
+    "src": "02",
+    "alt": "Brentford FC - photo 2"
+   },
+   {
+    "type": "image",
+    "src": "03",
+    "alt": "Brentford FC - photo 3"
+   },
+   {
+    "type": "image",
+    "src": "04",
+    "alt": "Brentford FC - photo 4"
+   },
+   {
+    "type": "image",
+    "src": "05",
+    "alt": "Brentford FC - photo 5"
+   },
+   {
+    "type": "image",
+    "src": "06",
+    "alt": "Brentford FC - photo 6"
+   }
+  ]
+ },
+ {
+  "id": "sheffield",
+  "date": "2026-11-03",
+  "place": "Sheffield United",
+  "title": "Sheffield United",
+  "tags": [
+   "sport"
+  ],
+  "summary": "Training delivered at Sheffield United.",
+  "caption": "Training delivered. Full integration with their performance and recovery programme coming shortly...",
+  "instagram": null,
+  "media": [
+   {
+    "type": "image",
+    "src": "01",
+    "alt": "Sheffield United - photo 1"
+   },
+   {
+    "type": "image",
+    "src": "02",
+    "alt": "Sheffield United - photo 2"
+   },
+   {
+    "type": "image",
+    "src": "03",
+    "alt": "Sheffield United - photo 3"
+   },
+   {
+    "type": "image",
+    "src": "04",
+    "alt": "Sheffield United - photo 4"
+   },
+   {
+    "type": "image",
+    "src": "05",
+    "alt": "Sheffield United - photo 5"
+   },
+   {
+    "type": "image",
+    "src": "06",
+    "alt": "Sheffield United - photo 6"
+   }
+  ]
+ },
+ {
+  "id": "puerto-rico",
+  "date": "2026-11-02",
+  "place": "Puerto Rico",
+  "title": "Puerto Rico",
+  "tags": [
+   "home"
+  ],
+  "summary": "A Zeugma on the second floor of a private residence.",
+  "caption": "A Zeugma on the second floor of a private residence in Puerto Rico.",
+  "instagram": null,
+  "media": [
+   {
+    "type": "image",
+    "src": "01",
+    "alt": "Puerto Rico - photo 1"
+   },
+   {
+    "type": "image",
+    "src": "02",
+    "alt": "Puerto Rico - photo 2"
+   },
+   {
+    "type": "image",
+    "src": "03",
+    "alt": "Puerto Rico - photo 3"
+   },
+   {
+    "type": "image",
+    "src": "04",
+    "alt": "Puerto Rico - photo 4"
+   },
+   {
+    "type": "image",
+    "src": "05",
+    "alt": "Puerto Rico - photo 5"
+   }
+  ]
+ },
+ {
+  "id": "santa-fe",
+  "date": "2026-11-01",
+  "place": "Santa Fe, New Mexico",
+  "title": "Santa Fe",
+  "tags": [
+   "home"
+  ],
+  "summary": "An Atlantis for a private residence in Santa Fe.",
+  "caption": "An Atlantis for a private residence in Santa Fe, New Mexico.",
+  "instagram": null,
+  "media": [
+   {
+    "type": "image",
+    "src": "01",
+    "alt": "Santa Fe - photo 1"
+   },
+   {
+    "type": "image",
+    "src": "02",
+    "alt": "Santa Fe - photo 2"
+   },
+   {
+    "type": "image",
+    "src": "03",
+    "alt": "Santa Fe - photo 3"
+   },
+   {
+    "type": "image",
+    "src": "04",
+    "alt": "Santa Fe - photo 4"
+   },
+   {
+    "type": "image",
+    "src": "05",
+    "alt": "Santa Fe - photo 5"
+   }
+  ]
+ },
+ {
+  "id": "design-service",
+  "date": "2026-10-30",
+  "place": "Design service",
+  "title": "3D design service",
+  "tags": [
+   "home",
+   "commercial",
+   "sport"
+  ],
+  "summary": "We model the chamber and its equipment into your room in 3D.",
+  "caption": "We model the chamber and its equipment into your room in 3D, and set out exactly what the room needs, including space, power and cooling.",
+  "instagram": null,
+  "media": [
+   {
+    "type": "image",
+    "src": "01",
+    "alt": "3D design service - photo 1"
+   }
+  ]
+ },
+ {
+  "id": "hand-painting",
+  "date": "2026-10-29",
+  "place": "Finishes",
+  "title": "Hand painting",
+  "tags": [
+   "home"
+  ],
+  "summary": "Hand-painted chambers by film-set artists.",
+  "caption": "For the ultimate in creative expression, we now offer hand-painted chambers (subject to availability). We use artists who typically work on film sets to mimic pretty much any finish or turn your chamber into a piece of art.",
+  "instagram": null,
+  "media": [
+   {
+    "type": "image",
+    "src": "01",
+    "alt": "Hand painting - photo 1"
+   },
+   {
+    "type": "image",
+    "src": "02",
+    "alt": "Hand painting - photo 2"
+   },
+   {
+    "type": "image",
+    "src": "03",
+    "alt": "Hand painting - photo 3"
+   },
+   {
+    "type": "image",
+    "src": "04",
+    "alt": "Hand painting - photo 4"
+   },
+   {
+    "type": "image",
+    "src": "05",
+    "alt": "Hand painting - photo 5"
+   },
+   {
+    "type": "image",
+    "src": "06",
+    "alt": "Hand painting - photo 6"
+   }
+  ]
+ }
 ]
