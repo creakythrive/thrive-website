@@ -56,7 +56,11 @@
     "src": "09",
     "alt": "A session under way inside the chamber"
    }
-  ]
+  ],
+  "show": {
+   "index": 1,
+   "commercial": 1
+  }
  },
  {
   "id": "botree",
@@ -100,7 +104,11 @@
     "src": "06",
     "alt": "triplebond at The BoTree - photo 6"
    }
-  ]
+  ],
+  "show": {
+   "index": 3,
+   "commercial": 2
+  }
  },
  {
   "id": "wttc",
@@ -134,7 +142,10 @@
     "src": "04",
     "alt": "WTTC Global Summit - photo 4"
    }
-  ]
+  ],
+  "show": {
+   "commercial": 5
+  }
  },
  {
   "id": "new-york",
@@ -163,7 +174,11 @@
     "src": "03",
     "alt": "On its way to New York - photo 3"
    }
-  ]
+  ],
+  "show": {
+   "index": 6,
+   "commercial": 3
+  }
  },
  {
   "id": "green-tree",
@@ -187,7 +202,11 @@
     "src": "02",
     "alt": "Croydon PT studio - photo 2"
    }
-  ]
+  ],
+  "show": {
+   "index": 8,
+   "commercial": 4
+  }
  },
  {
   "id": "stock",
@@ -232,7 +251,10 @@
     "src": "06",
     "alt": "Zeugmas in stock - photo 6"
    }
-  ]
+  ],
+  "show": {
+   "home-use": 6
+  }
  },
  {
   "id": "air-breaks",
@@ -258,7 +280,10 @@
     "src": "02",
     "alt": "Automatic air breaks - photo 2"
    }
-  ]
+  ],
+  "show": {
+   "sport": 3
+  }
  },
  {
   "id": "customisation",
@@ -303,7 +328,10 @@
     "src": "06",
     "alt": "Customisation - photo 6"
    }
-  ]
+  ],
+  "show": {
+   "home-use": 5
+  }
  },
  {
   "id": "granada-1",
@@ -332,7 +360,10 @@
     "src": "03",
     "alt": "Granada single-seater - photo 3"
    }
-  ]
+  ],
+  "show": {
+   "home-use": 4
+  }
  },
  {
   "id": "granada-2",
@@ -377,7 +408,11 @@
     "src": "06",
     "alt": "Granada two-seater - photo 6"
    }
-  ]
+  ],
+  "show": {
+   "commercial": 6,
+   "home-use": 7
+  }
  },
  {
   "id": "masks",
@@ -423,7 +458,10 @@
     "src": "06",
     "alt": "Why the mask matters - photo 6"
    }
-  ]
+  ],
+  "show": {
+   "sport": 4
+  }
  },
  {
   "id": "medica",
@@ -467,7 +505,10 @@
     "src": "06",
     "alt": "Exhibitions (MEDICA + HOS) - photo 6"
    }
-  ]
+  ],
+  "show": {
+   "commercial": 8
+  }
  },
  {
   "id": "brentford",
@@ -511,7 +552,11 @@
     "src": "06",
     "alt": "Brentford FC - photo 6"
    }
-  ]
+  ],
+  "show": {
+   "index": 2,
+   "sport": 1
+  }
  },
  {
   "id": "sheffield",
@@ -555,7 +600,11 @@
     "src": "06",
     "alt": "Sheffield United - photo 6"
    }
-  ]
+  ],
+  "show": {
+   "index": 5,
+   "sport": 2
+  }
  },
  {
   "id": "puerto-rico",
@@ -594,7 +643,11 @@
     "src": "05",
     "alt": "Puerto Rico - photo 5"
    }
-  ]
+  ],
+  "show": {
+   "index": 4,
+   "home-use": 1
+  }
  },
  {
   "id": "santa-fe",
@@ -633,7 +686,11 @@
     "src": "05",
     "alt": "Santa Fe - photo 5"
    }
-  ]
+  ],
+  "show": {
+   "index": 7,
+   "home-use": 2
+  }
  },
  {
   "id": "design-service",
@@ -654,7 +711,11 @@
     "src": "01",
     "alt": "3D design service - photo 1"
    }
-  ]
+  ],
+  "show": {
+   "commercial": 7,
+   "home-use": 8
+  }
  },
  {
   "id": "hand-painting",
@@ -698,6 +759,9 @@
     "src": "06",
     "alt": "Hand painting - photo 6"
    }
-  ]
+  ],
+  "show": {
+   "home-use": 3
+  }
  }
 ]

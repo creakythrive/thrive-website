@@ -183,9 +183,15 @@
     }));
     items.sort(function (a, b) { return a.date < b.date ? 1 : -1; });
     Array.prototype.forEach.call(hosts, function (host) {
-      var tag = host.getAttribute('data-tag'), lim = +host.getAttribute('data-limit') || 4;
-      var pick = items.filter(function (i) { return !tag || i.tags.indexOf(tag) > -1; });
-      if (pick.length < lim) pick = pick.concat(items.filter(function (i) { return pick.indexOf(i) < 0; }));
+      var page = host.getAttribute('data-page'), tag = host.getAttribute('data-tag'), lim = +host.getAttribute('data-limit') || 8;
+      var pick;
+      if (page) {
+        // hand-picked per page: stories with a rank for this page, in rank order; no filler
+        pick = items.filter(function (i) { return i.kind === 'story' && i.story.show && i.story.show[page]; })
+          .sort(function (a, b) { return a.story.show[page] - b.story.show[page]; });
+      } else {
+        pick = items.filter(function (i) { return !tag || i.tags.indexOf(tag) > -1; });
+      }
       pick = pick.slice(0, lim);
       var sec = host.closest('section');
       if (!pick.length) { if (sec) sec.hidden = true; return; }
