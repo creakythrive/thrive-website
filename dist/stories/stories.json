@@ -5,8 +5,8 @@
   "place": "Exhibitions",
   "title": "Exhibitions (MEDICA + HOS)",
   "summary": "Find us at MEDICA and the Health Optimisation Summit.",
-  "caption": "You'll find us at the big health and wellness shows.\n\nWe're at MEDICA in Düsseldorf this week, 16-19 November, and we had three great days at the Health Optimisation Summit in London, meeting so many people using the latest tech to build the wellness scene in London and beyond. Come and say hello!\n\n@hpotech.hyperbaric",
-  "instagram": null,
+  "caption": "You'll find us at the big health and wellness shows.\n\nWe're at MEDICA in Düsseldorf this week, 16-19 November, representing @hpotech.hyperbaric. Come and say hello!\n\nWe also had three great days at the Health Optimisation Summit in London, meeting so many people using the latest tech to build the wellness scene in London and beyond.",
+  "instagram": "https://www.instagram.com/p/Df2HaXwCht2/",
   "media": [
    {
     "type": "image",
@@ -14,29 +14,9 @@
     "alt": "Exhibitions (MEDICA + HOS) - photo 1"
    },
    {
-    "type": "image",
-    "src": "02",
-    "alt": "Exhibitions (MEDICA + HOS) - photo 2"
-   },
-   {
-    "type": "image",
-    "src": "03",
-    "alt": "Exhibitions (MEDICA + HOS) - photo 3"
-   },
-   {
-    "type": "image",
-    "src": "04",
-    "alt": "Exhibitions (MEDICA + HOS) - photo 4"
-   },
-   {
-    "type": "image",
-    "src": "05",
-    "alt": "Exhibitions (MEDICA + HOS) - photo 5"
-   },
-   {
-    "type": "image",
-    "src": "06",
-    "alt": "Exhibitions (MEDICA + HOS) - photo 6"
+    "type": "video",
+    "src": "clip",
+    "alt": "Health Optimisation Summit, London"
    }
   ],
   "pages": [
