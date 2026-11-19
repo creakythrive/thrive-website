@@ -225,32 +225,37 @@
    {
     "type": "image",
     "src": "01",
-    "alt": "Sheffield United - photo 1"
+    "alt": "Chamber in Sheffield United colours"
    },
    {
-    "type": "image",
-    "src": "02",
-    "alt": "Sheffield United - photo 2"
+    "type": "video",
+    "src": "clip",
+    "alt": "Sheffield United chamber"
    },
    {
     "type": "image",
     "src": "03",
-    "alt": "Sheffield United - photo 3"
+    "alt": "Training session with the club"
    },
    {
     "type": "image",
     "src": "04",
-    "alt": "Sheffield United - photo 4"
-   },
-   {
-    "type": "image",
-    "src": "05",
-    "alt": "Sheffield United - photo 5"
+    "alt": "Chamber walkthrough"
    },
    {
     "type": "image",
     "src": "06",
-    "alt": "Sheffield United - photo 6"
+    "alt": "Chamber controls"
+   },
+   {
+    "type": "image",
+    "src": "02",
+    "alt": "Player in the training session"
+   },
+   {
+    "type": "image",
+    "src": "05",
+    "alt": "Player at the chamber"
    }
   ],
   "pages": [
