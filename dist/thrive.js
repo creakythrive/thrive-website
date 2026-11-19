@@ -180,7 +180,7 @@
     stories.forEach(function (s) { if (s.instagram) linked[s.instagram.replace(/\/$/, '')] = 1; });
     var items = stories.filter(live).map(function (s) {
       return { kind: 'story', date: s.date, pages: s.pages || [], story: s, img: base(s) + s.media[0].src + '.webp', alt: s.media[0].alt,
-        type: s.media.length > 1 ? 'carousel_album' : 'image', meta: s.place, text: s.summary || s.title };
+        type: s.media.length > 1 ? 'carousel_album' : (s.media[0].type === 'video' ? 'video' : 'image'), meta: s.place, text: s.summary || s.title };
     });
     var older = feed.filter(function (p) { return !linked[p.permalink.replace(/\/$/, '')] && p.tags && p.tags !== 'hide'; }).map(function (p) {
       return { kind: 'ig', date: p.date, pages: p.tags, href: p.permalink, img: p.img, alt: p.text, type: p.type, meta: fmt(p.date), text: p.text };

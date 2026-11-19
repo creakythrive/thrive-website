@@ -223,39 +223,9 @@
   "instagram": null,
   "media": [
    {
-    "type": "image",
-    "src": "01",
-    "alt": "Chamber in Sheffield United colours"
-   },
-   {
     "type": "video",
-    "src": "clip",
-    "alt": "Sheffield United chamber"
-   },
-   {
-    "type": "image",
-    "src": "03",
-    "alt": "Training session with the club"
-   },
-   {
-    "type": "image",
-    "src": "04",
-    "alt": "Chamber walkthrough"
-   },
-   {
-    "type": "image",
-    "src": "06",
-    "alt": "Chamber controls"
-   },
-   {
-    "type": "image",
-    "src": "02",
-    "alt": "Player in the training session"
-   },
-   {
-    "type": "image",
-    "src": "05",
-    "alt": "Player at the chamber"
+    "src": "film",
+    "alt": "Sheffield United - HPO.TECH film"
    }
   ],
   "pages": [
