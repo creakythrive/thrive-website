@@ -128,32 +128,22 @@
  },
  {
   "id": "puerto-rico",
-  "date": "2026-11-24",
+  "date": "2026-11-20",
   "place": "Puerto Rico",
   "title": "Puerto Rico",
   "summary": "A Zeugma on the second floor of a private residence.",
-  "caption": "A Zeugma on the second floor of a private residence in Puerto Rico.",
-  "instagram": null,
+  "caption": "A Zeugma on the second floor of a private residence in Puerto Rico. Small space, no problem.",
+  "instagram": "https://www.instagram.com/p/Df-j882D6Fg/",
   "media": [
    {
     "type": "image",
-    "src": "01",
-    "alt": "Puerto Rico - photo 1"
-   },
-   {
-    "type": "image",
-    "src": "02",
-    "alt": "Puerto Rico - photo 2"
+    "src": "04",
+    "alt": "Puerto Rico - photo 4"
    },
    {
     "type": "image",
     "src": "03",
     "alt": "Puerto Rico - photo 3"
-   },
-   {
-    "type": "image",
-    "src": "04",
-    "alt": "Puerto Rico - photo 4"
    },
    {
     "type": "image",
