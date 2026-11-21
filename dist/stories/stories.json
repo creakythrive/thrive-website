@@ -324,17 +324,17 @@
  },
  {
   "id": "hand-painting",
-  "date": "2026-12-08",
+  "date": "2026-11-21",
   "place": "Finishes",
   "title": "Hand painting",
   "summary": "Hand-painted chambers by film-set artists.",
-  "caption": "For the ultimate in creative expression, we now offer hand-painted chambers (subject to availability). We use artists who typically work on film sets to mimic pretty much any finish or turn your chamber into a piece of art.",
-  "instagram": null,
+  "caption": "For the ultimate in creative expression, working with @hpotech.hyperbaric, we now offer hand-painted chambers (subject to availability). We use London-based artists who typically work on film sets to mimic pretty much any finish or turn your chamber into a piece of art.",
+  "instagram": "https://www.instagram.com/p/DgBNSN-AvLR/",
   "media": [
    {
-    "type": "image",
-    "src": "01",
-    "alt": "Hand painting - photo 1"
+    "type": "video",
+    "src": "clip",
+    "alt": "Hand painting a chamber in the factory"
    },
    {
     "type": "image",
