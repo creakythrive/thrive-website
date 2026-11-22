@@ -298,12 +298,12 @@
  },
  {
   "id": "air-breaks",
-  "date": "2026-12-05",
+  "date": "2026-11-22",
   "place": "How it works",
   "title": "Automatic air breaks",
   "summary": "Automatic air breaks and HIF-1α.",
-  "caption": "Automatic air breaks come as standard on HPO.TECH chambers.\n\nAt set points in a session the chamber switches you from oxygen to air for a few minutes. On many other manufacturers' chambers you'd take your mask off for five minutes. Here you don't have to. Air breaks help manage oxygen exposure, and the change in oxygen level may also help activate HIF-1α, the body's oxygen-sensing mechanism. The research behind it won the 2019 Nobel Prize.\n\n@hpotech.hyperbaric",
-  "instagram": null,
+  "caption": "Automatic air breaks come as standard on HPO.TECH chambers.\n\nAt set points in a session the chamber switches you from oxygen to air for a few minutes. On many other manufacturers' chambers you'd need to take your mask off for five minutes. Here you don't have to. Air breaks help manage oxygen exposure, and the change in oxygen level can also help activate HIF-1α, the body's oxygen-sensing mechanism. The discovery of how cells sense oxygen won the 2019 Nobel Prize.\n\n@hpotech.hyperbaric",
+  "instagram": "https://www.instagram.com/p/DgClcaeHS8J/",
   "media": [
    {
     "type": "image",
